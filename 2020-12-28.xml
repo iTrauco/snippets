@@ -1,0 +1,1869 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Date Exported</key>
+	<string>2020-12-28 14:27:05 -0500</string>
+	<key>Library Name</key>
+	<string>main.snippetslablibrary</string>
+	<key>Snippets</key>
+	<array>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 15:43:34 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:51:55 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>:mks ~/.SpaveVim.d/sessions/file_name.vim               to save sessions
+
+
+:source ~/.SpaveVim.d/sessions/file_name.vim            to restore session:w
+
+
+vim -S ~/.SpaveVim.d/sessions/file_name.vim             -run on vim initalization</string>
+					<key>Date Created</key>
+					<string>2020-10-01 15:43:34 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:51:17 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>sessions</string>
+				<string>vim</string>
+			</array>
+			<key>Title</key>
+			<string>sessions</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-18 17:50:42 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-18 17:50:54 -0500</string>
+			<key>Folder</key>
+			<string>python3</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string># import packages
+import re
+import csv
+
+file = 'captions.vtt'
+opened_file = open(file,encoding='utf8')
+content = opened_file.read()
+segments = content.split('\n\n') # split on double line
+
+# wrangle segments
+m = re.compile(r"\&lt;.*?\&gt;") # strip/remove unwanted tags
+o = re.compile(r"\.+\d+") # strip/remove miliseconds
+
+def clean(content):
+    new_content = m.sub('',content)
+    new_content = o.sub('',new_content)
+    new_content = new_content.replace('align:start position:0%','')
+    new_content = new_content.replace('--&gt;','')
+    return new_content
+
+new_segments = [clean(s) for s in segments if len(s)!=0][2:]
+
+# trim time codes for g suite plain text formatting conversion to seconds w/ formula '=value(str*24*3600)'
+def clean_time(time):
+    time = time.split(':')
+    if time[0]=='00':
+        return time[1]+':'+time[2]
+    if not time[0]=='00':
+        return time[0]+':'+time[1]+':'+time[2]
+
+trimmed_segments = []
+for segment in new_segments:
+    split_segment = segment.split()
+    time_code = split_segment[0]
+    text = ' '.join(segment.split()[2:])
+    trimmed_segment = (time_code, text)
+    trimmed_segments.append(trimmed_segment)
+
+# write output as csv file
+with open(str(file)[:-3]+'csv', 'w', encoding='utf8', newline='') as f:
+    for line in trimmed_segments:
+        thewriter = csv.writer(f)
+        thewriter.writerow(line)</string>
+					<key>Date Created</key>
+					<string>2020-11-18 17:50:42 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-19 22:50:58 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Convert VTT to CSV</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-02 18:06:24 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-02 18:07:03 -0400</string>
+			<key>Folder</key>
+			<string>VLOOKUP</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])
+
+</string>
+					<key>Date Created</key>
+					<string>2020-10-02 18:06:24 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-02 18:07:14 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>lookup_value – the value that we want to find in the table_array
+table_array – the range of cells containing the data we want to find or retrieve
+col_index_num – the column number in the table_array corresponding to the information we want to retrieve, relative to the lookup_value
+[range_lookup] – optional; value can either be TRUE or FALSE
+if TRUE or omitted, VLOOKUP returns either an exact or approximate match
+if FALSE, VLOOKUP will only find an exact match</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Comparing Two Columns</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 18:43:23 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 18:44:07 -0400</string>
+			<key>Folder</key>
+			<string>macOS</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>stty -echoctl</string>
+					<key>Date Created</key>
+					<string>2020-10-25 18:43:23 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 18:46:28 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>KbSRC - https://itrau.co/3kp4CxE</string>
+					<key>Title</key>
+					<string>Temporarily Turn Off Echo</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>stty echoctl</string>
+					<key>Date Created</key>
+					<string>2020-10-25 18:44:07 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 18:44:42 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Turn On Echo</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Turn Off Echo in macOS CLI</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-02 12:28:21 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-02 12:28:21 -0500</string>
+			<key>Folder</key>
+			<string>Uncategorized</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-12-02 12:28:21 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-02 12:28:21 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>untitled snippet</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 22:22:48 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 22:23:13 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>:noh</string>
+					<key>Date Created</key>
+					<string>2020-10-25 22:22:48 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 22:23:26 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>Disables all active highlights in the current buffer</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>VIM No Higlight</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 02:50:47 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 02:52:05 -0400</string>
+			<key>Folder</key>
+			<string>macOS</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>⌘ is the Command () key.
+
+⌃ is the Control key.
+
+⌥ is the Option (alt) key.
+
+⇧ is the Shift key.
+
+⇪ is the Caps Lock key.
+
+fn is the Function key. Now you know, but if the symbols confuse you, don't feel too bad about it.</string>
+					<key>Date Created</key>
+					<string>2020-10-01 02:50:47 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 15:48:29 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Mac Keyboard Icons ⌘ ⌥ ⌃</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-24 01:44:41 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 22:24:33 -0400</string>
+			<key>Folder</key>
+			<string>Slack TS</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>#!/usr/bin/env bash
+
+for x in &lt;path/to/file&gt;/*.json;
+  do
+    jsonlint -q "$x";</string>
+					<key>Date Created</key>
+					<string>2020-10-24 01:44:41 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 22:35:37 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>**For macOS**
+1. Global install of NPM package JSONLINT
+  1.`npm install jsonlint -g`
+  **sudo may be required**
+  2. `sudo npm install jsonlint -g`
+2. Locally download the original data import file, [slack_data_file_name.zip ](&lt;G Drive Link&gt;)
+3. Make a new directory and move the downloaded zip file into it for extraction w/ `unzip slack_data_file_name.zip`
+4. Upon successful extraction of the data `rm -rf slack_data_file_name.zip `
+5. Open a new terminal window and create the file `validate_slack_json.sh`
+6. Using your editor of choice open `validate_slack_json.sh` and paste the following into the file
+```
+#!/usr/bin/env bash
+
+for x in &lt;path/to/file&gt;/*.json;
+  do
+    jsonlint -q "$x";
+```
+7. Make the file executable w/ `chmod -x validate_slack_json.sh`
+9. Temporarily disable the `echo` command for standard output w/ `stty -echoctl`
+10. Run the script `sh validate_slack_json.sh`
+11. Compress the folder that you ran the `validate_slack_json.sh` script on by running zip **recursively** w/ the `-r` flag:
+```
+zip -r output.zip target-directory
+```
+12.  Reenable echo standard output w/ `stty echoctl`
+13. Move the newly compressed Slack data for import into G Drive
+**Note** A full reverse of the prior failed data import must be completed before you attempt upload of the new file from G Drive
+14. Try the Slack data import again w/ [Official Slack Data Import Instructions](http://itrau.co/HTImportSlackData)</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Validate Slack Json</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-18 17:46:54 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-18 17:46:54 -0500</string>
+			<key>Folder</key>
+			<string>Uncategorized</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-11-18 17:46:54 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-18 17:46:54 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>untitled snippet</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-18 17:47:05 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-23 12:13:46 -0500</string>
+			<key>Folder</key>
+			<string>python3</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string> python3 -m venv venv
+ source venv/bin/activate</string>
+					<key>Date Created</key>
+					<string>2020-11-18 17:47:05 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-16 20:52:41 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Create ENV</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>source venv/bin/activate</string>
+					<key>Date Created</key>
+					<string>2020-11-18 17:47:39 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-18 17:48:03 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Activate ENV</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>deactivate</string>
+					<key>Date Created</key>
+					<string>2020-11-18 17:48:12 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-18 17:48:25 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Deactive ENV</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string> python3 -m venv venv
+ source venv/bin/activate</string>
+					<key>Date Created</key>
+					<string>2020-11-23 12:13:46 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-23 12:14:04 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Combo</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>vevnv</string>
+			</array>
+			<key>Title</key>
+			<string>Python ENV Start / Stop</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 16:17:33 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:21:03 -0400</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>="("&amp;C2&amp;")"</string>
+					<key>Date Created</key>
+					<string>2020-10-01 16:17:33 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:19:43 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>(Surround String of Another Cell)</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 07:50:50 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 07:51:37 -0400</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=error.type(A1)&gt;0
+
+=iserror(A1)=true
+
+=type(A1)=16
+
+=iferror(A1,true)</string>
+					<key>Date Created</key>
+					<string>2020-10-01 07:50:50 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 07:51:20 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>There are four formulas. Use any of the ones to highlight total error cells.</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>google sheets</string>
+				<string>errors</string>
+				<string>conditional formatting</string>
+			</array>
+			<key>Title</key>
+			<string>Conditional Formatting: Errors</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-18 17:47:01 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-18 17:47:01 -0500</string>
+			<key>Folder</key>
+			<string>macOS</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-11-18 17:47:01 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-18 17:47:01 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>untitled snippet</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-02 19:17:49 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-02 19:17:57 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=LEFT(A1,LEN(A1)-3)
+
+# Or more generally:
+
+=LEFT(A1,LEN(A1)-[number of characters to remove])</string>
+					<key>Date Created</key>
+					<string>2020-11-02 19:17:49 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-02 19:18:43 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>Source: http://spreadsheetpro.net/removing-the-last-x-number-of-characters-from-a-string-in-excel-and-google-spreadsheets/
+
+Sometimes you want to remove some number of last letters from a string in your spreadsheet. For this you can use a very handy function: LEFT()
+
+LEFT() returns the first X characters in a string, based on the amount of characters you specify. Like: LEFT(text,num_chars)
+
+Say you want to remove the last 3 characters from a string in cell A1 you can use:
+
+=LEFT(A1,LEN(A1)-3)
+
+Or more generally:
+
+=LEFT(A1,LEN(A1)-[number of characters to remove])
+
+How does this LEFT() function work?
+Say for example that in cell A1 you have a string “IncomeMAX” and you want to remove the last three characters (“MAX”):
+
+First, LEN(A1) returns how long the string in cell A1 is: 8 characters
+Then it subtracts 3, in order to leave out the last 3 characters: 8-3=5
+Then LEFT() makes sure that only the first 5 characters from the left are returned: Income
+That’s it! As always, let me know in the comments when you have any questions!</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Removing the last number of characters from a string in Excel and Google Spreadsheets</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 16:06:20 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:06:52 -0400</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=CONCATENATE(D2:E2)</string>
+					<key>Date Created</key>
+					<string>2020-10-01 16:06:20 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:06:56 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Concat 2 Cells Together</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 06:41:34 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 06:41:45 -0400</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>="("&amp;A2&amp;")"</string>
+					<key>Date Created</key>
+					<string>2020-10-01 06:41:34 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:04:08 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Insert Brackets Around Text In A Cell</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-23 12:02:42 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-23 12:02:46 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=RIGHT(A2,LEN(A2)-FIND("@",A2))</string>
+					<key>Date Created</key>
+					<string>2020-12-23 12:02:42 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-23 12:02:50 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>To extract domain from email address</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-16 20:45:58 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-16 20:46:13 -0500</string>
+			<key>Folder</key>
+			<string>python3</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>#! /usr/bin/env python3
+
+import webbrowser
+from time import sleep
+
+url = input('Input the URL to reload, including "http://: ')
+
+while True:
+    print("refreshing...")
+    webbrowser.open(url, new=0)
+    sleep(10)</string>
+					<key>Date Created</key>
+					<string>2020-12-16 20:45:58 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-16 20:46:38 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://gist.github.com/iTrauco/79f9ac98830be9d44cb675bfc44b0dc3</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>refresh a given URL every 10 seconds script</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2019-08-15 23:46:35 -0400</string>
+			<key>Date Modified</key>
+			<string>2019-08-15 23:46:53 -0400</string>
+			<key>Folder</key>
+			<string>Uncategorized</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>function setupKeyLogger() {
+         document.onkeydown = function(e) {
+           console.log(e);
+         }
+}</string>
+					<key>Date Created</key>
+					<string>2019-08-15 23:46:35 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 02:32:34 -0400</string>
+					<key>Language</key>
+					<string>Python</string>
+					<key>Note</key>
+					<string>
+use just the following simple handler to output the key codes to the JavaScript console.</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>keycodes</string>
+				<string>keyboard</string>
+			</array>
+			<key>Title</key>
+			<string>output keycodes in js</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2019-08-01 17:03:29 -0400</string>
+			<key>Date Modified</key>
+			<string>2019-08-01 17:04:15 -0400</string>
+			<key>Folder</key>
+			<string>git</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2019-08-01 17:03:29 -0400</string>
+					<key>Date Modified</key>
+					<string>2019-08-01 17:04:10 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>Recently I wanted to pull a list of changed files from an older commit from the command line.
+
+Turns out (like most things in Git) this is very easy to do. git show –name-only {commit}
+
+You can replace {commit} with the SHA1 you want to retrieve, or things like HEAD or HEAD^^
+
+I made this post into a YouTube video</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>git log</string>
+				<string>git</string>
+			</array>
+			<key>Title</key>
+			<string>git show &lt;hash&gt; --name-only</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-04 19:46:05 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-04 19:47:42 -0500</string>
+			<key>Folder</key>
+			<string>gas</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>// Credit: github.com/danthareja
+
+function doGet(request) {
+
+  // ID of Google Spreadsheet
+  var json = getNotesAndFormulas(request.parameter.id);
+
+  return ContentService.createTextOutput(JSON.stringify(cache))
+  .setMimeType(ContentService.MimeType.JSON);
+}
+
+function getNotesAndFormulas(spreadsheetId) {
+  return SpreadsheetApp
+  .openById(spreadsheetId)
+  .getSheets()
+  .reduce(function(cache, sheet) {
+
+    var sheetData = cache[sheet.getName()] = {};
+    var range = sheet.getDataRange();
+
+    sheetData.range = range.getA1Notation();
+    sheetData.notes = range.getNotes();
+    sheetData.formulas = range.getFormulas();
+
+    return cache;
+  }, { spreadsheetId: spreadsheetId });
+}</string>
+					<key>Date Created</key>
+					<string>2020-11-04 19:46:05 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-04 19:46:35 -0500</string>
+					<key>Language</key>
+					<string>JavaScript</string>
+					<key>Note</key>
+					<string>Dan Thareja has written a Google Script that will let you export all the formulas, cell values and notes from a Google Spreadsheet as a JSON file. You can also pull the Google formulas in another web app or Google Apps script using a GET Request. It should come handy when you are reviewing the formulas of a large sheet.
+
+https://www.labnol.org/code/20057-export-google-sheet-formulas</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>apps scipt</string>
+				<string>google apps script</string>
+				<string>gas</string>
+				<string>clasp</string>
+				<string>g-suite</string>
+				<string>g-sheets</string>
+			</array>
+			<key>Title</key>
+			<string>Export Formulas and Notes from a Google Spreadsheet</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-18 22:53:49 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-18 22:54:12 -0500</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>:set
+:10,12s/^/#</string>
+					<key>Date Created</key>
+					<string>2020-12-18 22:53:49 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-18 22:54:21 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Regex Multi Line Comment</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2019-08-01 17:00:51 -0400</string>
+			<key>Date Modified</key>
+			<string>2019-08-01 17:01:14 -0400</string>
+			<key>Folder</key>
+			<string>git</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit
+</string>
+					<key>Date Created</key>
+					<string>2019-08-01 17:00:51 -0400</string>
+					<key>Date Modified</key>
+					<string>2019-08-01 17:01:05 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>git</string>
+				<string>git log</string>
+			</array>
+			<key>Title</key>
+			<string>git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 22:20:40 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 22:20:52 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>%!python -m json.tool</string>
+					<key>Date Created</key>
+					<string>2020-10-25 22:20:40 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 22:21:13 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>1.  Esc into Normal mode￼
+2. Type :
+3. Enter “%!python -m json.tool”</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Pretty print JSON in Vim</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2019-08-01 19:58:44 -0400</string>
+			<key>Date Modified</key>
+			<string>2019-08-01 19:58:50 -0400</string>
+			<key>Folder</key>
+			<string>git</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>git diff &lt;a commit sha1&gt;...&lt;b commit sha2&gt;</string>
+					<key>Date Created</key>
+					<string>2019-08-01 19:58:44 -0400</string>
+					<key>Date Modified</key>
+					<string>2019-08-01 19:59:25 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>http://bit.ly/2GGHmte</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>shows file names and what changed in each file</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-02 16:03:30 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-02 16:03:41 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>function deleteRows() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var rows = sheet.getDataRange();
+  var numRows = rows.getNumRows();
+  var values = rows.getValues();
+
+  var rowsDeleted = 0;
+  for (var i = 0; i &lt;= numRows - 1; i++) {
+    var row = values[i];
+    if (row[0] == 'Learn more' || row[0] == '') { // This searches all cells in columns A (change to row[1] for columns B and so on) and deletes row if cell is empty or has value 'delete'.
+      sheet.deleteRow((parseInt(i)+1) - rowsDeleted);
+      rowsDeleted++;
+    }
+  }
+};</string>
+					<key>Date Created</key>
+					<string>2020-12-02 16:03:30 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-02 16:04:10 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://gist.github.com/dDondero/285f8fd557c07e07af0e#:~:text=Google%20Apps%20script%20function%20to%20delete%20rows%20based%20on%20value%20in%20cell.,-find%2Dcell%2Dvalue&amp;text=var%20row%20%3D%20values%5Bi%5D,or%20has%20value%20'delete'.</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>GAS - Delete Rows</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-22 12:52:31 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-22 12:53:12 -0400</string>
+			<key>Folder</key>
+			<string>hotkey-shortcuts</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string># Block Formatting
+⌘+0 - Paragraph
+⌘+1 - Heading 1
+⌘+6 - Heading 6 
+⌘+7 -  Preformatted
+⌘+8 - Quote
+⌘+Shift+B - Bullet list
+⌘+Shift+N - Numbered list
+
+# Rich Formatting
+⌘+M - Files and images
+⌘+K - Link
+⌘+Shift+D - Insert markup
+⌘+Shift+A - Macro
+⌘+Shift+I - Table
+⌘+Shift+X - Cut row
+⌘+Shift+C - Copy row
+⌘+Shift+V - Paste row above
+
+# Editing Actions
+⌘+Shift+E - Preview
+⌘+S - Save</string>
+					<key>Date Created</key>
+					<string>2020-10-22 12:52:31 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-22 12:58:44 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>Official hotkey shortcuts for Confluence. </string>
+					<key>Title</key>
+					<string>Editor Hotkeys</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string># Font Formatting
+*Bold* - Bold text
++Underline+ - Underline text
+_Italic_ - Italic text
+{{Monospace}} - Monospace text
+
+# Autocomplete
+! - Image/Media
+[ - Link
+Macro - {
+
+# Tables	 	 	 
+||||| + enter - first cell
+||heading||heading|| - heading	heading
+
+# Styles
+h1. Heading - Heading
+h3. Heading - Heading
+bq. Quote - Quote
+
+# Emoticons
+(/)
+::)
+
+# Lists
+# list - list
+* bullets - bullets
+task - [] task
+</string>
+					<key>Date Created</key>
+					<string>2020-10-22 12:53:12 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-22 14:02:06 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Autoformat</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Confluence</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-23 12:02:40 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-23 12:02:40 -0500</string>
+			<key>Folder</key>
+			<string>Uncategorized</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-12-23 12:02:40 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-23 12:02:40 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>untitled snippet</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 17:27:09 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 17:27:19 -0400</string>
+			<key>Folder</key>
+			<string>SpaceVim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>
+Keybindings	Descriptions
+
+h	toggle view home (buffers) list
+
+H	enter home (buffers) list in search
+
+o	toggle view project files list
+
+O	enter project files in search
+
+l	toggle view tabs list
+
+L	enter tabs search in search
+
+w	toggle view workspaces list
+
+W	enter workspaces list in search
+
+b	toggle view bookmarks list
+
+B	enter bookmarks list in search
+
+/	toggle search mode for current list
+
+?	display help for current list and mode</string>
+					<key>Date Created</key>
+					<string>2020-10-01 17:27:09 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 17:27:36 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>CntrlSpace Keybindings</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 22:21:33 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 22:22:29 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>:%s/\#/ /g</string>
+					<key>Date Created</key>
+					<string>2020-10-25 22:21:33 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 22:21:54 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>Comments to Spaces</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Comments to Spaces</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 02:42:53 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 02:44:30 -0400</string>
+			<key>Folder</key>
+			<string>Uncategorized</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-10-01 02:42:53 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 02:45:08 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>asds</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-10-01 02:44:30 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 02:44:30 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment 2</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>vim</string>
+				<string>sessions</string>
+			</array>
+			<key>Title</key>
+			<string>Sessions</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 03:37:18 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:52:06 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>zf#j creates a fold from the cursor down # lines.
+
+zf/string creates a fold from the cursor to string.
+
+zj moves the cursor to the next fold.
+
+zk moves the cursor to the previous fold.
+
+zo opens a fold at the cursor.
+
+zO opens all folds at the cursor.
+
+zm increases the foldlevel by one.
+
+zM closes all open folds.
+
+zr decreases the foldlevel by one.
+
+zR decreases the foldlevel to zero — all folds will be open.
+
+zd deletes the fold at the cursor.
+
+zE deletes all folds.
+
+[z move to start of open fold.
+
+]z move to end of open fold.</string>
+					<key>Date Created</key>
+					<string>2020-10-01 03:37:18 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 03:38:12 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>folding</string>
+				<string>vim</string>
+			</array>
+			<key>Title</key>
+			<string>Folding Commands</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 16:00:12 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:00:26 -0400</string>
+			<key>Folder</key>
+			<string>python3</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import pandas as pd
+df = pd.read_json(r'PATH/TO/file.json')
+df.to_csv('output_file_name.csv')</string>
+					<key>Date Created</key>
+					<string>2020-10-01 16:00:12 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:53:44 -0400</string>
+					<key>Language</key>
+					<string>Python 3</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>json_to_csv.py</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-01 15:37:38 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-01 15:41:15 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=COUNTIF($A$1:$A$13,”?*”)+COUNT($A$1:$A$13)
+
+</string>
+					<key>Date Created</key>
+					<string>2020-12-01 15:37:38 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-01 15:41:05 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://productivityspot.com/count-non-blank-cells-google-sheets/</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>=SUMPRODUCT(LEN(A1:A13)&gt;0)</string>
+					<key>Date Created</key>
+					<string>2020-12-01 15:41:15 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-01 15:41:36 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>SUMPRODUCT</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Count Cells If Not Blank Using COUNTIF function</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 16:07:10 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:13:46 -0400</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=LEFT(B3,FIND(" ",B3)-1)</string>
+					<key>Date Created</key>
+					<string>2020-10-01 16:07:10 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:16:38 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Left ← </string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>=MID(B2,FIND(" ",B2)+1,256)</string>
+					<key>Date Created</key>
+					<string>2020-10-01 16:13:46 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:16:49 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>→ Right </string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>← → First Whitespace Text Extraction</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-02 15:55:35 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-12-10 24:43:36 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=$A2="any string"
+
+=$B=TRUE</string>
+					<key>Date Created</key>
+					<string>2020-10-02 15:55:35 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-11-24 17:16:28 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>=$A2&lt;&gt;"" </string>
+					<key>Date Created</key>
+					<string>2020-12-10 24:43:36 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-10 24:43:54 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Empty Cell</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Whole Row Highlighting</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2019-08-01 19:54:49 -0400</string>
+			<key>Date Modified</key>
+			<string>2019-08-01 19:55:25 -0400</string>
+			<key>Folder</key>
+			<string>git</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>git diff --stat </string>
+					<key>Date Created</key>
+					<string>2019-08-01 19:54:49 -0400</string>
+					<key>Date Modified</key>
+					<string>2019-08-01 19:55:46 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>http://bit.ly/2GGHmte</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>git diff --stat &lt;hashID&gt; &lt;hashID&gt;</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 22:25:46 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 22:26:00 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>gg"*yG</string>
+					<key>Date Created</key>
+					<string>2020-10-25 22:25:46 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 22:26:08 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>You should yank the text to the * or + registers:
+
+gg"*yG
+
+Explanation:
+
+gg to get the cursor to the first character of the file
+"*y to start a yank command to the register * from the first line, until...
+G to go the end of the file
+
+Source: https://stackoverflow.com/questions/1620018/copy-all-the-lines-to-clipboard</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Copy All Lines to System Clipboard</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 02:26:19 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 16:52:12 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>Esc                    
+ 
+⌃ + v                   CONTROL + visual mode
+ 
+↑/↓                     (Up / Down w/ Arrows Keys)
+  
+Shift + I(capital I) 
+
+#                       Press ANY Symbol to Populate
+
+</string>
+					<key>Date Created</key>
+					<string>2020-10-01 02:26:19 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:27:35 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>press Esc (to leave editing or other mode)
+hit ctrl+v (visual block mode)
+use the ↑/↓ arrow keys to select lines you want (it won't highlight everything - it's OK!)
+Shift+i (capital I)
+insert the text you want, e.g. %
+press EscEsc
+
+</string>
+					<key>Title</key>
+					<string>Commenting</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-10-01 02:35:29 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 02:45:23 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>Uncommenting
+
+press Esc (to leave editing or other mode)
+hit ctrl+v (visual block mode)
+use the ↑/↓ arrow keys to select the lines to uncomment.
+If you want to select multiple characters, use one or combine these methods:
+
+use the left/right arrow keys to select more text
+to select chunks of text use shift + ←/→ arrow key
+you can repeatedly push the delete keys below, like a regular delete button
+press d or x to delete characters, repeatedly if necessary</string>
+					<key>Title</key>
+					<string>Uncommenting</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array>
+				<string>vim</string>
+				<string>comments</string>
+				<string>multiple lines</string>
+			</array>
+			<key>Title</key>
+			<string>Bulk Line Comments</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-01 15:59:23 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-01 15:59:35 -0400</string>
+			<key>Folder</key>
+			<string>bash</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>#!/usr/bin/env bash
+
+#!/bin/bash
+for domain in `cat domains.txt`
+do
+   echo $domain
+   `whois $domain &gt;&gt; whois-results.txt`
+done</string>
+					<key>Date Created</key>
+					<string>2020-10-01 15:59:23 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-01 16:01:37 -0400</string>
+					<key>Language</key>
+					<string>Bash</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Batch Whois Domain Lookup</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-21 01:49:43 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-21 01:50:19 -0500</string>
+			<key>Folder</key>
+			<string>git</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>
+To create a new branch (locally):
+
+With the commit hash (or part of it)
+
+git checkout -b new_branch 6e559cb
+or to go back 4 commits from HEAD
+
+git checkout -b new_branch HEAD~4</string>
+					<key>Date Created</key>
+					<string>2020-11-21 01:49:43 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-21 01:49:57 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>How can I switch my git repository to a particular commit</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 22:22:22 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 22:22:40 -0400</string>
+			<key>Folder</key>
+			<string>vim</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>ds(    delete first surrounding pair of parentheses
+2ds(   delete second surrounding pair of parentheses
+cs[{   change surrounding pair of square brackets into a pair of braces
+See :help surround.</string>
+					<key>Date Created</key>
+					<string>2020-10-25 22:22:22 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 22:22:41 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Vim Surround</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-11-18 18:23:58 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-11-18 18:24:11 -0500</string>
+			<key>Folder</key>
+			<string>cli-cheats</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>You can cancel current command with ⌃ CTRL+c. You can clear command to the beginning with ⌃ CTRL+u. To clear line after the cursor press ⌃ CTRL+K.
+
+</string>
+					<key>Date Created</key>
+					<string>2020-11-18 18:23:58 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-11-18 18:24:14 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Clear Current CLI Line</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2019-08-01 07:53:59 -0400</string>
+			<key>Date Modified</key>
+			<string>2019-08-01 07:54:44 -0400</string>
+			<key>Folder</key>
+			<string>git</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>git diff-tree --no-commit-id --name-only -r</string>
+					<key>Date Created</key>
+					<string>2019-08-01 07:53:59 -0400</string>
+					<key>Date Modified</key>
+					<string>2019-08-01 07:54:25 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>git diff-tree</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-28 14:24:02 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-28 14:26:22 -0500</string>
+			<key>Folder</key>
+			<string>data-analysis</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>import os
+import pandas as pd
+
+
+cwd = os.path.abspath('')
+files = os.listdir(cwd)
+
+df = pd.DataFrame()
+
+for file in files:
+    if file.endswith('.xlsx'):
+        df = df.append(pd.read_excel(file), ignore_index=True)
+
+df.to_excel('total_sales.xlsx')</string>
+					<key>Date Created</key>
+					<string>2020-12-28 14:24:02 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-28 14:26:14 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://pythoninoffice.com/use-python-to-combine-multiple-excel-files/</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Combine Excel Sheets to Master</string>
+		</dict>
+	</array>
+	<key>Snippets Count</key>
+	<string>45</string>
+</dict>
+</plist>
