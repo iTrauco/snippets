@@ -1,0 +1,1463 @@
+{
+  "Library Name" : "main.snippetslablibrary",
+  "Date Exported" : "2021-01-27 21:38:40 -0500",
+  "Snippets Count" : "67",
+  "Snippets" : [
+    {
+      "Date Created" : "2020-12-30 21:27:45 -0500",
+      "Date Modified" : "2020-12-30 21:27:54 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=IFERROR(function)",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-30 21:27:45 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 21:27:45 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-02 15:55:35 -0400",
+      "Date Modified" : "2020-12-10 24:43:36 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Whole Row Highlighting",
+      "Fragments" : [
+        {
+          "Content" : "=$A2=\"any string\"\n\n=$B=TRUE",
+          "Date Modified" : "2020-11-24 17:16:28 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-02 15:55:35 -0400"
+        },
+        {
+          "Content" : "=$A2<>\"\" ",
+          "Date Modified" : "2020-12-10 24:43:54 -0500",
+          "Note" : "",
+          "Title" : "Empty Cell",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-10 24:43:36 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-28 14:24:02 -0500",
+      "Date Modified" : "2020-12-28 14:26:22 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "Combine Excel Sheets to Master",
+      "Fragments" : [
+        {
+          "Content" : "import os\nimport pandas as pd\n\n\ncwd = os.path.abspath('')\nfiles = os.listdir(cwd)\n\ndf = pd.DataFrame()\n\nfor file in files:\n    if file.endswith('.xlsx'):\n        df = df.append(pd.read_excel(file), ignore_index=True)\n\ndf.to_excel('output.xlsx')",
+          "Date Modified" : "2020-12-28 14:55:39 -0500",
+          "Note" : "https:\/\/pythoninoffice.com\/use-python-to-combine-multiple-excel-files\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-28 14:24:02 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-22 12:52:31 -0400",
+      "Date Modified" : "2020-10-22 12:53:12 -0400",
+      "Folder" : "hotkey-shortcuts",
+      "Title" : "Confluence",
+      "Fragments" : [
+        {
+          "Content" : "# Block Formatting\n⌘+0 - Paragraph\n⌘+1 - Heading 1\n⌘+6 - Heading 6 \n⌘+7 -  Preformatted\n⌘+8 - Quote\n⌘+Shift+B - Bullet list\n⌘+Shift+N - Numbered list\n\n# Rich Formatting\n⌘+M - Files and images\n⌘+K - Link\n⌘+Shift+D - Insert markup\n⌘+Shift+A - Macro\n⌘+Shift+I - Table\n⌘+Shift+X - Cut row\n⌘+Shift+C - Copy row\n⌘+Shift+V - Paste row above\n\n# Editing Actions\n⌘+Shift+E - Preview\n⌘+S - Save",
+          "Date Modified" : "2020-10-22 12:58:44 -0400",
+          "Note" : "Official hotkey shortcuts for Confluence. ",
+          "Title" : "Editor Hotkeys",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-22 12:52:31 -0400"
+        },
+        {
+          "Content" : "# Font Formatting\n*Bold* - Bold text\n+Underline+ - Underline text\n_Italic_ - Italic text\n{{Monospace}} - Monospace text\n\n# Autocomplete\n! - Image\/Media\n[ - Link\nMacro - {\n\n# Tables\t \t \t \n||||| + enter - first cell\n||heading||heading|| - heading\theading\n\n# Styles\nh1. Heading - Heading\nh3. Heading - Heading\nbq. Quote - Quote\n\n# Emoticons\n(\/)\n::)\n\n# Lists\n# list - list\n* bullets - bullets\ntask - [] task\n",
+          "Date Modified" : "2020-10-22 14:02:06 -0400",
+          "Note" : "",
+          "Title" : "Autoformat",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-22 12:53:12 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:19:24 -0500",
+      "Date Modified" : "2021-01-27 01:19:37 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "simple benchmarkinbg",
+      "Fragments" : [
+        {
+          "Content" : "import pandas as pd\nimport time\nimport csv\nimport paratext\nimport dask.dataframe\ninput_file = \"random.csv\"\nstart_time = time.time()\ndata = csv.DictReader(open(input_file))\nprint(\"csv.DictReader took %s seconds\" % (time.time() - start_time))\nstart_time = time.time()\ndata = pd.read_csv(input_file)\nprint(\"pd.read_csv took %s seconds\" % (time.time() - start_time))\nstart_time = time.time()\ndata = pd.read_csv(\"random.csv\", chunksize=100000)\nprint(\"pd.read_csv with chunksize took %s seconds\" % (time.time() - start_time))\nstart_time = time.time()\ndata = dask.dataframe.read_csv(input_file)\nprint(\"dask.dataframe took %s seconds\" % (time.time() - start_time))",
+          "Date Modified" : "2021-01-27 01:19:39 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:19:24 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:22:22 -0400",
+      "Date Modified" : "2020-10-25 22:22:40 -0400",
+      "Folder" : "vim",
+      "Title" : "Vim Surround",
+      "Fragments" : [
+        {
+          "Content" : "ds(    delete first surrounding pair of parentheses\n2ds(   delete second surrounding pair of parentheses\ncs[{   change surrounding pair of square brackets into a pair of braces\nSee :help surround.",
+          "Date Modified" : "2020-10-25 22:22:41 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:22:22 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-23 12:02:40 -0500",
+      "Date Modified" : "2020-12-23 12:02:40 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "untitled snippet",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-23 12:02:40 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-23 12:02:40 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 15:20:54 -0500",
+      "Date Modified" : "2020-12-29 21:24:02 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=RIGHT(function)",
+      "Fragments" : [
+        {
+          "Content" : "=RIGHT(A2,LEN(A2)-FIND(\" \",A2))",
+          "Date Modified" : "2020-12-29 15:21:07 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 15:20:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 15:43:34 -0400",
+      "Date Modified" : "2020-10-01 16:51:55 -0400",
+      "Folder" : "vim",
+      "Title" : "sessions",
+      "Fragments" : [
+        {
+          "Content" : ":mks ~\/.SpaveVim.d\/sessions\/file_name.vim               to save sessions\n\n\n:source ~\/.SpaveVim.d\/sessions\/file_name.vim            to restore session:w\n\n\nvim -S ~\/.SpaveVim.d\/sessions\/file_name.vim             -run on vim initalization",
+          "Date Modified" : "2020-10-01 16:51:17 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 15:43:34 -0400"
+        }
+      ],
+      "Tags" : [
+        "sessions",
+        "vim"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 06:41:34 -0400",
+      "Date Modified" : "2020-10-01 06:41:45 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "Insert Brackets Around Text In A Cell",
+      "Fragments" : [
+        {
+          "Content" : "=\"(\"&A2&\")\"",
+          "Date Modified" : "2020-10-01 16:04:08 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 06:41:34 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 17:27:09 -0400",
+      "Date Modified" : "2020-10-01 17:27:19 -0400",
+      "Folder" : "SpaceVim",
+      "Title" : "CntrlSpace Keybindings",
+      "Fragments" : [
+        {
+          "Content" : "\nKeybindings\tDescriptions\n\nh\ttoggle view home (buffers) list\n\nH\tenter home (buffers) list in search\n\no\ttoggle view project files list\n\nO\tenter project files in search\n\nl\ttoggle view tabs list\n\nL\tenter tabs search in search\n\nw\ttoggle view workspaces list\n\nW\tenter workspaces list in search\n\nb\ttoggle view bookmarks list\n\nB\tenter bookmarks list in search\n\n\/\ttoggle search mode for current list\n\n?\tdisplay help for current list and mode",
+          "Date Modified" : "2020-10-01 17:27:36 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 17:27:09 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:25:46 -0400",
+      "Date Modified" : "2020-10-25 22:26:00 -0400",
+      "Folder" : "vim",
+      "Title" : "Copy All Lines to System Clipboard",
+      "Fragments" : [
+        {
+          "Content" : "gg\"*yG",
+          "Date Modified" : "2020-10-25 22:26:08 -0400",
+          "Note" : "You should yank the text to the * or + registers:\n\ngg\"*yG\n\nExplanation:\n\ngg to get the cursor to the first character of the file\n\"*y to start a yank command to the register * from the first line, until...\nG to go the end of the file\n\nSource: https:\/\/stackoverflow.com\/questions\/1620018\/copy-all-the-lines-to-clipboard",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:25:46 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 14:14:39 -0500",
+      "Date Modified" : "2021-01-27 14:14:53 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "How to split Column to Multiple Rows \/ Columns",
+      "Fragments" : [
+        {
+          "Content" : "=ArrayFormula(IFERROR(VLOOKUP( COLUMN(OFFSET(INDIRECT(\"a1\"),,,1,numCols)) + (ROW(INDIRECT(\"a1:a\"&ROUNDUP(COUNTA(A1:A)\/numCols)))-1)*numCols, {ROW(A1:A)-ROW(A1)+1,A1:A},2,)))\n\nA1:A5 to E1:I1,\nA6:A10 to E2:I2,\nA11:A14 to E3:I3,\nand so",
+          "Date Modified" : "2021-01-27 14:16:07 -0500",
+          "Note" : "https:\/\/sheetswithmaxmakhrov.wordpress.com\/2017\/12\/26\/how-to-transpose-every-5-or-n-rows-from-one-column-to-multiple-columns\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 14:14:39 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 21:10:01 -0500",
+      "Date Modified" : "2020-12-29 21:11:26 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=SS_FUNCTIONS(Template)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\n\n\n",
+          "Date Modified" : "2020-12-29 22:02:25 -0500",
+          "Note" : "# legend\n\n# reference",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 21:10:01 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 20:31:56 -0500",
+      "Date Modified" : "2020-12-30 23:23:54 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=INDEX(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax =INDEX(\n    array,\n    row_num,\n    [col_num],\n    [area_num]\n)\n",
+          "Date Modified" : "2020-12-29 22:01:39 -0500",
+          "Note" : "[TECHNICAL]\nThe INDEX function returns the value at a given position in a range or array. \n\nINDEX is frequently used together with the MATCH function. \n\nMATCH locates and feeds a position to INDEX,which returns the value at that position.\n\n# legend\n\nhttps:\/\/exceljet.net\/excel-functions\/excel-index-function",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 20:31:56 -0500"
+        },
+        {
+          "Content" : "=filter(\n        IMPORTRANGE(\n                    \"URL\",\n                    \"A:J\"),\n        INDEX(\n             IMPORTRANGE(\n                        \"URL\",\n                        \"A:J\"),\n             0,\n             3)\n        =\"Yes\")",
+          "Date Modified" : "2020-12-30 23:30:10 -0500",
+          "Note" : "",
+          "Title" : "filter && importrange",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 23:23:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 02:42:53 -0400",
+      "Date Modified" : "2020-10-01 02:44:30 -0400",
+      "Folder" : "Uncategorized",
+      "Title" : "Sessions",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-10-01 02:45:08 -0400",
+          "Note" : "",
+          "Title" : "asds",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:42:53 -0400"
+        },
+        {
+          "Content" : "",
+          "Date Modified" : "2020-10-01 02:44:30 -0400",
+          "Note" : "",
+          "Title" : "Fragment 2",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:44:30 -0400"
+        }
+      ],
+      "Tags" : [
+        "vim",
+        "sessions"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 07:50:50 -0400",
+      "Date Modified" : "2020-10-01 07:51:37 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "Conditional Formatting: Errors",
+      "Fragments" : [
+        {
+          "Content" : "=error.type(A1)>0\n\n=iserror(A1)=true\n\n=type(A1)=16\n\n=iferror(A1,true)",
+          "Date Modified" : "2020-10-01 07:51:20 -0400",
+          "Note" : "There are four formulas. Use any of the ones to highlight total error cells.",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 07:50:50 -0400"
+        }
+      ],
+      "Tags" : [
+        "google sheets",
+        "errors",
+        "conditional formatting"
+      ]
+    },
+    {
+      "Date Created" : "2020-11-02 19:17:49 -0500",
+      "Date Modified" : "2020-11-02 19:17:57 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Removing the last number of characters from a string in Excel and Google Spreadsheets",
+      "Fragments" : [
+        {
+          "Content" : "=LEFT(A1,LEN(A1)-3)\n\n# Or more generally:\n\n=LEFT(A1,LEN(A1)-[number of characters to remove])",
+          "Date Modified" : "2020-11-02 19:18:43 -0500",
+          "Note" : "Source: http:\/\/spreadsheetpro.net\/removing-the-last-x-number-of-characters-from-a-string-in-excel-and-google-spreadsheets\/\n\nSometimes you want to remove some number of last letters from a string in your spreadsheet. For this you can use a very handy function: LEFT()\n\nLEFT() returns the first X characters in a string, based on the amount of characters you specify. Like: LEFT(text,num_chars)\n\nSay you want to remove the last 3 characters from a string in cell A1 you can use:\n\n=LEFT(A1,LEN(A1)-3)\n\nOr more generally:\n\n=LEFT(A1,LEN(A1)-[number of characters to remove])\n\nHow does this LEFT() function work?\nSay for example that in cell A1 you have a string “IncomeMAX” and you want to remove the last three characters (“MAX”):\n\nFirst, LEN(A1) returns how long the string in cell A1 is: 8 characters\nThen it subtracts 3, in order to leave out the last 3 characters: 8-3=5\nThen LEFT() makes sure that only the first 5 characters from the left are returned: Income\nThat’s it! As always, let me know in the comments when you have any questions!",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-02 19:17:49 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:00:12 -0400",
+      "Date Modified" : "2020-10-01 16:00:26 -0400",
+      "Folder" : "python3",
+      "Title" : "json_to_csv.py",
+      "Fragments" : [
+        {
+          "Content" : "#!\/usr\/bin\/env python3\n# -*- coding: utf-8 -*-\n\nimport pandas as pd\ndf = pd.read_json(r'PATH\/TO\/file.json')\ndf.to_csv('output_file_name.csv')",
+          "Date Modified" : "2020-10-01 16:53:44 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Python 3",
+          "Date Created" : "2020-10-01 16:00:12 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-02 18:06:24 -0400",
+      "Date Modified" : "2020-10-02 18:07:03 -0400",
+      "Folder" : "VLOOKUP",
+      "Title" : "Comparing Two Columns",
+      "Fragments" : [
+        {
+          "Content" : "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])\n\n",
+          "Date Modified" : "2020-10-02 18:07:14 -0400",
+          "Note" : "lookup_value – the value that we want to find in the table_array\ntable_array – the range of cells containing the data we want to find or retrieve\ncol_index_num – the column number in the table_array corresponding to the information we want to retrieve, relative to the lookup_value\n[range_lookup] – optional; value can either be TRUE or FALSE\nif TRUE or omitted, VLOOKUP returns either an exact or approximate match\nif FALSE, VLOOKUP will only find an exact match",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-02 18:06:24 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-24 01:44:41 -0400",
+      "Date Modified" : "2020-10-25 22:24:33 -0400",
+      "Folder" : "Slack TS",
+      "Title" : "Validate Slack Json",
+      "Fragments" : [
+        {
+          "Content" : "#!\/usr\/bin\/env bash\n\nfor x in <path\/to\/file>\/*.json;\n  do\n    jsonlint -q \"$x\";",
+          "Date Modified" : "2020-10-25 22:35:37 -0400",
+          "Note" : "**For macOS**\n1. Global install of NPM package JSONLINT\n  1.`npm install jsonlint -g`\n  **sudo may be required**\n  2. `sudo npm install jsonlint -g`\n2. Locally download the original data import file, [slack_data_file_name.zip ](<G Drive Link>)\n3. Make a new directory and move the downloaded zip file into it for extraction w\/ `unzip slack_data_file_name.zip`\n4. Upon successful extraction of the data `rm -rf slack_data_file_name.zip `\n5. Open a new terminal window and create the file `validate_slack_json.sh`\n6. Using your editor of choice open `validate_slack_json.sh` and paste the following into the file\n```\n#!\/usr\/bin\/env bash\n\nfor x in <path\/to\/file>\/*.json;\n  do\n    jsonlint -q \"$x\";\n```\n7. Make the file executable w\/ `chmod -x validate_slack_json.sh`\n9. Temporarily disable the `echo` command for standard output w\/ `stty -echoctl`\n10. Run the script `sh validate_slack_json.sh`\n11. Compress the folder that you ran the `validate_slack_json.sh` script on by running zip **recursively** w\/ the `-r` flag:\n```\nzip -r output.zip target-directory\n```\n12.  Reenable echo standard output w\/ `stty echoctl`\n13. Move the newly compressed Slack data for import into G Drive\n**Note** A full reverse of the prior failed data import must be completed before you attempt upload of the new file from G Drive\n14. Try the Slack data import again w\/ [Official Slack Data Import Instructions](http:\/\/itrau.co\/HTImportSlackData)",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-24 01:44:41 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-23 12:02:42 -0500",
+      "Date Modified" : "2020-12-23 12:02:46 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "To extract domain from email address",
+      "Fragments" : [
+        {
+          "Content" : "=RIGHT(A2,LEN(A2)-FIND(\"@\",A2))",
+          "Date Modified" : "2020-12-23 12:02:50 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-23 12:02:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-25 17:03:40 -0500",
+      "Date Modified" : "2021-01-25 17:03:58 -0500",
+      "Folder" : "gas",
+      "Title" : "Delete Expired\/Old Rows",
+      "Fragments" : [
+        {
+          "Content" : "function DeleteOldEntries() {\nvar ss = SpreadsheetApp.getActiveSpreadsheet();\nvar sheet = ss.getSheetByName(\"Live Events\");\/\/assumes Live Events is the name of the sheet\nvar datarange = sheet.getDataRange();\nvar lastrow = datarange.getLastRow();\nvar values = datarange.getValues();\/\/ get all data in a 2D array\n\nvar currentDate = new Date();\/\/today\n\nfor (i=lastrow;i>=3;i--) {\nvar tempDate = values[i-1][2];\/\/ arrays are 0 indexed so row1 = values[0] and col3 = [2]\nif ((tempDate!=NaN) && (tempDate <= currentDate))\n{\n  sheet.deleteRow(i);\n}\/\/closes if\n}\/\/closes for loop\n}\/\/closes function",
+          "Date Modified" : "2021-01-25 17:43:06 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/41114435\/google-sheets-delete-expired-rows-based-on-date",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-25 17:03:40 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 18:44:42 -0500",
+      "Date Modified" : "2020-12-30 18:44:48 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=query(query(A:A, \"SELECT * OFFSET 1\",0),\"select * skipping 2 \",0)",
+      "Fragments" : [
+        {
+          "Content" : "=query(query(A:A, \"SELECT * OFFSET 1\",0),\"select * skipping 2 \",0)\n",
+          "Date Modified" : "2020-12-30 18:44:55 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/48265170\/query-select-skipping-with-offset-issue",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 18:44:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 21:08:42 -0500",
+      "Date Modified" : "2020-12-29 21:08:50 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=MATCH(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\n=MATCH(\n    search_key,\n    range,\n    [search_type]\n)",
+          "Date Modified" : "2020-12-29 22:00:42 -0500",
+          "Note" : "# legend\n# search_key - the value to search for\n# range - the one-dimensional array to search\n# search_type - [OPTIONAL -1 by default] The manner5 in which to search\n# OPTIONAL VALUES\n# 1 - default value, causes MATCH to assume that the range is sorted in ascending order and return the largest value less than or equal to 'search_key'\n# 0 - indicates exact match and is required in situations where RANGE IS NOT SORTED\n# -1 - causes MATCH to assume that the range is sorted in descernding order and retuirn the smallest value greater then or equal to 'search_key'",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 21:08:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-04 19:46:05 -0500",
+      "Date Modified" : "2020-11-04 19:47:42 -0500",
+      "Folder" : "gas",
+      "Title" : "Export Formulas and Notes from a Google Spreadsheet",
+      "Fragments" : [
+        {
+          "Content" : "\/\/ Credit: github.com\/danthareja\n\nfunction doGet(request) {\n\n  \/\/ ID of Google Spreadsheet\n  var json = getNotesAndFormulas(request.parameter.id);\n\n  return ContentService.createTextOutput(JSON.stringify(cache))\n  .setMimeType(ContentService.MimeType.JSON);\n}\n\nfunction getNotesAndFormulas(spreadsheetId) {\n  return SpreadsheetApp\n  .openById(spreadsheetId)\n  .getSheets()\n  .reduce(function(cache, sheet) {\n\n    var sheetData = cache[sheet.getName()] = {};\n    var range = sheet.getDataRange();\n\n    sheetData.range = range.getA1Notation();\n    sheetData.notes = range.getNotes();\n    sheetData.formulas = range.getFormulas();\n\n    return cache;\n  }, { spreadsheetId: spreadsheetId });\n}",
+          "Date Modified" : "2020-11-04 19:46:35 -0500",
+          "Note" : "Dan Thareja has written a Google Script that will let you export all the formulas, cell values and notes from a Google Spreadsheet as a JSON file. You can also pull the Google formulas in another web app or Google Apps script using a GET Request. It should come handy when you are reviewing the formulas of a large sheet.\n\nhttps:\/\/www.labnol.org\/code\/20057-export-google-sheet-formulas",
+          "Title" : "Fragment",
+          "Language" : "JavaScript",
+          "Date Created" : "2020-11-04 19:46:05 -0500"
+        }
+      ],
+      "Tags" : [
+        "apps scipt",
+        "google apps script",
+        "gas",
+        "clasp",
+        "g-suite",
+        "g-sheets"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 18:43:23 -0400",
+      "Date Modified" : "2020-10-25 18:44:07 -0400",
+      "Folder" : "macOS",
+      "Title" : "Turn Off Echo in macOS CLI",
+      "Fragments" : [
+        {
+          "Content" : "stty -echoctl",
+          "Date Modified" : "2020-10-25 18:46:28 -0400",
+          "Note" : "KbSRC - https:\/\/itrau.co\/3kp4CxE",
+          "Title" : "Temporarily Turn Off Echo",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 18:43:23 -0400"
+        },
+        {
+          "Content" : "stty echoctl",
+          "Date Modified" : "2020-10-25 18:44:42 -0400",
+          "Note" : "",
+          "Title" : "Turn On Echo",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 18:44:07 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 23:21:20 -0500",
+      "Date Modified" : "2020-12-29 23:21:26 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=VLOOKUP(function)",
+      "Fragments" : [
+        {
+          "Content" : "=VLOOKUP(\n    search_key,\n    range,\n    index,\n    [is_sorted]\n)",
+          "Date Modified" : "2020-12-29 23:56:57 -0500",
+          "Note" : "# legend\n# search_key - the value(boolean, integer, float, string, etc) to search the 1ST column for\n# range - the range\/array to consider for the search\n# index - the column number of value to be returned\n# [is_sorted] options - ...\n- FALSE = exact match, \n- TRUE = nearest match",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 23:21:20 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:22:48 -0400",
+      "Date Modified" : "2020-10-25 22:23:13 -0400",
+      "Folder" : "vim",
+      "Title" : "VIM No Higlight",
+      "Fragments" : [
+        {
+          "Content" : ":noh",
+          "Date Modified" : "2020-10-25 22:23:26 -0400",
+          "Note" : "Disables all active highlights in the current buffer",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:22:48 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-22 18:45:12 -0500",
+      "Date Modified" : "2021-01-22 18:45:21 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "add delimiter to last line in every cell",
+      "Fragments" : [
+        {
+          "Content" : "=SUBSTITUTE(O2,CHAR(10),\",\" & CHAR(10)) &\",\"",
+          "Date Modified" : "2021-01-22 18:45:22 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-22 18:45:12 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:17:33 -0400",
+      "Date Modified" : "2020-10-01 16:21:03 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "(Surround String of Another Cell)",
+      "Fragments" : [
+        {
+          "Content" : "=\"(\"&C2&\")\"",
+          "Date Modified" : "2020-10-01 16:19:43 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:17:33 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:13:33 -0500",
+      "Date Modified" : "2021-01-27 01:15:05 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "pandas.read_csv()",
+      "Fragments" : [
+        {
+          "Content" : "import pandas\ndata = pd.read_csv(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:14:51 -0500",
+          "Note" : " Pandas are data structures tailored for data analysis and data science work. They are suited for tabular data with heterogeneously-typed columns (integers, floats, strings like the random data we already created), as well as time series. \n\nAn importnat point here is that pandas.read_csv() can be run with the chunksize option. This will break the input file into chunks instead of loading the whole file into memory. This will reduce the pressure on memory for large input files and given an optimal chunksize found through trial and error, there can be significant increase in efficiency. The code below will split the input file into chunks of 100 000 lines",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:13:33 -0500"
+        },
+        {
+          "Content" : "chunks = pd.read_csv(input_file, chunksize=100000)\ndata = pd.concat(chunks)",
+          "Date Modified" : "2021-01-27 01:15:49 -0500",
+          "Note" : "An importnat point here is that pandas.read_csv() can be run with the chunksize option. This will break the input file into chunks instead of loading the whole file into memory. This will reduce the pressure on memory for large input files and given an optimal chunksize found through trial and error, there can be significant increase in efficiency. \n\nThe code below will split the input file into chunks of 100 000 lines\n",
+          "Title" : "100,000 lines",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:15:05 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-16 20:45:58 -0500",
+      "Date Modified" : "2020-12-16 20:46:13 -0500",
+      "Folder" : "python3",
+      "Title" : "refresh a given URL every 10 seconds script",
+      "Fragments" : [
+        {
+          "Content" : "#! \/usr\/bin\/env python3\n\nimport webbrowser\nfrom time import sleep\n\nurl = input('Input the URL to reload, including \"http:\/\/: ')\n\nwhile True:\n    print(\"refreshing...\")\n    webbrowser.open(url, new=0)\n    sleep(10)",
+          "Date Modified" : "2020-12-16 20:46:38 -0500",
+          "Note" : "https:\/\/gist.github.com\/iTrauco\/79f9ac98830be9d44cb675bfc44b0dc3",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-16 20:45:58 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 19:58:44 -0400",
+      "Date Modified" : "2019-08-01 19:58:50 -0400",
+      "Folder" : "git",
+      "Title" : "shows file names and what changed in each file",
+      "Fragments" : [
+        {
+          "Content" : "git diff <a commit sha1>...<b commit sha2>",
+          "Date Modified" : "2019-08-01 19:59:25 -0400",
+          "Note" : "http:\/\/bit.ly\/2GGHmte",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 19:58:44 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-02 16:03:30 -0500",
+      "Date Modified" : "2020-12-02 16:03:41 -0500",
+      "Folder" : "gas",
+      "Title" : "GAS - Delete Rows",
+      "Fragments" : [
+        {
+          "Content" : "function deleteRows() {\n  var sheet = SpreadsheetApp.getActiveSheet();\n  var rows = sheet.getDataRange();\n  var numRows = rows.getNumRows();\n  var values = rows.getValues();\n\n  var rowsDeleted = 0;\n  for (var i = 0; i <= numRows - 1; i++) {\n    var row = values[i];\n    if (row[0] == 'Learn more' || row[0] == '') { \/\/ This searches all cells in columns A (change to row[1] for columns B and so on) and deletes row if cell is empty or has value 'delete'.\n      sheet.deleteRow((parseInt(i)+1) - rowsDeleted);\n      rowsDeleted++;\n    }\n  }\n};",
+          "Date Modified" : "2020-12-02 16:04:10 -0500",
+          "Note" : "https:\/\/gist.github.com\/dDondero\/285f8fd557c07e07af0e#:~:text=Google%20Apps%20script%20function%20to%20delete%20rows%20based%20on%20value%20in%20cell.,-find%2Dcell%2Dvalue&text=var%20row%20%3D%20values%5Bi%5D,or%20has%20value%20'delete'.",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-02 16:03:30 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 17:00:51 -0400",
+      "Date Modified" : "2019-08-01 17:01:14 -0400",
+      "Folder" : "git",
+      "Title" : "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit",
+      "Fragments" : [
+        {
+          "Content" : "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit\n",
+          "Date Modified" : "2019-08-01 17:01:05 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 17:00:51 -0400"
+        }
+      ],
+      "Tags" : [
+        "git",
+        "git log"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 24:59:45 -0500",
+      "Date Modified" : "2021-01-27 01:16:38 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "random_data_csv.py",
+      "Fragments" : [
+        {
+          "Content" : "import pandas as pd\nimport numpy as np\n# setting the number of rows for the CSV file\nN = 1000000\n# creating a pandas dataframe (df) with 8 columns and N rows with random integers between 999 and 999999 and with column names from A to H\ndf = pd.DataFrame(np.random.randint(999,999999,size=(N, 7)), columns=list(‘ABCDEFG’))\n# creating one column 'H' of float type using the uniform distribution\ndf[‘H’] = np.random.rand(N)\n# creating two additional columns with random strings\ndf[‘I’] = pd.util.testing.rands_array(10, N)\ndf[‘J’] = pd.util.testing.rands_array(10, N)\n# print the dataframe to see what we have created\nprint df\n# export the dataframe to csv using comma delimiting\ndf.to_csv(“random.csv”, sep=’,’)",
+          "Date Modified" : "2021-01-27 01:05:28 -0500",
+          "Note" : "https:\/\/medium.com\/casual-inference\/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 24:59:45 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-15 23:46:35 -0400",
+      "Date Modified" : "2019-08-15 23:46:53 -0400",
+      "Folder" : "Uncategorized",
+      "Title" : "output keycodes in js",
+      "Fragments" : [
+        {
+          "Content" : "function setupKeyLogger() {\n         document.onkeydown = function(e) {\n           console.log(e);\n         }\n}",
+          "Date Modified" : "2020-10-01 02:32:34 -0400",
+          "Note" : "\nuse just the following simple handler to output the key codes to the JavaScript console.",
+          "Title" : "Fragment",
+          "Language" : "Python",
+          "Date Created" : "2019-08-15 23:46:35 -0400"
+        }
+      ],
+      "Tags" : [
+        "keycodes",
+        "keyboard"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 03:37:18 -0400",
+      "Date Modified" : "2020-10-01 16:52:06 -0400",
+      "Folder" : "vim",
+      "Title" : "Folding Commands",
+      "Fragments" : [
+        {
+          "Content" : "zf#j creates a fold from the cursor down # lines.\n\nzf\/string creates a fold from the cursor to string.\n\nzj moves the cursor to the next fold.\n\nzk moves the cursor to the previous fold.\n\nzo opens a fold at the cursor.\n\nzO opens all folds at the cursor.\n\nzm increases the foldlevel by one.\n\nzM closes all open folds.\n\nzr decreases the foldlevel by one.\n\nzR decreases the foldlevel to zero — all folds will be open.\n\nzd deletes the fold at the cursor.\n\nzE deletes all folds.\n\n[z move to start of open fold.\n\n]z move to end of open fold.",
+          "Date Modified" : "2020-10-01 03:38:12 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 03:37:18 -0400"
+        }
+      ],
+      "Tags" : [
+        "folding",
+        "vim"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-22 16:39:19 -0500",
+      "Date Modified" : "2021-01-22 16:39:31 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Convert one column into multiple rows",
+      "Fragments" : [
+        {
+          "Content" : "=INDIRECT(ADDRESS((ROW($A1)-1)*3+COLUMN(A1),1))\n",
+          "Date Modified" : "2021-01-22 16:39:53 -0500",
+          "Note" : "Used on SXMP Adswiz\n\nhttps:\/\/superuser.com\/questions\/359617\/convert-one-column-into-multiple-rows",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-22 16:39:19 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-01 15:37:38 -0500",
+      "Date Modified" : "2020-12-01 15:41:15 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Count Cells If Not Blank Using COUNTIF function",
+      "Fragments" : [
+        {
+          "Content" : "=COUNTIF($A$1:$A$13,”?*”)+COUNT($A$1:$A$13)\n\n",
+          "Date Modified" : "2020-12-01 15:41:05 -0500",
+          "Note" : "https:\/\/productivityspot.com\/count-non-blank-cells-google-sheets\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-01 15:37:38 -0500"
+        },
+        {
+          "Content" : "=SUMPRODUCT(LEN(A1:A13)>0)",
+          "Date Modified" : "2020-12-01 15:41:36 -0500",
+          "Note" : "",
+          "Title" : "SUMPRODUCT",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-01 15:41:15 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-18 17:50:42 -0500",
+      "Date Modified" : "2020-11-18 17:50:54 -0500",
+      "Folder" : "python3",
+      "Title" : "Convert VTT to CSV",
+      "Fragments" : [
+        {
+          "Content" : "# import packages\nimport re\nimport csv\n\nfile = 'captions.vtt'\nopened_file = open(file,encoding='utf8')\ncontent = opened_file.read()\nsegments = content.split('\\n\\n') # split on double line\n\n# wrangle segments\nm = re.compile(r\"\\<.*?\\>\") # strip\/remove unwanted tags\no = re.compile(r\"\\.+\\d+\") # strip\/remove miliseconds\n\ndef clean(content):\n    new_content = m.sub('',content)\n    new_content = o.sub('',new_content)\n    new_content = new_content.replace('align:start position:0%','')\n    new_content = new_content.replace('-->','')\n    return new_content\n\nnew_segments = [clean(s) for s in segments if len(s)!=0][2:]\n\n# trim time codes for g suite plain text formatting conversion to seconds w\/ formula '=value(str*24*3600)'\ndef clean_time(time):\n    time = time.split(':')\n    if time[0]=='00':\n        return time[1]+':'+time[2]\n    if not time[0]=='00':\n        return time[0]+':'+time[1]+':'+time[2]\n\ntrimmed_segments = []\nfor segment in new_segments:\n    split_segment = segment.split()\n    time_code = split_segment[0]\n    text = ' '.join(segment.split()[2:])\n    trimmed_segment = (time_code, text)\n    trimmed_segments.append(trimmed_segment)\n\n# write output as csv file\nwith open(str(file)[:-3]+'csv', 'w', encoding='utf8', newline='') as f:\n    for line in trimmed_segments:\n        thewriter = csv.writer(f)\n        thewriter.writerow(line)",
+          "Date Modified" : "2020-11-19 22:50:58 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:50:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:20:40 -0400",
+      "Date Modified" : "2020-10-25 22:20:52 -0400",
+      "Folder" : "vim",
+      "Title" : "Pretty print JSON in Vim",
+      "Fragments" : [
+        {
+          "Content" : "%!python -m json.tool",
+          "Date Modified" : "2020-10-25 22:21:13 -0400",
+          "Note" : "1.  Esc into Normal mode￼\n2. Type :\n3. Enter “%!python -m json.tool”",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:20:40 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-21 01:49:43 -0500",
+      "Date Modified" : "2020-11-21 01:50:19 -0500",
+      "Folder" : "git",
+      "Title" : "How can I switch my git repository to a particular commit",
+      "Fragments" : [
+        {
+          "Content" : "\nTo create a new branch (locally):\n\nWith the commit hash (or part of it)\n\ngit checkout -b new_branch 6e559cb\nor to go back 4 commits from HEAD\n\ngit checkout -b new_branch HEAD~4",
+          "Date Modified" : "2020-11-21 01:49:57 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-21 01:49:43 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-18 22:53:49 -0500",
+      "Date Modified" : "2020-12-18 22:54:12 -0500",
+      "Folder" : "vim",
+      "Title" : "Regex Multi Line Comment",
+      "Fragments" : [
+        {
+          "Content" : ":set\n:10,12s\/^\/#",
+          "Date Modified" : "2020-12-18 22:54:21 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-18 22:53:49 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 15:59:23 -0400",
+      "Date Modified" : "2020-10-01 15:59:35 -0400",
+      "Folder" : "bash",
+      "Title" : "Batch Whois Domain Lookup",
+      "Fragments" : [
+        {
+          "Content" : "#!\/usr\/bin\/env bash\n\n#!\/bin\/bash\nfor domain in `cat domains.txt`\ndo\n   echo $domain\n   `whois $domain >> whois-results.txt`\ndone",
+          "Date Modified" : "2020-10-01 16:01:37 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Bash",
+          "Date Created" : "2020-10-01 15:59:23 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 19:54:49 -0400",
+      "Date Modified" : "2019-08-01 19:55:25 -0400",
+      "Folder" : "git",
+      "Title" : "git diff --stat <hashID> <hashID>",
+      "Fragments" : [
+        {
+          "Content" : "git diff --stat ",
+          "Date Modified" : "2019-08-01 19:55:46 -0400",
+          "Note" : "http:\/\/bit.ly\/2GGHmte",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 19:54:49 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-18 18:23:58 -0500",
+      "Date Modified" : "2020-11-18 18:24:11 -0500",
+      "Folder" : "cli-cheats",
+      "Title" : "Clear Current CLI Line",
+      "Fragments" : [
+        {
+          "Content" : "You can cancel current command with ⌃ CTRL+c. You can clear command to the beginning with ⌃ CTRL+u. To clear line after the cursor press ⌃ CTRL+K.\n\n",
+          "Date Modified" : "2020-11-18 18:24:14 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 18:23:58 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 18:17:33 -0500",
+      "Date Modified" : "2020-12-30 18:21:40 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=OFFSET(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\n=OFFSET(\n    cell_reference,\n    offset_rows,\n    offset_columns,\n    [height],\n    [width]\n)",
+          "Date Modified" : "2020-12-30 18:25:34 -0500",
+          "Note" : "# legend\n# cell_reference - the startin reference cell(or base cell) from which the range of cells is displaced\n# offset_rows - the number of rows the range of cells displaces by, value = integer\n# offset_columns - num of columns a range of cells displaces\n# [height] - an optional parameter that specifies the height of the returning range of cells\n# [width] - optional parameter that specifies the width of the returning range of cells \n#\n\nSRCKb - https:\/\/blog.sheetgo.com\/google-sheets-formulas\/offset-formula-google-sheets\/\n",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 18:17:33 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 18:48:57 -0500",
+      "Date Modified" : "2020-12-31 24:53:38 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=QUERY(function)",
+      "Fragments" : [
+        {
+          "Content" : "=QUERY(people, \"Select E where E is not null offset 1\")",
+          "Date Modified" : "2020-12-30 18:49:02 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 18:48:57 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n      {\n      IMPORTRANGE(\"google-sheet-id1\",\n                  \"sheet-name1!range1\");\n      IMPORTRANGE(\"google-sheet-id2\",\n                  \"sheet-name2!range2\"\n                  )},\n      \"SELECT * WHERE Col8 = 'foo'\",\n      1\n)    ",
+          "Date Modified" : "2020-12-30 21:27:33 -0500",
+          "Note" : "ss1 = https:\/\/docs.google.com\/spreadsheets\/d\/1YVUUIwweR9gZHJbqb7u2U8vWa46m5kmh_eo_-azXYFs\/edit#gid=375647266\n\nss2 = https:\/\/docs.google.com\/spreadsheets\/d\/1pBe2lmxAZjVt-4gX7-ihGP-1P5N-xUrj1jss01Y_r-U\/edit#gid=1063480624\n\n=QUERY(\n      {\n      IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1YVUUIwweR9gZHJbqb7u2U8vWa46m5kmh_eo_-azXYFs\",\n                 \"transactions!A1:H\");\n      IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1YVUUIwweR9gZHJbqb7u2U8vWa46m5kmh_eo_-azXYFs\",\n                  \"transaction-hx!A1:H\"\n                  )},\n      \"SELECT Col8, Col7\",\n      1\n)   \n\nA dictionary of  2+ IMPORTRANGE external sheet datasets into a single array then queried \n",
+          "Title" : "W\/ =IMPORTRANGE(f)",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 21:19:34 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n       {IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk\",\"kt_schedule\")},\n       \"SELECT Col1 WHERE Col1 is not null\",\n       1\n)",
+          "Date Modified" : "2020-12-30 22:02:09 -0500",
+          "Note" : "",
+          "Title" : "V2",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 22:01:28 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n  {\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-1\", \"'sheet-name-1'!A2:Z100\");\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-2\", \"'sheet-name-2'!A2:Z100\");\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-3\", \"'sheet-name-3'!A2:Z100\");\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-4\", \"'sheet-name-4'!A2:Z100\")\n  },\n  \"SELECT * WHERE Col1 IS NOT NULL ORDER BY Col3 ASC\"\n)",
+          "Date Modified" : "2020-12-31 24:26:20 -0500",
+          "Note" : "Explanation:\nThe above query removes blank lines from imported ranges:\n\nSELECT * WHERE Col1 IS NOT NULL\nand sorts ascending all data collected together in relation to the third column:\n\nORDER BY Col3 ASC\nFor descending, just use DESC in place of ASC.\n\nOf course, we can also arrange any other criteria, or omit them displaying everything without modification:\n\n\"SELECT * \"\nNote:\nIn order to use the above constructed query, we first need to call a single IMPORTIMAGE() method for each of the spreadsheets we want to refer:\n\n=IMPORTRANGE(\"key-or-url-of-spreadsheet-1\", \"'sheet-name-1'!A2:Z100\")\nWe have to do this even if we refer to the same spreadsheet in which we write this formula, but for every spreadsheet it is enough to do it once.\n\nThis is to be able to connect these sheets and allow access to the sheets (to which we have the access rights anyway):\n\n                                                    enter image description here\n\nAfter giving permission for all spreadsheets, we can use the above query.",
+          "Title" : "Fragment 2",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:25:50 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n        {IMPORTRANGE(\n            “Spreadsheet_url”,\n            ”Sheet1!A1:P”);\n         IMPORTRANGE(\n             “Spreadsheet_url”,\n             ”Sheet1!A2:P”);\n        IMPORTRANGE(\n            “Spreadsheet_url”,\n            ”Sheet1!A2:P”)},\n    ”Select * where Col1<>””,\n    1\n)",
+          "Date Modified" : "2020-12-31 24:56:30 -0500",
+          "Note" : "",
+          "Title" : "Fragment 3",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:53:38 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:15:55 -0500",
+      "Date Modified" : "2021-01-27 01:15:57 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "dask.dataframe",
+      "Fragments" : [
+        {
+          "Content" : "import dask.dataframe\ndata = dask.dataframe.read_csv(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:16:54 -0500",
+          "Note" : "The dask.dataframe is a collection of smaller pandas data frames split by the index (the row labels used for identification of data), which can be processed in parallel on a single machine or on multiple machines on a cluster. I learnt about dask from this useful post by Eric Brown.",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:15:55 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 20:25:00 -0500",
+      "Date Modified" : "2020-12-30 23:21:54 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=FILTER(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\nFILTER(\n    range,          \n    condition,\n    [options,...]\n)",
+          "Date Modified" : "2020-12-29 22:01:47 -0500",
+          "Note" : "# legend\n# range = range of cells to filter\n# condition = the columns\/row(corresponding to the column\/row of the dataset), returns an array of booleans TRUE\/FALSE\n# [options,..] = second condition, can return an array of booleans TRUE\/FALSE\n\nhttps:\/\/spreadsheetpoint.com\/filter-function-google-sheets\/\n\n",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 20:25:00 -0500"
+        },
+        {
+          "Content" : "=filter(IMPORTRANGE(\"URL\",\"A:J\"),INDEX(IMPORTRANGE(\"URL\",\"A:J\"),0,3)=\"Yes\")",
+          "Date Modified" : "2020-12-30 23:23:00 -0500",
+          "Note" : "https:\/\/webapps.stackexchange.com\/questions\/87272\/using-filter-or-importrange-to-bring-in-and-filter-data-from-another-spreadsheet",
+          "Title" : "ex_one",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 23:21:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 02:26:19 -0400",
+      "Date Modified" : "2020-10-01 16:52:12 -0400",
+      "Folder" : "vim",
+      "Title" : "Bulk Line Comments",
+      "Fragments" : [
+        {
+          "Content" : "Esc                    \n \n⌃ + v                   CONTROL + visual mode\n \n↑\/↓                     (Up \/ Down w\/ Arrows Keys)\n  \nShift + I(capital I) \n\n#                       Press ANY Symbol to Populate\n\n",
+          "Date Modified" : "2020-10-01 16:27:35 -0400",
+          "Note" : "press Esc (to leave editing or other mode)\nhit ctrl+v (visual block mode)\nuse the ↑\/↓ arrow keys to select lines you want (it won't highlight everything - it's OK!)\nShift+i (capital I)\ninsert the text you want, e.g. %\npress EscEsc\n\n",
+          "Title" : "Commenting",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:26:19 -0400"
+        },
+        {
+          "Content" : "",
+          "Date Modified" : "2020-10-01 02:45:23 -0400",
+          "Note" : "Uncommenting\n\npress Esc (to leave editing or other mode)\nhit ctrl+v (visual block mode)\nuse the ↑\/↓ arrow keys to select the lines to uncomment.\nIf you want to select multiple characters, use one or combine these methods:\n\nuse the left\/right arrow keys to select more text\nto select chunks of text use shift + ←\/→ arrow key\nyou can repeatedly push the delete keys below, like a regular delete button\npress d or x to delete characters, repeatedly if necessary",
+          "Title" : "Uncommenting",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:35:29 -0400"
+        }
+      ],
+      "Tags" : [
+        "vim",
+        "comments",
+        "multiple lines"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:07:10 -0400",
+      "Date Modified" : "2020-10-01 16:13:46 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "← → First Whitespace Text Extraction",
+      "Fragments" : [
+        {
+          "Content" : "=LEFT(B3,FIND(\" \",B3)-1)",
+          "Date Modified" : "2020-10-01 16:16:38 -0400",
+          "Note" : "",
+          "Title" : "Left ← ",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:07:10 -0400"
+        },
+        {
+          "Content" : "=MID(B2,FIND(\" \",B2)+1,256)",
+          "Date Modified" : "2020-10-01 16:16:49 -0400",
+          "Note" : "",
+          "Title" : "→ Right ",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:13:46 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:17:50 -0500",
+      "Date Modified" : "2021-01-27 01:18:25 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "paratest",
+      "Fragments" : [
+        {
+          "Content" : "import paratext\ndata = paratext.load_csv_to_pandas(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:19:10 -0500",
+          "Note" : "With paratext you can import csv either to pandas or to a dictionary similarly to two of the other methods I described above. In order to do either of those one can use the following code snippets:\n\nAs you can see in this reddit post Damian Eads (who apparently is the man behind Paratext) explains that you need a CSV file of at least 100 MBs in order to see the benefits of the library. The overhead or the initial load of setting up parallel processing is not negligible and therefore the gains from using it will be more apparent in more formidable tasks like importing a multi-gigabyte data set. But again, one needs the proper setup in order to reap the benefits of this library.",
+          "Title" : "v1",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:17:50 -0500"
+        },
+        {
+          "Content" : "data = paratext.load_csv_to_dict(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:19:06 -0500",
+          "Note" : "As you can see in this reddit post Damian Eads (who apparently is the man behind Paratext) explains that you need a CSV file of at least 100 MBs in order to see the benefits of the library. The overhead or the initial load of setting up parallel processing is not negligible and therefore the gains from using it will be more apparent in more formidable tasks like importing a multi-gigabyte data set. But again, one needs the proper setup in order to reap the benefits of this library.",
+          "Title" : "v2",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:18:25 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-18 17:47:05 -0500",
+      "Date Modified" : "2020-11-23 12:13:46 -0500",
+      "Folder" : "python3",
+      "Title" : "Python ENV Start \/ Stop",
+      "Fragments" : [
+        {
+          "Content" : " python3 -m venv venv\n source venv\/bin\/activate",
+          "Date Modified" : "2020-12-16 20:52:41 -0500",
+          "Note" : "",
+          "Title" : "Create ENV",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:47:05 -0500"
+        },
+        {
+          "Content" : "source venv\/bin\/activate",
+          "Date Modified" : "2020-11-18 17:48:03 -0500",
+          "Note" : "",
+          "Title" : "Activate ENV",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:47:39 -0500"
+        },
+        {
+          "Content" : "deactivate",
+          "Date Modified" : "2020-11-18 17:48:25 -0500",
+          "Note" : "",
+          "Title" : "Deactive ENV",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:48:12 -0500"
+        },
+        {
+          "Content" : " python3 -m venv venv\n source venv\/bin\/activate",
+          "Date Modified" : "2020-11-23 12:14:04 -0500",
+          "Note" : "",
+          "Title" : "Combo",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-23 12:13:46 -0500"
+        }
+      ],
+      "Tags" : [
+        "vevnv"
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 07:53:59 -0400",
+      "Date Modified" : "2019-08-01 07:54:44 -0400",
+      "Folder" : "git",
+      "Title" : "git diff-tree",
+      "Fragments" : [
+        {
+          "Content" : "git diff-tree --no-commit-id --name-only -r",
+          "Date Modified" : "2019-08-01 07:54:25 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 07:53:59 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:04:54 -0500",
+      "Date Modified" : "2021-01-27 01:06:05 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "How to measure time efficiently",
+      "Fragments" : [
+        {
+          "Content" : "import time\nstart_time = time.time()\ndo_something()\nprint(“%s seconds” % (time.time() — start_time))",
+          "Date Modified" : "2021-01-27 01:37:02 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:04:54 -0500"
+        },
+        {
+          "Content" : "",
+          "Date Modified" : "2021-01-27 01:37:04 -0500",
+          "Note" : "A somewhat important point here is that there is overhead associated with timing itself. One way to see what the overhead is would be to run the script without anything to actually time.",
+          "Title" : "Fragment 2",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:06:05 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 02:50:47 -0400",
+      "Date Modified" : "2020-10-01 02:52:05 -0400",
+      "Folder" : "macOS",
+      "Title" : "Mac Keyboard Icons ⌘ ⌥ ⌃",
+      "Fragments" : [
+        {
+          "Content" : "⌘ is the Command () key.\n\n⌃ is the Control key.\n\n⌥ is the Option (alt) key.\n\n⇧ is the Shift key.\n\n⇪ is the Caps Lock key.\n\nfn is the Function key. Now you know, but if the symbols confuse you, don't feel too bad about it.",
+          "Date Modified" : "2020-10-01 15:48:29 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:50:47 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-26 15:11:38 -0500",
+      "Date Modified" : "2021-01-26 15:11:47 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Dynamic Row Hiding",
+      "Fragments" : [
+        {
+          "Content" : "\/** \n* TITLE:\n*     Hide a row if a value is inputted. \n*\/\n\n\/\/**GLOBALS**\n\/\/ Sheet the data is on.\nvar SHEET = \"SNOW\";\n\/\/ The value that will cause the row to hide. \nvar VALUE = true;\n\/\/ The column we will be using \nvar COLUMN_NUMBER = 1\n\nfunction onEdit(e) {\n  var ss = SpreadsheetApp.getActiveSpreadsheet();\n  var activeSheet = ss.getActiveSheet();\n  \n  \/\/Ensure on correct sheet.\n  if(SHEET == activeSheet.getName()){\n    var cell = ss.getActiveCell()\n    var cellValue = cell.getValue();\n    \n    \/\/Ensure we are looking at the correct column.\n    if(cell.getColumn() == COLUMN_NUMBER){\n      \/\/If the cell matched the value we require,hide the row. \n      if(cellValue == VALUE){\n        activeSheet.hideRow(cell);\n      };\n    };\n  };\n}",
+          "Date Modified" : "2021-01-27 15:32:16 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-26 15:11:38 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:06:20 -0400",
+      "Date Modified" : "2020-10-01 16:06:52 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "Concat 2 Cells Together",
+      "Fragments" : [
+        {
+          "Content" : "=CONCATENATE(D2:E2)",
+          "Date Modified" : "2020-10-01 16:06:56 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:06:20 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-31 24:58:42 -0500",
+      "Date Modified" : "2020-12-31 01:00:00 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=COUNT(function)",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-31 24:58:42 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:58:42 -0500"
+        },
+        {
+          "Content" : "=COUNT( FILTER( $A$2:$A$95, $A$2:$A$95 <= $E$2, $A$2:$A$95 >= $D$2 ))",
+          "Date Modified" : "2020-12-31 24:59:14 -0500",
+          "Note" : "",
+          "Title" : "filter_count",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:58:51 -0500"
+        },
+        {
+          "Content" : "=SUM(FILTER($B$2:$B$95, MONTH($A$2:$A$95)=12))\n",
+          "Date Modified" : "2020-12-31 01:00:24 -0500",
+          "Note" : "",
+          "Title" : "sum-filter",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 01:00:00 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 17:03:29 -0400",
+      "Date Modified" : "2019-08-01 17:04:15 -0400",
+      "Folder" : "git",
+      "Title" : "git show <hash> --name-only",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2019-08-01 17:04:10 -0400",
+          "Note" : "Recently I wanted to pull a list of changed files from an older commit from the command line.\n\nTurns out (like most things in Git) this is very easy to do. git show –name-only {commit}\n\nYou can replace {commit} with the SHA1 you want to retrieve, or things like HEAD or HEAD^^\n\nI made this post into a YouTube video",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 17:03:29 -0400"
+        }
+      ],
+      "Tags" : [
+        "git log",
+        "git"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:21:33 -0400",
+      "Date Modified" : "2020-10-25 22:22:29 -0400",
+      "Folder" : "vim",
+      "Title" : "Comments to Spaces",
+      "Fragments" : [
+        {
+          "Content" : ":%s\/\\#\/ \/g",
+          "Date Modified" : "2020-10-25 22:21:54 -0400",
+          "Note" : "Comments to Spaces",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:21:33 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-02 12:28:21 -0500",
+      "Date Modified" : "2020-12-02 12:28:21 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "untitled snippet",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-02 12:28:21 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-02 12:28:21 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:11:13 -0500",
+      "Date Modified" : "2021-01-27 01:11:15 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "maps the data read as a dictionary, whose keys, unless specified are the first row of the CSV",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2021-01-27 01:11:13 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:11:13 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-25 16:43:14 -0500",
+      "Date Modified" : "2021-01-26 19:36:45 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Example Query",
+      "Fragments" : [
+        {
+          "Content" : "=QUERY(\n       {IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk\",\"kt_schedule\")},\n       \"SELECT Col1 WHERE Col1 is not null\",\n       1\n)",
+          "Date Modified" : "2021-01-25 16:43:19 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-25 16:43:14 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    }
+  ]
+}
