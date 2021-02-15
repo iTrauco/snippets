@@ -1,0 +1,2057 @@
+{
+  "Library Name" : "main.snippetslablibrary",
+  "Date Exported" : "2021-02-14 23:07:22 -0500",
+  "Snippets Count" : "97",
+  "Snippets" : [
+    {
+      "Date Created" : "2021-01-25 16:43:14 -0500",
+      "Date Modified" : "2021-01-26 19:36:45 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Example Query",
+      "Fragments" : [
+        {
+          "Content" : "=QUERY(\n       {IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk\",\"kt_schedule\")},\n       \"SELECT Col1 WHERE Col1 is not null\",\n       1\n)",
+          "Date Modified" : "2021-01-25 16:43:19 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-25 16:43:14 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 15:20:54 -0500",
+      "Date Modified" : "2020-12-29 21:24:02 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=RIGHT(function)",
+      "Fragments" : [
+        {
+          "Content" : "=RIGHT(A2,LEN(A2)-FIND(\" \",A2))",
+          "Date Modified" : "2020-12-29 15:21:07 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 15:20:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-16 20:45:58 -0500",
+      "Date Modified" : "2020-12-16 20:46:13 -0500",
+      "Folder" : "python3",
+      "Title" : "refresh a given URL every 10 seconds script",
+      "Fragments" : [
+        {
+          "Content" : "#! \/usr\/bin\/env python3\n\nimport webbrowser\nfrom time import sleep\n\nurl = input('Input the URL to reload, including \"http:\/\/: ')\n\nwhile True:\n    print(\"refreshing...\")\n    webbrowser.open(url, new=0)\n    sleep(10)",
+          "Date Modified" : "2020-12-16 20:46:38 -0500",
+          "Note" : "https:\/\/gist.github.com\/iTrauco\/79f9ac98830be9d44cb675bfc44b0dc3",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-16 20:45:58 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 23:38:26 -0500",
+      "Date Modified" : "2021-01-28 23:38:33 -0500",
+      "Folder" : "gas",
+      "Title" : "Copy Formulas Down",
+      "Fragments" : [
+        {
+          "Content" : "function onOpen() {\n  var sheet = SpreadsheetApp.getActiveSpreadsheet();\n  var entries = [{\n    name : \"Copy formulas\",\n    functionName : \"copyFormulas\"\n  }];\n  sheet.addMenu(\"Scripts\", entries);\n};\nfunction copyFormulas() {\n    var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];\n    var row = 2;\n    CopyFormulasDown.copyFormulasDown(sheet, row);\n}",
+          "Date Modified" : "2021-01-28 23:38:51 -0500",
+          "Note" : "In many spreadsheets, you have data in a few columns, and formulas that work with this data in other columns. When you add more rows, you have to copy the formulas to each row. This script automates copying the formulas to new rows.\n\nYou can use the script as a library in your project. The project key is : MSqCbU8hTkNuB2nTncoeP0HPfFjUr1CYB. You can also copy and paste the code directly in your own script, see the source code.\n\nThe script has only one public function, copyFormulasDown(Sheet sheet, int sourceRow), as documented below.\n\nYou can create a menu entry and copy the formulas from the menu:\n\nYou can take it one step further by using an installable trigger, so the copyFormulas() function from the code above is called automatically when you edit the spreadsheet or submit a form.\n\ncopyFormulasDown(Sheet sheet, int sourceRow)\nCopy formulas from the a source row in a sheet to rows below\n\nArguments:",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 23:38:26 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-18 22:53:49 -0500",
+      "Date Modified" : "2020-12-18 22:54:12 -0500",
+      "Folder" : "vim",
+      "Title" : "Regex Multi Line Comment",
+      "Fragments" : [
+        {
+          "Content" : ":set\n:10,12s\/^\/#",
+          "Date Modified" : "2020-12-18 22:54:21 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-18 22:53:49 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 19:58:44 -0400",
+      "Date Modified" : "2019-08-01 19:58:50 -0400",
+      "Folder" : "git",
+      "Title" : "shows file names and what changed in each file",
+      "Fragments" : [
+        {
+          "Content" : "git diff <a commit sha1>...<b commit sha2>",
+          "Date Modified" : "2019-08-01 19:59:25 -0400",
+          "Note" : "http:\/\/bit.ly\/2GGHmte",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 19:58:44 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:20:36 -0500",
+      "Date Modified" : "2021-01-28 21:20:56 -0500",
+      "Folder" : "python3",
+      "Title" : "Python Read JSON from HTTP Request of URL",
+      "Fragments" : [
+        {
+          "Content" : "# Load Json into a Python object\n\nimport urllib2\nimport json\nreq = urllib2.Request(\"http:\/\/localhost:81\/sensors\/temperature.json\")\nopener = urllib2.build_opener()\nf = opener.open(req)\njson = json.loads(f.read())\nprint json\nprint json['unit']\n\n# Array example\n\nimport urllib2\nimport json\nreq = urllib2.Request(\"http:\/\/vimeo.com\/api\/v2\/video\/38356.json\")\nopener = urllib2.build_opener()\nf = opener.open(req)\njson = json.loads(f.read())\nprint json\nprint json[0]['title']",
+          "Date Modified" : "2021-01-28 21:20:49 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:20:36 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:25:46 -0400",
+      "Date Modified" : "2020-10-25 22:26:00 -0400",
+      "Folder" : "vim",
+      "Title" : "Copy All Lines to System Clipboard",
+      "Fragments" : [
+        {
+          "Content" : "gg\"*yG",
+          "Date Modified" : "2020-10-25 22:26:08 -0400",
+          "Note" : "You should yank the text to the * or + registers:\n\ngg\"*yG\n\nExplanation:\n\ngg to get the cursor to the first character of the file\n\"*y to start a yank command to the register * from the first line, until...\nG to go the end of the file\n\nSource: https:\/\/stackoverflow.com\/questions\/1620018\/copy-all-the-lines-to-clipboard",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:25:46 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:22:48 -0400",
+      "Date Modified" : "2020-10-25 22:23:13 -0400",
+      "Folder" : "vim",
+      "Title" : "VIM No Higlight",
+      "Fragments" : [
+        {
+          "Content" : ":noh",
+          "Date Modified" : "2020-10-25 22:23:26 -0400",
+          "Note" : "Disables all active highlights in the current buffer",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:22:48 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 18:48:57 -0500",
+      "Date Modified" : "2020-12-31 24:53:38 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=QUERY(function)",
+      "Fragments" : [
+        {
+          "Content" : "=QUERY(people, \"Select E where E is not null offset 1\")",
+          "Date Modified" : "2020-12-30 18:49:02 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 18:48:57 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n      {\n      IMPORTRANGE(\"google-sheet-id1\",\n                  \"sheet-name1!range1\");\n      IMPORTRANGE(\"google-sheet-id2\",\n                  \"sheet-name2!range2\"\n                  )},\n      \"SELECT * WHERE Col8 = 'foo'\",\n      1\n)    ",
+          "Date Modified" : "2020-12-30 21:27:33 -0500",
+          "Note" : "ss1 = https:\/\/docs.google.com\/spreadsheets\/d\/1YVUUIwweR9gZHJbqb7u2U8vWa46m5kmh_eo_-azXYFs\/edit#gid=375647266\n\nss2 = https:\/\/docs.google.com\/spreadsheets\/d\/1pBe2lmxAZjVt-4gX7-ihGP-1P5N-xUrj1jss01Y_r-U\/edit#gid=1063480624\n\n=QUERY(\n      {\n      IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1YVUUIwweR9gZHJbqb7u2U8vWa46m5kmh_eo_-azXYFs\",\n                 \"transactions!A1:H\");\n      IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1YVUUIwweR9gZHJbqb7u2U8vWa46m5kmh_eo_-azXYFs\",\n                  \"transaction-hx!A1:H\"\n                  )},\n      \"SELECT Col8, Col7\",\n      1\n)   \n\nA dictionary of  2+ IMPORTRANGE external sheet datasets into a single array then queried \n",
+          "Title" : "W\/ =IMPORTRANGE(f)",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 21:19:34 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n       {IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk\",\"kt_schedule\")},\n       \"SELECT Col1 WHERE Col1 is not null\",\n       1\n)",
+          "Date Modified" : "2020-12-30 22:02:09 -0500",
+          "Note" : "",
+          "Title" : "V2",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 22:01:28 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n  {\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-1\", \"'sheet-name-1'!A2:Z100\");\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-2\", \"'sheet-name-2'!A2:Z100\");\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-3\", \"'sheet-name-3'!A2:Z100\");\n    IMPORTRANGE(\"key-or-url-of-spreadsheet-4\", \"'sheet-name-4'!A2:Z100\")\n  },\n  \"SELECT * WHERE Col1 IS NOT NULL ORDER BY Col3 ASC\"\n)",
+          "Date Modified" : "2020-12-31 24:26:20 -0500",
+          "Note" : "Explanation:\nThe above query removes blank lines from imported ranges:\n\nSELECT * WHERE Col1 IS NOT NULL\nand sorts ascending all data collected together in relation to the third column:\n\nORDER BY Col3 ASC\nFor descending, just use DESC in place of ASC.\n\nOf course, we can also arrange any other criteria, or omit them displaying everything without modification:\n\n\"SELECT * \"\nNote:\nIn order to use the above constructed query, we first need to call a single IMPORTIMAGE() method for each of the spreadsheets we want to refer:\n\n=IMPORTRANGE(\"key-or-url-of-spreadsheet-1\", \"'sheet-name-1'!A2:Z100\")\nWe have to do this even if we refer to the same spreadsheet in which we write this formula, but for every spreadsheet it is enough to do it once.\n\nThis is to be able to connect these sheets and allow access to the sheets (to which we have the access rights anyway):\n\n                                                    enter image description here\n\nAfter giving permission for all spreadsheets, we can use the above query.",
+          "Title" : "Fragment 2",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:25:50 -0500"
+        },
+        {
+          "Content" : "=QUERY(\n        {IMPORTRANGE(\n            “Spreadsheet_url”,\n            ”Sheet1!A1:P”);\n         IMPORTRANGE(\n             “Spreadsheet_url”,\n             ”Sheet1!A2:P”);\n        IMPORTRANGE(\n            “Spreadsheet_url”,\n            ”Sheet1!A2:P”)},\n    ”Select * where Col1<>””,\n    1\n)",
+          "Date Modified" : "2020-12-31 24:56:30 -0500",
+          "Note" : "",
+          "Title" : "Fragment 3",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:53:38 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 02:26:19 -0400",
+      "Date Modified" : "2020-10-01 16:52:12 -0400",
+      "Folder" : "vim",
+      "Title" : "Bulk Line Comments",
+      "Fragments" : [
+        {
+          "Content" : "Esc                    \n \n⌃ + v                   CONTROL + visual mode\n \n↑\/↓                     (Up \/ Down w\/ Arrows Keys)\n  \nShift + I(capital I) \n\n#                       Press ANY Symbol to Populate\n\n",
+          "Date Modified" : "2020-10-01 16:27:35 -0400",
+          "Note" : "press Esc (to leave editing or other mode)\nhit ctrl+v (visual block mode)\nuse the ↑\/↓ arrow keys to select lines you want (it won't highlight everything - it's OK!)\nShift+i (capital I)\ninsert the text you want, e.g. %\npress EscEsc\n\n",
+          "Title" : "Commenting",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:26:19 -0400"
+        },
+        {
+          "Content" : "",
+          "Date Modified" : "2020-10-01 02:45:23 -0400",
+          "Note" : "Uncommenting\n\npress Esc (to leave editing or other mode)\nhit ctrl+v (visual block mode)\nuse the ↑\/↓ arrow keys to select the lines to uncomment.\nIf you want to select multiple characters, use one or combine these methods:\n\nuse the left\/right arrow keys to select more text\nto select chunks of text use shift + ←\/→ arrow key\nyou can repeatedly push the delete keys below, like a regular delete button\npress d or x to delete characters, repeatedly if necessary",
+          "Title" : "Uncommenting",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:35:29 -0400"
+        }
+      ],
+      "Tags" : [
+        "vim",
+        "comments",
+        "multiple lines"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 16:24:43 -0500",
+      "Date Modified" : "2021-01-29 16:24:56 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "stop google sheets from increasing dates",
+      "Fragments" : [
+        {
+          "Content" : "One workaround: enter the date, then select the range including that cell (as opposed to dragging the blue box), an then fill down using ⌘ + d (Ctrl + d in Windows).",
+          "Date Modified" : "2021-01-29 16:25:00 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 16:24:43 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-22 16:39:19 -0500",
+      "Date Modified" : "2021-01-22 16:39:31 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Convert one column into multiple rows",
+      "Fragments" : [
+        {
+          "Content" : "=INDIRECT(ADDRESS((ROW($A1)-1)*3+COLUMN(A1),1))\n",
+          "Date Modified" : "2021-01-22 16:39:53 -0500",
+          "Note" : "Used on SXMP Adswiz\n\nhttps:\/\/superuser.com\/questions\/359617\/convert-one-column-into-multiple-rows",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-22 16:39:19 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 02:42:53 -0400",
+      "Date Modified" : "2020-10-01 02:44:30 -0400",
+      "Folder" : "Uncategorized",
+      "Title" : "Sessions",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-10-01 02:45:08 -0400",
+          "Note" : "",
+          "Title" : "asds",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:42:53 -0400"
+        },
+        {
+          "Content" : "",
+          "Date Modified" : "2020-10-01 02:44:30 -0400",
+          "Note" : "",
+          "Title" : "Fragment 2",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:44:30 -0400"
+        }
+      ],
+      "Tags" : [
+        "vim",
+        "sessions"
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 07:53:59 -0400",
+      "Date Modified" : "2019-08-01 07:54:44 -0400",
+      "Folder" : "git",
+      "Title" : "git diff-tree",
+      "Fragments" : [
+        {
+          "Content" : "git diff-tree --no-commit-id --name-only -r",
+          "Date Modified" : "2019-08-01 07:54:25 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 07:53:59 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 22:22:38 -0500",
+      "Date Modified" : "2021-01-27 22:28:41 -0500",
+      "Folder" : "gspread",
+      "Title" : "gspread-python",
+      "Fragments" : [
+        {
+          "Content" : "Gspread Python\ngspread, gspread is a Python API for Google Sheets. Features: Google Sheets API v4. Open a spreadsheet by title, key or url. Read, write, and format cell ranges. Sharing  gspread is a Python API for Google Sheets. Features: Google Sheets API v4. Open a spreadsheet by title, key or url. Read, write, and format cell ranges. Sharing and access control. Batching updates.\n\nburnash\/gspread: Google Sheets Python API, Read, write, and format cell ranges. Sharing and access control. Batching updates. Installation. pip install gspread. Requirements: Python 2.7  Files for gspread, version 3.6.0; Filename, size File type Python version Upload date Hashes; Filename, size gspread-3.6.0-py3-none-any.whl (26.5 kB) File type Wheel Python version py3 Upload date Apr 30, 2020 Hashes View\n\ngspread · PyPI, gspread 3.6.0. pip install gspread. Copy PIP instructions. Latest version. Released: Apr 30, 2020. Google Spreadsheets Python API  Using gspread with NumPy¶ NumPy is a library for scientific computing in Python. It provides tools for working with high performance multi-dimensional arrays. Read contents of a sheet into a NumPy array:\n\n\nPython upload CSV to Google Sheets\nFrom CSV to Google Sheet Using Python, Click on this link to create a project. Give the project a name. Go to project dashboard and click on + ENABLE APIS AND SERVICES. Search for Google Drive API and click on it. Enable Google Drive API. Click on Create Credentials. Select the parameters and click on What credentials do I need?. We are using that client object to open the Google Sheet CSV-to-Google-Sheet. Finally we are reading the CSV file using open built-in function of Python and importing it to the Google Sheet by that client object. Now run the Python script with this command python upload.py and open CSV-to-Google-Sheet Google Sheet in your browser. You will see that your Google Sheet is updated with the content of the CSV file as following.\n\nHow to import a CSV file using Google Sheets API V4, Another alternative to Sam Berlin's answer. If you're using Python, you can use the Drive API via gspread to import a CSV file. Here's an  Once the file is generated, I'm logging into my google sheet account and use the import option to import my CSV file into the google spreadsheet. The manual labor is kinda stupid and I wish to add this ability to my script. Google Sheets API V4. So, I followed this guide, Python Quickstart and was able to complete all the steps.\n\nGoogle Drive API in Python, In this Google Drive API in Python tutorial, I will be covering how to use Google Drive API to Duration: 7:54 Posted: Jul 30, 2020 I am using gspread to refresh a worksheet in Google Sheets with data from a .CSV file. As much as I've looked around the web, I'm having a hard time finding what I think should be a clean answer to my question. I have the .CSV file in my project directory. Here's my code thus far:\n\n\nAutomate Google Sheets with Python\nHow to Automate Google Sheets with Python, pygsheets is a simple intuitive python library to access google spreadsheets through the Google Sheets API v4. · Installation · Get client secret. We hope this script helps you automate your Google Sheet extracts with Python as well as look for other tasks you can automate. In the examples above, we’re manually scheduling this script.\n\nAutomating Data Extractions From Google Sheets With Python, We'll outline how you can write a Python script that can export data from Google Sheets and insert it into MySQL. When would you use this? You can access particular google spreadsheets with python by providing the index of that sheet in the get_worksheet function. For the first sheet, pass the index 0 and so on. # get the instance of the Spreadsheet. sheet = client. open ( 'commentary data') # get the first sheet of the Spreadsheet.\n\n14 working with google sheets, py Python script that uses EZSheets: A credentials file named credentials-sheets.​json; A token for Google Sheets named token-sheets.pickle; A token for Google  Click this button to create a new Cloud Platform project and automatically enable the Google Sheets API: Enable the Google Sheets API. In resulting dialog click DOWNLOAD CLIENT CONFIGURATION and\n\nGspread-formatting\ngspread-formatting · PyPI, Formatting¶. Here's an example of basic formatting. Set A1:B1 text format to bold: worksheet. gspread-formatting This package provides complete cell formatting for Google spreadsheets using the popular gspread package, along with a few related features such as setting “frozen” rows and columns in a worksheet. Both basic and conditional formatting operations are supported.\n\nExamples of gspread Usage, github.com › robin900 › gspread-formatting › blob › master › test gspread-formatting offers extensive functionality to help you when you go beyond basics. Using gspread with pandas ¶ pandas is a popular library for data analysis. The simplest way to get data from a sheet to a pandas DataFrame is with get_all_records ():\n\ngspread, Cell formatting support for gspread. Contribute to robin900\/gspread-formatting development by creating an account on GitHub. gspread-formatting This package provides complete cell formatting for Google spreadsheets using the popular gspread package, along with a few related features such as setting \"frozen\" rows and columns in a worksheet. Both basic and conditional formatting operations are supported.\n\nGspread get list of sheets\nExamples of gspread Usage, Otherwise, you will get an Insufficient Permission error when you try to copy a spreadsheet. create (title Returns a list of all worksheets in a spreadsheet. So far we’ve been fetching a limited amount of data from a sheet. This works great until you need to get values from hundreds of cells or iterating over many rows or columns. Under the hood, gspread uses Google Sheets API v4. Most of the time when you call a gspread method to fetch or update a sheet gspread produces one HTTP API call.\n\ngspread, Set up a gspread client: You'll need the client method openall(). It returns a list of spreadsheet objects. Then use a for-loop to add the title of the  gspread¶ gspread is a Python API for Google Sheets. Features: Google Sheets API v4. Open a spreadsheet by title, key or url. Read, write, and format cell ranges. Sharing and access control. Batching updates.\n\nAPI Reference, This is really wonky. It will produce a list of tabs once, but I cannot figure out a way to get it to continually update the list of sheet names at some  gc = gspread.authorize (credentials) You’ll need the client method openall (). It returns a list of spreadsheet objects. Then use a for-loop to add the title of the spreadsheet to a list. 1. 2.\n\nPython Google Sheets\nPython Quickstart | Sheets API, We show code for an easy way to read and update a Google spreadsheet in Python using the gspread package and the Google Drive API. Click this button to create a new Cloud Platform project and automatically enable the Google Sheets API: Enable the Google Sheets API. In resulting dialog click DOWNLOAD CLIENT CONFIGURATION and\n\nGoogle Spreadsheets and Python, gsheets is a small wrapper around the Google Sheets API (v4) to provide more convenient access to Google Sheets from Python scripts. Turn on the API,  How to Read and Write to Google Sheets With Python Google Setup. Before you jump into the code, there is some initial setup needed on the Google Sheets. First, create Python Setup. There are two main Python versions: 2.7 and 3.x. I'll be using 2.7, but it does not really matter what you\n\nGoogle Sheets and Python, Learn to use Google APIs to read google spreadsheets data using python and update the data in the spreadsheet using python also. There are 3 ways to open a Google Sheet using Python: 1. Open Google Sheet by Name Here, we simply need to input the actual name of the Google Sheet that we created: gsheet = 2. Open Google Sheet by URL To open the Google Sheet using a URL, you would need to open your Google Sheet in the 3.\n\nGoogle-sheets-api Python GitHub\nburnash\/gspread: Google Sheets Python API, gsheets. Latest PyPI Version License Supported Python Versions Format · Travis Codecov Readthedocs stable Readthedocs latest. gsheets is a small wrapper  This will create a JSON file stored in the notebook's directory, probably named sheets.googleapis.com-python.json; you should leave it there but not copy to GitHub About Demonstrations of using the Google Sheets API in Python\n\nxflr6\/gsheets: Pythonic wrapper for the Google Sheets API, pygsheets - Google Spreadsheets Python API v4 · Open, create, delete and share spreadsheets using title or key · Intuitive models - spreadsheet, worksheet, cell,  pygsheets - Google Spreadsheets Python API v4 A simple, intutive library for google sheets which gets most of your work done.\n\nnithinmurali\/pygsheets: Google Sheets Python API v4, Google Sheets Python API v4. python python-lib spreadsheet Python library to interact with Google Sheets V4 API Google\/Excel Sheets API Python. Enable the Google Sheets API. In resulting dialog click DOWNLOAD CLIENT CONFIGURATION and save the file credentials.json to your working directory. Step 2: Install the Google Client Library. Run the following command to install the library using pip: pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib\n\nGspread clear sheet\nPlexiglas Sheets Wholesale, Clear Barriers For Social Distancing Easy Sterilization Safety Dividers. Free Shipping! gspread¶ gspread is a Python API for Google Sheets. Features: Google Sheets API v4. Open a spreadsheet by title, key or url. Read, write, and format cell ranges. Sharing and access control. Batching updates.\n\nHow to clear a range in google sheet via gspread, You want to clear the values of range on Google Spreadsheet. You want to achieve this using gspread with python. You have already been  At the method of values_clear(range) of gspread, range is required to be the string value of a1Notation. Ref sh.worksheet(\"WorksheetX\").range(\"A3:J10000\") returns the list type which is not the string.\n\nAPI Reference, Lower-level method that directly calls spreadsheets.values.clear. The class that represents a single sheet in a spreadsheet (aka “worksheet”). acell (label  So far we’ve been fetching a limited amount of data from a sheet. This works great until you need to get values from hundreds of cells or iterating over many rows or columns. Under the hood, gspread uses Google Sheets API v4. Most of the time when you call a gspread method to fetch or update a sheet gspread produces one HTTP API call.\n\n",
+          "Date Modified" : "2021-01-27 22:29:41 -0500",
+          "Note" : "https:\/\/www.xspdf.com\/resolution\/56895534.html",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 22:22:38 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:11:13 -0500",
+      "Date Modified" : "2021-01-27 01:11:15 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "maps the data read as a dictionary, whose keys, unless specified are the first row of the CSV",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2021-01-27 01:11:13 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:11:13 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-25 17:03:40 -0500",
+      "Date Modified" : "2021-01-25 17:03:58 -0500",
+      "Folder" : "gas",
+      "Title" : "Delete Expired\/Old Rows",
+      "Fragments" : [
+        {
+          "Content" : "function DeleteOldEntries() {\nvar ss = SpreadsheetApp.getActiveSpreadsheet();\nvar sheet = ss.getSheetByName(\"Live Events\");\/\/assumes Live Events is the name of the sheet\nvar datarange = sheet.getDataRange();\nvar lastrow = datarange.getLastRow();\nvar values = datarange.getValues();\/\/ get all data in a 2D array\n\nvar currentDate = new Date();\/\/today\n\nfor (i=lastrow;i>=3;i--) {\nvar tempDate = values[i-1][2];\/\/ arrays are 0 indexed so row1 = values[0] and col3 = [2]\nif ((tempDate!=NaN) && (tempDate <= currentDate))\n{\n  sheet.deleteRow(i);\n}\/\/closes if\n}\/\/closes for loop\n}\/\/closes function",
+          "Date Modified" : "2021-01-25 17:43:06 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/41114435\/google-sheets-delete-expired-rows-based-on-date",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-25 17:03:40 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 21:10:01 -0500",
+      "Date Modified" : "2020-12-29 21:11:26 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=SS_FUNCTIONS(Template)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\n\n\n",
+          "Date Modified" : "2020-12-29 22:02:25 -0500",
+          "Note" : "# legend\n\n# reference",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 21:10:01 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 08:08:54 -0500",
+      "Date Modified" : "2021-01-30 08:09:32 -0500",
+      "Folder" : "gas",
+      "Title" : "oogle apps script getAs('application\/pdf') layout",
+      "Fragments" : [
+        {
+          "Content" : "function CreaPDF() {\n  \/\/The function prints an invoice to PDF. First it copies spreadsheet to a new document.\n  \/\/Deletes all sheet except the one to print. Saves it to PDF. \n  \/\/It overwrites any existing doc with same name.\n\n  var sourceSpreadsheet = SpreadsheetApp.getActive();          \n  var sheetName = \"Factura\";\n  var folderID = getParentFolder(); \/\/ Folder id to save in a folder.\n  var sourceSheet = sourceSpreadsheet.getSheetByName(sheetName);\n  var folder = DriveApp.getFolderById(folderID); \n  var numf = sourceSpreadsheet.getRangeByName(\"NumeroFactura\").getValue();\n  var anof = numf.split(\"\/\",2);   \/\/ Seeks number and year -> filename \n\n  var pdfName = anof[1] +\"_Factura_\" + anof[0]+ \"_Dra_Salazar\"; \/\/ Nombre del documento;\n\n  SpreadsheetApp.getActiveSpreadsheet().toast('Creando PDF');\n\n  \/\/ export url\n  var url = 'https:\/\/docs.google.com\/spreadsheets\/d\/'+sourceSpreadsheet.getId()+'\/export?exportFormat=pdf&format=pdf' \/\/ export as pdf \/ csv \/ xls \/ xlsx\n  + '&size=A4'                           \/\/ paper size legal \/ letter \/ A4\n  + '&portrait=true'                     \/\/ orientation, false for landscape\n  + '&fitw=false'                        \/\/ fit to page width, false for actual size\n  + '&sheetnames=false&printtitle=false' \/\/ hide optional headers and footers\n  + '&pagenumbers=false&gridlines=false' \/\/ hide page numbers and gridlines\n  + '&fzr=false'                         \/\/ do not repeat row headers (frozen rows) on each page\n  + '&gid='+sourceSheet.getSheetId();    \/\/ the sheet's Id\n\n  var token = ScriptApp.getOAuthToken();\n\n  \/\/ request export url\n  var response = UrlFetchApp.fetch(url, {\n    headers: {\n      'Authorization': 'Bearer ' +  token\n    }\n  });\n\n  var theBlob = response.getBlob().setName(pdfName+'.pdf');\n\n  \/\/ delete pdf if already exists\n  var files = folder.getFilesByName(pdfName);\n  while (files.hasNext())\n  {\n    files.next().setTrashed(true);\n  }\n\n  \/\/ create pdf\n  var newFile = folder.createFile(theBlob);\n\n  return true;\n}",
+          "Date Modified" : "2021-01-30 08:09:19 -0500",
+          "Note" : "ry this solution based on https:\/\/ctrlq.org\/code\/19869-email-google-spreadsheets-pdf\n\nUsing export url parameters you can set needed options for result pdf. Also you can set specific id of sheet to export, so you don't need to make duplicate of your whole spreadsheet anymore.\n\nhttps:\/\/stackoverflow.com\/questions\/45209619\/google-apps-script-getasapplication-pdf-layout\/45211625",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 08:08:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 03:01:59 -0500",
+      "Date Modified" : "2021-01-30 03:02:12 -0500",
+      "Folder" : "SpaceVim",
+      "Title" : "disable relativenumbers on init.toml",
+      "Fragments" : [
+        {
+          "Content" : "relativenumber=false\n",
+          "Date Modified" : "2021-01-30 03:02:41 -0500",
+          "Note" : "https:\/\/askubuntu.com\/questions\/1038836\/disabling-relative-line-numbers-in-spacevim",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 03:01:59 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 01:03:35 -0500",
+      "Date Modified" : "2021-01-29 17:58:36 -0500",
+      "Folder" : "gas",
+      "Title" : "Google Apps Script : Insert x rows after every cells in range",
+      "Fragments" : [
+        {
+          "Content" : "function insertRows() {\n  var startRow = 10;\n  var ss = SpreadsheetApp.getActiveSpreadsheet();\n  var sheet = ss.getSheetByName(\"test\");\n\n  var sourceRange = sheet.getRange(startRow, 1, sheet.getLastRow());\n  var sheetData = sourceRange.getValues();\n\n  var numRows = sourceRange.getNumRows() - startRow;\n\/\/  Logger.log(numRows);\n\n  for (var i=numRows; i > -1; i--) {\n    if (sheetData[i].join(\"\")) {\n      sheet.insertRowsAfter(i + startRow, 5);\n    }\n  }\n}\n",
+          "Date Modified" : "2021-01-29 17:58:56 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/45510968\/google-apps-script-insert-x-rows-after-every-cells-in-range",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 01:03:35 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:08:50 -0500",
+      "Date Modified" : "2021-01-28 21:09:07 -0500",
+      "Folder" : "js",
+      "Title" : "Google Script CRUD",
+      "Fragments" : [
+        {
+          "Content" : "\/* Route\n * All Request with Method Get will be proces here\n *\/\nfunction doGet(req) {\n   var action = req.parameter.action;\n\n   var db = SpreadsheetApp.openById(\"YOUR SPREADSHEET ID\");\n  \n   \/\/ Don't forget to change your Sheet Name by default is 'Sheet1'\n   var sheetUsers = db.getSheetByName(\"Users\");\n   \n   switch(action) {\n       case \"read\":\n           return doRead(req, sheetUsers);\n           break;\n       case \"insert\":\n           return doInsert(req, sheetUsers);\n           break;\n       case \"update\":\n           return doUpdate(req, sheetUsers);\n           break;\n       case \"delete\":\n           return doDelete(req, sheetUsers);\n           break;\n       default:\n           return response().json({\n              status: false,\n              message: 'silent!'\n           });\n   }\n}\n\n\/* Read\n * request for all Data\n *\n * @request-parameter | action<string>\n * @example-request | ?action=read\n *\/\nfunction doRead(request, sheetObject) \n{\n   var data = {};\n   \n   data.records = _readData(sheetObject);\n\n   return response().json(data);\n\n}\n\n\/* Insert\n *\n *\/\nfunction doInsert(req, sheet) {\n   var id = req.parameter.id;\n   var username = req.parameter.username;\n   var email = req.parameter.email;\n   \/\/ all data your needed\n\n   var flag = 1;\n   var Row = sheet.getLastRow();\n   for (var i = 1; i <= Row; i++) {\n      \/* getRange(i, 2) \n       * i | is a row index\n       * 1 | is a id column index ('id')\n       *\/\n      var idTemp = sheet.getRange(i, 1).getValue();\n      if (idTemp == id) {\n         flag = 0;\n         var result = \"Sorry bratha, id already exist\";\n      }\n   }\n   \n   \/\/ add new row with recieved parameter from client\n   if (flag == 1) {\n      var timestamp = Date.now();\n      var currentTime = new Date().toLocaleString(); \/\/ Full Datetime\n      var rowData = sheet.appendRow([\n         id,\n         username,\n         email,\n         timestamp,\n         currentTime\n      ]);\n      var result = \"Insertion successful\";\n   }\n\n   return response().json({\n      result: result\n   });\n}\n\n\/* Update\n * request for Update\n *\n * @request-parameter | id<string>, data<JSON>, action<string>\n * @example-request | ?action=update&data={\"email\":\"ryandevstudio@gmail.com\", \"username\":\"nyancodeid\"}\n *\/\nfunction doUpdate(req, sheet) \n{\n   var id = req.parameter.id;\n   var updates = JSON.parse(req.parameter.data);\n  \n   var lr = sheet.getLastRow();\n\n   var headers = _getHeaderRow(sheet);\n   var updatesHeader = Object.keys(updates);\n   \n   \/\/ Looping for row\n   for (var row = 1; row <= lr; row++) {\n      \/\/ Looping for available header \/ column\n      for (var i = 0; i <= (headers.length - 1); i++) {\n         var header = headers[i];\n         \/\/ Looping for column need to updated\n         for (var update in updatesHeader) {\n            if (updatesHeader[update] == header) {\n               \/\/ Get ID for every row\n               var rid = sheet.getRange(row, 1).getValue();\n\n               if (rid == id) {\n                  \/\/ Lets Update\n                  sheet.getRange(row, i + 1).setValue(updates[updatesHeader[update]]);\n               }\n            }\n         }\n      }\n   }\n\n   \n   \/\/ Output\n   return response().json({\n      status: true,\n      message: \"Update successfully\"\n   });\n}\n\n\n\/* Delete\n *\n *\/\nfunction doDelete(req, sheet) {\n   var id = req.parameter.id;\n   var flag = 0;\n\n   var Row = sheet.getLastRow();\n   for (var i = 1; i <= Row; i++) {\n      var idTemp = sheet.getRange(i, 1).getValue();\n      if (idTemp == id) {\n         sheet.deleteRow(i);\n         \n         var result = \"deleted successfully\";\n         flag = 1;\n      }\n\n   }\n\n   if (flag == 0) {\n      return response().json({\n         status: false,\n         message: \"ID not found\"\n      });\n   }\n\n   return response().json({\n      status: true,\n      message: result\n   });\n}\n\n\n\/* Service\n *\/\nfunction _readData(sheetObject, properties) {\n\n   if (typeof properties == \"undefined\") {\n      properties = _getHeaderRow(sheetObject);\n      properties = properties.map(function (p) {\n         return p.replace(\/\\s+\/g, '_');\n      });\n   }\n\n   var rows = _getDataRows(sheetObject),\n      data = [];\n\n   for (var r = 0, l = rows.length; r < l; r++) {\n      var row = rows[r],\n          record = {};\n\n      for (var p in properties) {\n         record[properties[p]] = row[p];\n      }\n\n      data.push(record);\n   }\n   \n   return data;\n}\nfunction _getDataRows(sheetObject) {\n   var sh = sheetObject;\n\n   return sh.getRange(2, 1, sh.getLastRow() - 1, sh.getLastColumn()).getValues();\n}\nfunction _getHeaderRow(sheetObject) {\n   var sh = sheetObject;\n\n   return sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0];\n}\nfunction response() {\n   return {\n      json: function(data) {\n         return ContentService\n            .createTextOutput(JSON.stringify(data))\n            .setMimeType(ContentService.MimeType.JSON);\n      }\n   }\n}",
+          "Date Modified" : "2021-01-28 21:09:09 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:08:50 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 23:34:20 -0500",
+      "Date Modified" : "2021-01-27 23:34:25 -0500",
+      "Folder" : "gspread",
+      "Title" : "How to update cells in a google spreadsheet with python’s gspread wks.update_cells",
+      "Fragments" : [
+        {
+          "Content" : "from sheetfu import SpreadsheetApp\nfrom sheetfu import Table\n\nspreadsheet = SpreadsheetApp('path\/to\/secret.json').open_by_id('<spreadsheet id>')\ndata_range = spreadsheet.get_sheet_by_name('sheet name').get_data_range()\n\ntable = Table(data_range)\n\nfor item in table:\n    impression_value = item.get_field_value('Impressions')\n    if impression_value[0] = \"'\":\n        impression_value = impression_value[1:]\n        item.get_set_value('Impressions', impression_value)\n\ntable.commit()",
+          "Date Modified" : "2021-01-27 23:34:56 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/59701452\/how-to-update-cells-in-a-google-spreadsheet-with-python-s-gspread-wks-update-cel",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 23:34:20 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 01:03:44 -0500",
+      "Date Modified" : "2021-01-29 01:04:48 -0500",
+      "Folder" : "SXMP",
+      "Title" : "SOX",
+      "Fragments" : [
+        {
+          "Content" : "=ArrayFormula( CONCATENATE( E3:N3 & CHAR(10) ) )",
+          "Date Modified" : "2021-01-29 01:04:11 -0500",
+          "Note" : "",
+          "Title" : "E - N",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 01:03:44 -0500"
+        },
+        {
+          "Content" : "=ArrayFormula( CONCATENATE( O3:X3 & CHAR(10) ) )",
+          "Date Modified" : "2021-01-29 01:04:38 -0500",
+          "Note" : "",
+          "Title" : "O - X",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 01:04:06 -0500"
+        },
+        {
+          "Content" : "=ArrayFormula( CONCATENATE( Y3:AH3 & CHAR(10) ) )",
+          "Date Modified" : "2021-01-29 01:27:17 -0500",
+          "Note" : "",
+          "Title" : "Y - AH",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 01:04:48 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:06:03 -0500",
+      "Date Modified" : "2021-01-28 21:06:14 -0500",
+      "Folder" : "js",
+      "Title" : "selenium-webdriver",
+      "Fragments" : [
+        {
+          "Content" : "const { Builder } = require('selenium-webdriver');         \/\/ Currently using ^3.6.0\nconst firefox     = require('selenium-webdriver\/firefox'); \/\/ Currently using ^3.6.0\n\n\/\/ Create a builder for browser 'firefox'\nlet builder = new Builder().forBrowser('firefox');\n\n\/\/ I then create firefox options\nlet options = new firefox.Options();\n\n\/\/ setPreference is present in the docs as well as the type file for this version\n\/\/ But is present in this docs: https:\/\/seleniumhq.github.io\/selenium\/docs\/api\/javascript\/module\/selenium-webdriver\/firefox_exports_Options.html\n\/\/ will fail: TypeError: options.setPreference is not a function\noptions.setPreference('lightweightThemes.selectedThemeID', 'default-theme@mozilla.org');\n\n\/\/ Then I build it\nbuilder.setFirefoxOptions(options);\nbuilder.build();\n\n\/\/ Running it: node test.js",
+          "Date Modified" : "2021-01-28 21:06:16 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:06:03 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 08:10:26 -0500",
+      "Date Modified" : "2021-01-30 08:10:44 -0500",
+      "Folder" : "gas",
+      "Title" : "Converting Sheet data as a PDF file",
+      "Fragments" : [
+        {
+          "Content" : "function doGet() {\n  \/*\n   *  This spreadsheet may not be active while this function \n   *  executes, so you cannot get access to active spreadsheet, \n   *  use open by id.\n   *\n   *\/\n  var ss = SpreadsheetApp.openById(\"[[ this spreadsheet id ]]\");\n\n  var SheetData = ss.getSheetByName(\"Data\");\n  \n  var template = HtmlService\n      .createTemplateFromFile(\"Template.html\");\n\n  \/\/ Assign 'data' to the template object\n  template.data = SheetData.getDataRange().getValues();\n  \n  \/\/ Evaluate template object as html content\n  var html = template.evaluate();\n\n  \/\/ Convert html content to pdf\n  \/\/ var pdf = html.getAs(\"application\/pdf\")\n  \/\/    .setName(\"Test_Data.pdf\");\n\n  \/\/ Or use this code\n  var pdf = html.getAs(MimeType.PDF).setName(\"Test_Data.pdf\");\n  \n  \/\/ Create...",
+          "Date Modified" : "2021-01-30 08:10:45 -0500",
+          "Note" : "https:\/\/subscription.packtpub.com\/book\/web_development\/9781785882517\/7\/ch07lvl1sec64\/converting-sheet-data-as-a-pdf-file",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 08:10:26 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:00:12 -0400",
+      "Date Modified" : "2020-10-01 16:00:26 -0400",
+      "Folder" : "python3",
+      "Title" : "json_to_csv.py",
+      "Fragments" : [
+        {
+          "Content" : "#!\/usr\/bin\/env python3\n# -*- coding: utf-8 -*-\n\nimport pandas as pd\ndf = pd.read_json(r'PATH\/TO\/file.json')\ndf.to_csv('output_file_name.csv')",
+          "Date Modified" : "2020-10-01 16:53:44 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Python 3",
+          "Date Created" : "2020-10-01 16:00:12 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-23 12:02:42 -0500",
+      "Date Modified" : "2020-12-23 12:02:46 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "To extract domain from email address",
+      "Fragments" : [
+        {
+          "Content" : "=RIGHT(A2,LEN(A2)-FIND(\"@\",A2))",
+          "Date Modified" : "2020-12-23 12:02:50 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-23 12:02:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-18 17:50:42 -0500",
+      "Date Modified" : "2020-11-18 17:50:54 -0500",
+      "Folder" : "python3",
+      "Title" : "Convert VTT to CSV",
+      "Fragments" : [
+        {
+          "Content" : "# import packages\nimport re\nimport csv\n\nfile = 'captions.vtt'\nopened_file = open(file,encoding='utf8')\ncontent = opened_file.read()\nsegments = content.split('\\n\\n') # split on double line\n\n# wrangle segments\nm = re.compile(r\"\\<.*?\\>\") # strip\/remove unwanted tags\no = re.compile(r\"\\.+\\d+\") # strip\/remove miliseconds\n\ndef clean(content):\n    new_content = m.sub('',content)\n    new_content = o.sub('',new_content)\n    new_content = new_content.replace('align:start position:0%','')\n    new_content = new_content.replace('-->','')\n    return new_content\n\nnew_segments = [clean(s) for s in segments if len(s)!=0][2:]\n\n# trim time codes for g suite plain text formatting conversion to seconds w\/ formula '=value(str*24*3600)'\ndef clean_time(time):\n    time = time.split(':')\n    if time[0]=='00':\n        return time[1]+':'+time[2]\n    if not time[0]=='00':\n        return time[0]+':'+time[1]+':'+time[2]\n\ntrimmed_segments = []\nfor segment in new_segments:\n    split_segment = segment.split()\n    time_code = split_segment[0]\n    text = ' '.join(segment.split()[2:])\n    trimmed_segment = (time_code, text)\n    trimmed_segments.append(trimmed_segment)\n\n# write output as csv file\nwith open(str(file)[:-3]+'csv', 'w', encoding='utf8', newline='') as f:\n    for line in trimmed_segments:\n        thewriter = csv.writer(f)\n        thewriter.writerow(line)",
+          "Date Modified" : "2020-11-19 22:50:58 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:50:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 22:28:32 -0500",
+      "Date Modified" : "2021-01-29 22:28:48 -0500",
+      "Folder" : "grep-awk-sed",
+      "Title" : "find a file(basic)",
+      "Fragments" : [
+        {
+          "Content" : "grep \"boo\" a_file",
+          "Date Modified" : "2021-01-29 22:28:54 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 22:28:32 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-18 18:23:58 -0500",
+      "Date Modified" : "2020-11-18 18:24:11 -0500",
+      "Folder" : "cli-cheats",
+      "Title" : "Clear Current CLI Line",
+      "Fragments" : [
+        {
+          "Content" : "You can cancel current command with ⌃ CTRL+c. \nYou can clear command to the beginning with ⌃ CTRL+u. \nTo clear line after the cursor press ⌃ CTRL+K.\n\n",
+          "Date Modified" : "2021-01-29 22:40:16 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 18:23:58 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 08:12:40 -0500",
+      "Date Modified" : "2021-01-30 08:13:00 -0500",
+      "Folder" : "gas",
+      "Title" : "Export a Google Drive spreadsheet to PDF in Google Drive in the same folder.",
+      "Fragments" : [
+        {
+          "Content" : "\/\/ Simple function to add a menu option to the spreadsheet \"Export\", for saving a PDF of the spreadsheet directly to Google Drive.\n\/\/ The exported file will be named: SheetName and saved in the same folder as the spreadsheet.\n\/\/ To change the filename, just set pdfName inside generatePdf() to something else.\n\n\/\/ Running this, sends the currently open sheet, as a PDF attachment\nfunction onOpen() {\n  var submenu = [{name:\"Save PDF\", functionName:\"generatePdf\"}];\n  SpreadsheetApp.getActiveSpreadsheet().addMenu('Export', submenu);  \n}\n\nfunction generatePdf() {\n  \/\/ Get active spreadsheet.\n  var sourceSpreadsheet = SpreadsheetApp.getActive();\n  \n  \/\/ Get active sheet.\n  var sheets = sourceSpreadsheet.getSheets();\n  var sheetName = sourceSpreadsheet.getActiveSheet().getName();\n  var sourceSheet = sourceSpreadsheet.getSheetByName(sheetName);\n  \n  \/\/ Set the output filename as SheetName.\n  var pdfName = sheetName;\n\n  \/\/ Get folder containing spreadsheet to save pdf in.\n  var parents = DriveApp.getFileById(sourceSpreadsheet.getId()).getParents();\n  if (parents.hasNext()) {\n    var folder = parents.next();\n  }\n  else {\n    folder = DriveApp.getRootFolder();\n  }\n  \n  \/\/ Copy whole spreadsheet.\n  var destSpreadsheet = SpreadsheetApp.open(DriveApp.getFileById(sourceSpreadsheet.getId()).makeCopy(\"tmp_convert_to_pdf\", folder))\n\n  \/\/ Delete redundant sheets.\n  var sheets = destSpreadsheet.getSheets();\n  for (i = 0; i < sheets.length; i++) {\n    if (sheets[i].getSheetName() != sheetName){\n      destSpreadsheet.deleteSheet(sheets[i]);\n    }\n  }\n  \n  var destSheet = destSpreadsheet.getSheets()[0];\n\n  \/\/ Repace cell values with text (to avoid broken references).\n  var sourceRange = sourceSheet.getRange(1,1,sourceSheet.getMaxRows(),sourceSheet.getMaxColumns());\n  var sourcevalues = sourceRange.getValues();\n  var destRange = destSheet.getRange(1, 1, destSheet.getMaxRows(), destSheet.getMaxColumns());\n  destRange.setValues(sourcevalues);\n\n  \/\/ Save to pdf.\n  var theBlob = destSpreadsheet.getBlob().getAs('application\/pdf').setName(pdfName);\n  var newFile = folder.createFile(theBlob);\n\n  \/\/ Delete the temporary sheet.\n  DriveApp.getFileById(destSpreadsheet.getId()).setTrashed(true);\n}",
+          "Date Modified" : "2021-01-30 08:13:36 -0500",
+          "Note" : "install.txt\nTo use this script in Google Drive:\n\n1. In your spreadsheet, click Tools->Script Editor.\n2. Paste the contents of Code.gs into the editor.\n3. Save.\n4. Select \"Allow\" when Google asks about permissions.\n5. Reload your spreadsheet.\n\nYou should now see a new file menu option, \"Export\".\n\n\n\n\nhttps:\/\/gist.github.com\/iTrauco\/dbb81e44831d01cb92e94fcc565b7399",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 08:12:40 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 23:21:20 -0500",
+      "Date Modified" : "2020-12-29 23:21:26 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=VLOOKUP(function)",
+      "Fragments" : [
+        {
+          "Content" : "=VLOOKUP(\n    search_key,\n    range,\n    index,\n    [is_sorted]\n)",
+          "Date Modified" : "2020-12-29 23:56:57 -0500",
+          "Note" : "# legend\n# search_key - the value(boolean, integer, float, string, etc) to search the 1ST column for\n# range - the range\/array to consider for the search\n# index - the column number of value to be returned\n# [is_sorted] options - ...\n- FALSE = exact match, \n- TRUE = nearest match",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 23:21:20 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 14:14:39 -0500",
+      "Date Modified" : "2021-01-27 14:14:53 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "How to split Column to Multiple Rows \/ Columns",
+      "Fragments" : [
+        {
+          "Content" : "=ArrayFormula(IFERROR(VLOOKUP( COLUMN(OFFSET(INDIRECT(\"a1\"),,,1,numCols)) + (ROW(INDIRECT(\"a1:a\"&ROUNDUP(COUNTA(A1:A)\/numCols)))-1)*numCols, {ROW(A1:A)-ROW(A1)+1,A1:A},2,)))\n\nA1:A5 to E1:I1,\nA6:A10 to E2:I2,\nA11:A14 to E3:I3,\nand so",
+          "Date Modified" : "2021-01-27 14:16:07 -0500",
+          "Note" : "https:\/\/sheetswithmaxmakhrov.wordpress.com\/2017\/12\/26\/how-to-transpose-every-5-or-n-rows-from-one-column-to-multiple-columns\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 14:14:39 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:20:40 -0400",
+      "Date Modified" : "2020-10-25 22:20:52 -0400",
+      "Folder" : "vim",
+      "Title" : "Pretty print JSON in Vim",
+      "Fragments" : [
+        {
+          "Content" : "%!python -m json.tool",
+          "Date Modified" : "2020-10-25 22:21:13 -0400",
+          "Note" : "1.  Esc into Normal mode￼\n2. Type :\n3. Enter “%!python -m json.tool”",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:20:40 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 23:18:28 -0500",
+      "Date Modified" : "2021-01-30 02:15:26 -0500",
+      "Folder" : "TDD",
+      "Title" : "Pytest TDD Walkthrough",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2021-01-30 02:15:28 -0500",
+          "Note" : "https:\/\/testdriven.io\/blog\/modern-tdd\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 23:18:28 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:19:24 -0500",
+      "Date Modified" : "2021-01-27 01:19:37 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "simple benchmarkinbg",
+      "Fragments" : [
+        {
+          "Content" : "import pandas as pd\nimport time\nimport csv\nimport paratext\nimport dask.dataframe\ninput_file = \"random.csv\"\nstart_time = time.time()\ndata = csv.DictReader(open(input_file))\nprint(\"csv.DictReader took %s seconds\" % (time.time() - start_time))\nstart_time = time.time()\ndata = pd.read_csv(input_file)\nprint(\"pd.read_csv took %s seconds\" % (time.time() - start_time))\nstart_time = time.time()\ndata = pd.read_csv(\"random.csv\", chunksize=100000)\nprint(\"pd.read_csv with chunksize took %s seconds\" % (time.time() - start_time))\nstart_time = time.time()\ndata = dask.dataframe.read_csv(input_file)\nprint(\"dask.dataframe took %s seconds\" % (time.time() - start_time))",
+          "Date Modified" : "2021-01-27 01:19:39 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:19:24 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-24 01:44:41 -0400",
+      "Date Modified" : "2020-10-25 22:24:33 -0400",
+      "Folder" : "Slack TS",
+      "Title" : "Validate Slack Json",
+      "Fragments" : [
+        {
+          "Content" : "#!\/usr\/bin\/env bash\n\nfor x in <path\/to\/file>\/*.json;\n  do\n    jsonlint -q \"$x\";",
+          "Date Modified" : "2020-10-25 22:35:37 -0400",
+          "Note" : "**For macOS**\n1. Global install of NPM package JSONLINT\n  1.`npm install jsonlint -g`\n  **sudo may be required**\n  2. `sudo npm install jsonlint -g`\n2. Locally download the original data import file, [slack_data_file_name.zip ](<G Drive Link>)\n3. Make a new directory and move the downloaded zip file into it for extraction w\/ `unzip slack_data_file_name.zip`\n4. Upon successful extraction of the data `rm -rf slack_data_file_name.zip `\n5. Open a new terminal window and create the file `validate_slack_json.sh`\n6. Using your editor of choice open `validate_slack_json.sh` and paste the following into the file\n```\n#!\/usr\/bin\/env bash\n\nfor x in <path\/to\/file>\/*.json;\n  do\n    jsonlint -q \"$x\";\n```\n7. Make the file executable w\/ `chmod -x validate_slack_json.sh`\n9. Temporarily disable the `echo` command for standard output w\/ `stty -echoctl`\n10. Run the script `sh validate_slack_json.sh`\n11. Compress the folder that you ran the `validate_slack_json.sh` script on by running zip **recursively** w\/ the `-r` flag:\n```\nzip -r output.zip target-directory\n```\n12.  Reenable echo standard output w\/ `stty echoctl`\n13. Move the newly compressed Slack data for import into G Drive\n**Note** A full reverse of the prior failed data import must be completed before you attempt upload of the new file from G Drive\n14. Try the Slack data import again w\/ [Official Slack Data Import Instructions](http:\/\/itrau.co\/HTImportSlackData)",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-24 01:44:41 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-21 01:49:43 -0500",
+      "Date Modified" : "2020-11-21 01:50:19 -0500",
+      "Folder" : "git",
+      "Title" : "How can I switch my git repository to a particular commit",
+      "Fragments" : [
+        {
+          "Content" : "\nTo create a new branch (locally):\n\nWith the commit hash (or part of it)\n\ngit checkout -b new_branch 6e559cb\nor to go back 4 commits from HEAD\n\ngit checkout -b new_branch HEAD~4",
+          "Date Modified" : "2020-11-21 01:49:57 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-21 01:49:43 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 06:07:30 -0500",
+      "Date Modified" : "2021-01-29 06:25:12 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "sox last step using query, NO APPS SCRIPT🤯",
+      "Fragments" : [
+        {
+          "Content" : "=query(:F; \"select AI, where A >= \"'Year(Today())'-'Month(Today())'-01\" \"; 0)\n\n where A >= \"'Year(TODAY())'-'Month(TODAY())'-01\" \n \n \n i don't wanna do this tonight, fuck it's morning\n '",
+          "Date Modified" : "2021-01-29 06:26:49 -0500",
+          "Note" : "https:\/\/infoinspired.com\/google-docs\/spreadsheet\/how-to-filter-timestamp-in-query-in-google-sheets\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 06:07:30 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 24:58:09 -0500",
+      "Date Modified" : "2021-01-30 01:03:51 -0500",
+      "Folder" : "vim",
+      "Title" : "How to Indent for python:",
+      "Fragments" : [
+        {
+          "Content" : "=======\nTo adjust the indent on three lines\n\nPut the cursor anywhere in the first line.\n\nPress V then jj to visually select the three lines.\n\nPress > to indent (shift text one 'shiftwidth' to the right), or press < to shift left.\n\nPress . to repeat the indent, or u to undo if you have shifted too far.\n\nType gv if you want to reselect the lines (not needed).\n=======\nAlternatively, if you know that you want to adjust three lines, you can simply:\n\nType 3>> to shift right or 3<< to shift left.\n\nOr:\n\nType >2j to shift right or <2j to shift left.\n\n\nAs mentioned above, the > and < commands combine with arbitrary Vim movements and text objects. For example, >} to indent from the cursor to the next blank line, or <aB to un-indent the current C-like {...} \"block\" structure",
+          "Date Modified" : "2021-01-30 01:02:13 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 24:58:09 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:17:33 -0400",
+      "Date Modified" : "2020-10-01 16:21:03 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "(Surround String of Another Cell)",
+      "Fragments" : [
+        {
+          "Content" : "=\"(\"&C2&\")\"",
+          "Date Modified" : "2020-10-01 16:19:43 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:17:33 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 24:59:45 -0500",
+      "Date Modified" : "2021-01-27 01:16:38 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "random_data_csv.py",
+      "Fragments" : [
+        {
+          "Content" : "import pandas as pd\nimport numpy as np\n# setting the number of rows for the CSV file\nN = 1000000\n# creating a pandas dataframe (df) with 8 columns and N rows with random integers between 999 and 999999 and with column names from A to H\ndf = pd.DataFrame(np.random.randint(999,999999,size=(N, 7)), columns=list(‘ABCDEFG’))\n# creating one column 'H' of float type using the uniform distribution\ndf[‘H’] = np.random.rand(N)\n# creating two additional columns with random strings\ndf[‘I’] = pd.util.testing.rands_array(10, N)\ndf[‘J’] = pd.util.testing.rands_array(10, N)\n# print the dataframe to see what we have created\nprint df\n# export the dataframe to csv using comma delimiting\ndf.to_csv(“random.csv”, sep=’,’)",
+          "Date Modified" : "2021-01-27 01:05:28 -0500",
+          "Note" : "https:\/\/medium.com\/casual-inference\/the-most-time-efficient-ways-to-import-csv-data-in-python-cc159b44063d",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 24:59:45 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:05:27 -0500",
+      "Date Modified" : "2021-01-28 21:05:39 -0500",
+      "Folder" : "gas",
+      "Title" : "review",
+      "Fragments" : [
+        {
+          "Content" : "Skip to content\n \nSearch…\nAll gists\nBack to GitHub\n@iTrauco \n@eojji\neojji\/JavaScript.html\nCreated 3 years ago • Report abuse\n1\n0\n Code\n Revisions 1\n Stars 1\n<script src=\"https:\/\/gist.github.com\/eojji\/73ef2b6f55cd38953c1c5e767cc56777.js\"><\/script>\nCopy to team drive - review. Listing folders - 8 https:\/\/m.cafe.naver.com\/eojji\/311\ncode.gs\n\/\/ Web App Exec: \n\/\/ https:\/\/script.google.com\/macros\/s\/AKfycbxa1mBiEPGwHpVDxw6V6p1bRBWSXHm8qbIea7Kjmv9rQUyv68_Z\/exec\nfunction doGet(request) {\n  var output = HtmlService.createTemplateFromFile('Page').evaluate();\n  return output.addMetaTag('viewport', 'width=device-width, initial-scale=1');\n}\n   \nfunction include(filename) {\n  return HtmlService.createHtmlOutputFromFile(filename)\n  .getContent();\n}\n\nfunction copyDriveFile_(title, fileId, parentId) {\n  var resource = {\n    'title': title,\n    parents: [{ id: parentId }]\n  };  \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  try {\n    return Drive.Files.copy(resource, fileId, optionalArgs);\n  } catch(error) {\n    return error; \/\/ error.name, error.message;\n  }\n}\n\nfunction createFolderSpreadsheet_(title, folderId) {\n  var ssNew, ssId, sheetFolder, sheetFiles;\n  var title = '_gfolder, ' + Date.now() + ' ' + title;\n  try {\n    ssNew = SpreadsheetApp.create(title);    \n    sheetFolder = ssNew.getSheets()[0]; \n    sheetFolder.setName('folder');    \n    sheetFolder.appendRow([\"row to read\", 3]);\n    sheetFolder.appendRow([\"title\", \"id\", \"id2\", \"files\", \"fileSize\", \"start\", \"end\", \"file row\", \"parent\"]);\n    \n    \/\/ files    \n    sheetFiles = ssNew.insertSheet('files');\n    sheetFiles.appendRow([\"row to read\", 3, \"page token\"]);\n    sheetFiles.appendRow(['title', 'id', 'mime', 'size', 'copy', 'name', 'message', 'check', 'parent']);\n    \n    \/\/ https:\/\/developers.google.com\/drive\/api\/v2\/reference\/parents\/insert\n    var resource= { \"id\": folderId };    \n    var optionalArgs = { \"supportsTeamDrives\" : true };        \n    \/\/ Drive.Parents.insert(resource, fileId, optionalArgs);\n    ssId = ssNew.getId();    \n    Drive.Parents.insert(resource, ssId, optionalArgs);\n    Drive.Parents.remove(ssId, DriveApp.getRootFolder().getId());\n    \n    return ssNew;\n  } catch(e) {\n    console.warn('Error: %s, %s - createFolderSpreadsheet: %s', e.name, e.message, folderId);\n  }\n}\n\nfunction fileCopyFromInput_(file, folderId) {\n  var appMessage = {};\n  if (! file.copyable) {\n    appMessage.url = file.alternateLink;\n    appMessage.title = file.title;\n    appMessage.message = 'The file can not be copied to My Drive.';\n    return appMessage;              \n  }        \n  \n  var aCopy = copyDriveFile_(file.title, file.id, folderId);    \n  if (aCopy.id) {\n    \/\/ console.log('Title: %s, Mimetype: %s, ID: %s', aCopy.title, aCopy.mimeType, aCopy.id);   \n    appMessage.url = aCopy.alternateLink;\n    appMessage.title = aCopy.title;\n    appMessage.message = 'The copy is complete. Size: ' + aCopy.fileSize;            \n  } else if (aCopy.name) {\n    console.warn('An error occurred while copying. Error Name: %s, Message: %s', aCopy.name, aCopy.message);      \n    appMessage.message = 'An error occurred while copying. '+aCopy.name+ ', Message: '+ aCopy.message;\n    appMessage.url = file.alternateLink;\n    appMessage.title = file.title;        \n  }\n  return appMessage;                \n}\n\nfunction getFolderByGdUrl_(url) {\n  var idx = url.lastIndexOf('google.com');\n  if (idx < 0) {    \n    var rtn = url.match(\/[-\\w]{15,}\/);\n    if (rtn) {\n      return getDriveFileById_(rtn[0]);\n    } \n    return;    \n  }\n  \n  var decUrl = url.substr(idx+10);\n  var arr = [\"\/d\/\", \"\/folders\/\", \"?id=\", \"&id=\"];    \n  for (var i=0; i<arr.length; i++) {\n    idx = decUrl.indexOf(arr[i]);\n    if (idx < 0) { \n      continue; \n    }\n    var str = decUrl.substr(idx + arr[i].length);\n    var idMatchStr = str.match(\/[-\\w]{15,}\/);\n    if (idMatchStr) {\n      return getDriveFileById_(idMatchStr[0]);        \n    } else {\n      return;\n    }    \n  }  \n}\n\nfunction setPageTokenProperty(value) {\n  PropertiesService.getUserProperties().setProperty('PAGE_TOKEN', value);  \n}  \n\nfunction getPageTokenProperty() {\n  var pageTokenProperty = PropertiesService.getUserProperties().getProperty('PAGE_TOKEN');  \n  return pageTokenProperty;  \n}\n\nfunction deletePageTokenProperty() {\n  PropertiesService.getUserProperties().deleteProperty('PAGE_TOKEN');\n}\n\nfunction doCopyFolder_(sheetFolder, folderRowNum, sheetFiles, startTime) {\n  var folderRange, folderInfo;\n  try {\n    folderRange = sheetFolder.getRange(folderRowNum, 1, 1, 9);\n    folderInfo = folderRange.getValues()[0];\n  } catch(e) {\n    console.warn('Error: %s, %s - doCopyFolder', e.name, e.message);\n    return '-1';\n  }\n  \n  var title, folderId, copyFolderId, fileRowNum;\n  title = folderInfo[0];\n  folderId = folderInfo[1];\n  copyFolderId = folderInfo[2];\n  fileRowNum = folderInfo[7];    \n  if (!fileRowNum || fileRowNum < 3) {\n    var pageToken;\n    var objFiles = listFilesByPageToken_(folderId, pageToken, startTime);\n    if (!objFiles) {\n      return '9';\n    }\n    \n    var parentId = folderInfo[8];\n    var resp = insertFolderById_(parentId, title);\n    if (!resp || !resp.id) {\n      console.warn('Error: %s, %s - insertFolderById(parentId: %s, %s)', resp.name, resp.message, parentId, title);\n      return '-1';\n    } \n    \n    folderInfo[7] = sheetFiles.getLastRow() + 1; \/\/ fileRowNum\n    sheetAppendFiles_(resp.id, objFiles.files, sheetFolder, sheetFiles);      \n    folderInfo[2] = resp.id; \/\/ copyFolderId   \n    folderRange.setValues([folderInfo]); \n    \n    if (objFiles.pageToken) {\n      setPageTokenProperty(folderId+','+objFiles.pageToken);\n      return '1';   \n    }\n    return copyFilesBySheet_(startTime, sheetFiles);   \n  }\n  \n  var pageTokenProperty = getPageTokenProperty();\n  if (pageTokenProperty) {\n    var arrIdAndPageToken = pageTokenProperty.split(',');\n    if (arrIdAndPageToken[0] == folderId && arrIdAndPageToken[1]) {\n      var objFiles = listFilesByPageToken_(folderId, arrIdAndPageToken[1], startTime);\n      if (objFiles) {\n        sheetAppendFiles_(copyFolderId, objFiles.files, sheetFolder, sheetFiles); \n        if (objFiles.pageToken) {\n          setPageTokenProperty(folderId+','+objFiles.pageToken);\n          return '1';\n        }\n      }\n    } else {\n      deletePageTokenProperty();\n    }\n  }\n  \n  return copyFilesBySheet_(startTime, sheetFiles);   \n}\n\nfunction sheetAppendFiles_(parentId, data, sheetFolder, sheetFiles) {\n  if (!data || data.length < 1) {\n    return;\n  }\n  \n  var folderData = [];\n  var newDate = new Date();\n  \/\/ title, id\n  \/\/ id2, files, fileSize, start, end, file row, parent\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n  var newFolderContents = ['', 0, 0, newDate, newDate, 0, parentId];\n  \n  var fileData = [];\n  \/\/ copy, name, message, check, parent\n  var newFileContents = ['', '', '', '', parentId];\n  \n  var len = data.length;\n  for (var i = 0; i < len; i++) {\n    \/\/ title, id, mimeType, fileSize\n    var mimeType = data[i][2]; \/\/ mimeType\n    if (mimeType == 'application\/vnd.google-apps.folder') {\n      folderData.push(data[i].slice(0, 2).concat(newFolderContents));\n    } else {\n      fileData.push(data[i].concat(newFileContents));\n    }\n  }\n  \n  if (folderData && folderData.length > 0) {\n    sheetFolder.getRange(sheetFolder.getLastRow() + 1, 1, folderData.length, folderData[0].length).setValues(folderData);\n  }\n  \n  if (fileData && fileData.length > 0) {\n    sheetFiles.getRange(sheetFiles.getLastRow() + 1, 1, fileData.length, fileData[0].length).setValues(fileData);\n  }\n}\n\nfunction insertFolderById_(parentId, folderName) {\n  var resource= {\n    \"parents\": [\n      {\n        \"id\": parentId\n      }\n    ],\n    \"title\": folderName,\n    \"mimeType\": \"application\/vnd.google-apps.folder\"\n  };    \n  \n  \/\/ https:\/\/stackoverflow.com\/questions\/28378738\/create-a-new-blob-in-memory-using-apps-script\n  \/\/ var blob = Utilities.newBlob(folderName);    \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  \/\/ var folder;\n  try {\n    \/\/ https:\/\/developers.google.com\/drive\/v2\/reference\/files#resource\n    return Drive.Files.insert(resource, Utilities.newBlob(folderName), optionalArgs); \n  } catch(error) {    \n    return error;\n  }\n}\n\nfunction triggerAfterByName(functionName, time) {\n  ScriptApp.newTrigger(functionName)\n  .timeBased().after(time).create();\n  \n  console.log('%s, %s, Time: %s - trigger AfterByName', Session.getEffectiveUser().getEmail(), functionName, time);\n}\n\nfunction setFolderSSIdProperty(value) {\n  return PropertiesService.getUserProperties().setProperty('FOLDER_SS_ID', value);\n}\n\nfunction getFolderSSIdProperty() {\n  return PropertiesService.getUserProperties().getProperty('FOLDER_SS_ID');\n}\n\nfunction deleteFolderSSIdProperty() {\n  return PropertiesService.getUserProperties().deleteProperty('FOLDER_SS_ID');\n}\n\nfunction deleteTriggerByName(name) {\n  var getPropTrigger = PropertiesService.getUserProperties().getProperty('atHour'+name);\n  if (!getPropTrigger) {\n    getPropTrigger = 'x';\n  }\n  \n  var triggers = ScriptApp.getProjectTriggers();    \n  for (var i = 0; i < triggers.length; i++) {\n    if (triggers[i].getHandlerFunction() == name && triggers[i].getUniqueId() != getPropTrigger) {\n      ScriptApp.deleteTrigger(triggers[i]);\n    }\n  }\n}\n\n\/\/ https:\/\/developers.google.com\/drive\/v2\/reference\/files\nfunction getDriveFileById_(id) {\n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  try {\n    return Drive.Files.get(id, optionalArgs);\n  } catch(error) {         \n    return error; \/\/ error.name, error.message;\n  }\n}\n\nfunction getSpreadsheetById(ssId) {\n  if (!ssId || ssId < 10) {\n    console.warn('!ssId || ssId.length < 10 - getSpreadsheetById');\n    return;\n  }\n  \n  try {\n    var resp = getDriveFileById_(ssId);\n    if (resp.id && !resp.labels.trashed) {\n      return SpreadsheetApp.openById(ssId);\n    }    \n  } catch(e) {\n    console.warn('Error: %s, %s - DriveApp.getFileById(%s) in getSpreadsheetById', e.name, e.message, ssId);\n  }  \n}\n\n\/*\n * check: 파일 복사 함수 호출의 반환값으로 다음 작업을 결정합니다.\n * '1': 계속 진행 \n * '-1': 프로세스 중단\n * '-2': after 트리거 생성\n * '-3': hour  트리거 생성\n**\/\n\nfunction callFileCopy_(title, id, parentId) {\n  var copiedState = {\n    copy: '1',\n    link: '',  \/\/ or Error name\n    message: 'Ok', \n    check: '1'\n  }\n  \n  var resource = {\n    'title': title,\n    parents: [{ id: parentId }]\n  };  \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  var resp;\n  try {\n    resp = Drive.Files.copy(resource, id, optionalArgs);\n    if (resp && resp.id) {\n      copiedState.link = resp.alternateLink; \n      return copiedState;\n    }    \n  } catch(error) {\n    resp = error; \/\/ error.name, error.message;\n  }\n  \n  copiedState.copy = '0'; \/\/ Not copy\n  \n  var rowContents;\n  \n  var thisFunctionName = 'Call Drive.Files.copy';\n  var email = Session.getEffectiveUser().getEmail();\n  if (!resp || !resp.name) {\n    console.warn('%s, Error !resp.name, Title: %s - %s', email, title, thisFunctionName);\n    \n    copiedState.link = '';\n    copiedState.message = '';\n    copiedState.check = '-2';\n    return copiedState;\n  }\n  \n  copiedState.link = resp.name;\n  copiedState.message = resp.message;\n  \n  console.warn('%s, Error: %s, Message: %s, Title: %s - %s', email, resp.name, resp.message, title, thisFunctionName);\n  \n  if (resp.message.indexOf('User rate limit exceeded') >= 0) {\n    copiedState.check = '-3'; \/\/ create trigger, hour\n  } else if (resp.message.indexOf('The user has exceeded') >= 0 || \n             resp.message.indexOf('The file limit for this Team Drive') >= 0) {\n    copiedState.check = '-1'; \/\/ process kill \n  } else {\n    copiedState.check = '1'; \/\/ Skip\n    \/\/ Error Name: Exception\n    \/\/ 'Internal Error'\n    \/\/ '빈 응답'\n  }\n  return copiedState;\n}\n\nfunction copyFilesBySheet_(startTime, sheet) {\n  var lastRow = sheet.getLastRow();\n  if (!lastRow || lastRow < 3) {\n    return '9';\n  }\n  \n  var startRow = sheet.getRange('B1').getValue();\n  if (!startRow || startRow < 3) {\n    startRow = 3;\n  }\n  \n  if (startRow > lastRow) {\n    return '9';\n  }\n  \n  var rows = lastRow - startRow + 1;\n  var fileValues = sheet.getRange(startRow, 1, rows, 9).getValues();\n  var fileCont;\n  var valuesCopyfile = [];  \n  for (var idx = 0; idx < rows; idx++) {\n    fileCont = fileValues[idx]\n    var title = fileCont[0];\n    var id = fileCont[1];\n    var parent = fileCont[8];\n    var copiedState = callFileCopy_(title, id, parent);  \n    var arr = [copiedState.copy];\n    arr.push(copiedState.link);\n    arr.push(copiedState.message);\n    arr.push(copiedState.check);    \n    valuesCopyfile.push(arr);    \n    \n    if (copiedState.check === '1') {\n      \/\/ console.log('copiedState.chek: %s === 1', copiedState.check);\n    } else {       \n      console.log('%s Not === 1, break copyFilesBySheet, copiedState.chek', copiedState.check);\n      break;      \n    }\n    \n    if (!timeCheck(startTime, 30000)) { \/\/ needTime: 30 sec\n      break;\n    }\n    \/\/ end for var idx\n  }\n\n  var valuesLength = valuesCopyfile.length;  \n  sheet.getRange(startRow, 5, valuesLength, valuesCopyfile[0].length).setValues(valuesCopyfile);\n  \n  var readToRow = (copiedState.check === '1') ? (startRow + valuesLength) : (startRow + valuesLength - 1);\n  sheet.getRange('B1').setValue(readToRow);\n  \n  if (idx >= rows) {\n    return '9'; \n  }\n  \n  return copiedState.check;\n}\n\nfunction timeCheck(startTime, needTime) {\n  var nowDate = new Date();\n  \/\/  remain = 6 min - ( now - start )\n  var remain = 360000 - (nowDate.getTime() - startTime);\n  if (remain < needTime) {\n    return false;\n  } else {\n    return true;\n  }\n}\n\n\n\n\nfunction trigCpFolderBySheet_() {\n  var newDate = new Date();  \n  var COPY_START_TIME = newDate.getTime();\n  \n  \/\/ Deletes triggers\n  var thisFunctionName = 'trigCpFolderBySheet_';  \n  deleteTriggerByName(thisFunctionName);\n  \n  var ssId = getFolderSSIdProperty();\n  if (!ssId || ssId.length < 10) {\n    console.warn('Error getProperty(FOLDER_SS_ID), %s', thisFunctionName);\n    return;\n  }\n  \n  var copyFolderSs = getSpreadsheetById(ssId);\n  if (!copyFolderSs) {\n    console.warn('getSpreadsheetById(%s), at %s', ssId, thisFunctionName);\n    return;\n  }\n  \n  var sheetFolder = copyFolderSs.getSheetByName('folder');    \n  var sheetFiles = copyFolderSs.getSheetByName('files');  \n  \n  var folderRow = sheetFolder.getRange('B1').getValue(); \/\/ row to read\n  \n  var timeResp;  \n  var title, id, id2, files, filesArrayLength, fileRow;\n  var lastRowFiles, pageTokenProperty;\n  do {\n    var resp = doCopyFolder_(sheetFolder, folderRow, sheetFiles, COPY_START_TIME); \n    if (resp === '1') {\n      if (!timeCheck(COPY_START_TIME, 120000)) {\n        console.log('timeCheck -> triggerAfter');\n        triggerAfterByName(thisFunctionName, 1000); \/\/ trigger 기동\n        return;\n      }\n    }\n  } while(resp === '1');\n}\n\nfunction listFilesByPageToken_(folderId, pageToken, startTime) {\n  var query = '\"'+ folderId +'\" in parents and trashed = false';\n  var files, resp;\n  var data = [];  \n  var fileCont = [];\n  do {\n    files = Drive.Files.list({\n      includeTeamDriveItems : true,\n      supportsTeamDrives : true,\n      q: query,\n      maxResults: 100,\n      pageToken: pageToken,\n    });\n    if (files.items && files.items.length > 0) {\n      for (var i = 0; i < files.items.length; i++) {\n        var file = files.items[i];\n        fileCont = [file.title]; \/\/ file.title, file.id, file.mimeType, file.fileSize\n        fileCont.push(file.id);     \n        fileCont.push(file.mimeType);\n        if (!file.fileSize) {\n          fileCont.push(0);\n        } else {\n          fileCont.push(file.fileSize);\n        }            \n        data.push(fileCont);        \n      }\n    }\n    pageToken = files.nextPageToken;\n  } while (pageToken && timeCheck(startTime, 30000)); \/\/ needTime: 30 sec\n  \n  if (data.length > 0) {\n    var objFiles = {};\n    objFiles.pageToken = pageToken;\n    objFiles.files = data;\n    return objFiles;\n  }\n}\n\nfunction funcCopyFromInput_(argUrl, argFolder) {\n  var appMessage = {};\n  appMessage.url = argUrl;\n  appMessage.title = argUrl;   \n  \n  if (!argUrl || argUrl.length < 15) {\n    appMessage.message = argUrl + ' is too short to be processed.';\n    return appMessage;\n  }\n  \n  var file = getFolderByGdUrl_(argUrl); \/\/ return Drive.Files.get(id, optionalArgs);\n  if (!file || !file.id) {\n    var appMessage = file;\n    if (appMessage && appMessage.name) {\n      console.log('Error Name: %s, Message: %s, Form Input Url: %s', appMessage.name, appMessage.message, argUrl);      \n      appMessage.message = 'Error Name: '+appMessage.name+', Message: '+appMessage.message;\n    } else {\n      console.log('Error input Url Validate. URL does not have file ID. [%s]', argUrl);\n      appMessage.message = 'Error ['+argUrl+'] Validate.';\n    }\n    return appMessage;\n  }\n  \n  var title = file.title;\n  if (file.mimeType != 'application\/vnd.google-apps.folder') {\n    return fileCopyFromInput_(file, argFolder.id);\n  } else {\n    var ss = createFolderSpreadsheet_(title, argFolder.id);    \n    var sheetFolder = ss.getSheets()[0];\n    var newDate = new Date();\n    sheetFolder.appendRow([title, file.id, '', 0, 0, newDate, newDate, 0, argFolder.id]);\n    setFolderSSIdProperty(ss.getId());\n    \n    appMessage.url = ss.getUrl();\n    appMessage.title = ss.getName();\n    appMessage.message = 'Create Spreadsheet';\n    \n    \/\/ trigger 기동\n    triggerAfterByName('trigCpFolderBySheet_', 1000);\n    return appMessage;    \n  }\n}\n\nfunction processForm(formObject) {\n  var formFromUrl = formObject.fromFolder.trim();\t\n  var formToUrl = formObject.toFolder.trim();\t\n  \nvar appMessage = {};    \n   var toFolder =  getFolderByGdUrl_(formToUrl);\n  if (!toFolder || !toFolder.id) {\n    console.warn('Error Get to folder');\n    appMessage.message = 'Error Get to folder';\n    return JSON.stringify(appMessage);  \n  }\n\n  var fcResp = funcCopyFromInput_(formFromUrl, toFolder);\n  if (!fcResp) {    \n    appMessage.url = 'https:\/\/drive.google.com';\n    appMessage.title = 'My Drive';\n    appMessage.message = 'can not copy!';\n  } else {\n    appMessage = fcResp;\n  }\n  return JSON.stringify(appMessage);  \n}\nJavaScript.html\n<script>\nwindow.addEventListener('load', function() {\n  \/\/ console.log('Page is loaded');\n});\n\n\/\/ Prevent forms from submitting.\nfunction preventFormSubmit() {\n  var forms = document.querySelectorAll('form');\n  for (var i = 0; i < forms.length; i++) {\n    forms[i].addEventListener('submit', function(event) {\n      event.preventDefault();\n    });\n  }\n}\nwindow.addEventListener('load', preventFormSubmit);\n\nfunction handleFormSubmit(formObject) {\n  google.script.run.withSuccessHandler(updateUrl).processForm(formObject);\n  formObject.fromFolder.value = '';\t\t\n}\n\nfunction updateUrl(appMessage) {\n  var json;\n  if (appMessage) {\n    json = JSON.parse(appMessage);\n    if (json.url) {\n      \/\/ var url  \n      var div = document.getElementById('output');\n      div.innerHTML = 'Link: <a href=\"' + json.url + '\" target=\"_blank\">'+json.title+'<\/a>';\n    }      \n    if (json.message) {\n      var message = document.getElementById('message');\n      message.innerHTML = 'Message: '+json.message;        \n    }\n  }\n}      \n<\/script>\nPage.html\n<!DOCTYPE html>\n<html>\n  <head>\n    <base target=\"_top\">\n    <?!= include('Stylesheet'); ?>\n  <\/head>\n  <body>\n    <h1>Copy to team drive review<\/h1>\n    <a href=\"https:\/\/gfoldercopy.eojji.com\/group\" target=\"_blank\">G folder copy group<\/a>\n    <br><br>\n    <form id=\"myForm\" onsubmit=\"handleFormSubmit(this)\">\n    From: <input name=\"fromFolder\" type=\"text\" required \/> <br>\n\tTo: <input name=\"toFolder\" type=\"text\" required \/>\n    <input type=\"submit\" value=\"Copy\" \/>\n    <\/form>\n    <br>\n    <div id=\"message\">Message: <\/div>     \n    <div id=\"output\">Link: <\/div>    \n    <br>    \n    Create a <a href=\"https:\/\/gsuite.google.com\/learning-center\/products\/drive\/get-started-team-drive\/\">Team Drive<\/a>: <a href=\"https:\/\/goo.gl\/forms\/1az5A9lwcG2HpL5s2\">Request Form<\/a>  |  <a href=\"https:\/\/hi.eojji.com\/\">Contact<\/a>\n    <br><br>\n    <a href=\"https:\/\/copy.gfolder.net\/\" target=\"_blank\">copy.gfolder.net<\/a>  |  <a href=\"https:\/\/hi.eojji.com\/privacy\" target=\"_blank\">Privacy Policy<\/a>    \n    <?!= include('JavaScript'); ?>\n  <\/body>\n<\/html>\nStylesheet.html\n<style>\np {\n  color: green;\n}\n<\/style>\n@iTrauco\n \nLeave a comment\nNo file chosen\nAttach files by dragging & dropping, selecting or pasting them.\n© 2021 GitHub, Inc.\nTerms\nPrivacy\nSecurity\nStatus\nDocs\nContact GitHub\nPricing\nAPI\nTraining\nBlog\nAbout\n",
+          "Date Modified" : "2021-01-28 21:05:31 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:05:27 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 24:10:33 -0500",
+      "Date Modified" : "2021-01-28 24:12:05 -0500",
+      "Folder" : "gspread",
+      "Title" : "Import \/ Export Sheet Data",
+      "Fragments" : [
+        {
+          "Content" : "from google.colab import auth\nauth.authenticate_user()\n\nimport gspread\nfrom oauth2client.client import GoogleCredentials\n\ngc = gspread.authorize(GoogleCredentials.get_application_default())\n\nsh = gc.create('A new spreadsheet')\n\n# Open our new sheet and add some data.\nworksheet = gc.open('A new spreadsheet').sheet1\n\ncell_list = worksheet.range('A1:C2')\n\nimport random\nfor cell in cell_list:\n  cell.value = random.randint(1, 10)\n\nworksheet.update_cells(cell_list)\n# Go to https:\/\/sheets.google.com to see your new spreadsheet.",
+          "Date Modified" : "2021-01-28 24:14:24 -0500",
+          "Note" : "!pip install --upgrade gspread",
+          "Title" : "!pip install --upgrade gspread",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 24:10:33 -0500"
+        },
+        {
+          "Content" : "from google.colab import auth\nauth.authenticate_user()\n\nimport gspread\nfrom oauth2client.client import GoogleCredentials\n\ngc = gspread.authorize(GoogleCredentials.get_application_default())\n\nworksheet = gc.open('Your spreadsheet name').sheet1\n\n# get_all_values gives a list of rows.\nrows = worksheet.get_all_values()\nprint(rows)\n\n# Convert to a DataFrame and render.\nimport pandas as pd\npd.DataFrame.from_records(rows)",
+          "Date Modified" : "2021-01-28 24:13:44 -0500",
+          "Note" : "!pip install --upgrade gspread",
+          "Title" : "Importing data from Google Sheets",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 24:11:38 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 20:25:00 -0500",
+      "Date Modified" : "2020-12-30 23:21:54 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=FILTER(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\nFILTER(\n    range,          \n    condition,\n    [options,...]\n)",
+          "Date Modified" : "2020-12-29 22:01:47 -0500",
+          "Note" : "# legend\n# range = range of cells to filter\n# condition = the columns\/row(corresponding to the column\/row of the dataset), returns an array of booleans TRUE\/FALSE\n# [options,..] = second condition, can return an array of booleans TRUE\/FALSE\n\nhttps:\/\/spreadsheetpoint.com\/filter-function-google-sheets\/\n\n",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 20:25:00 -0500"
+        },
+        {
+          "Content" : "=filter(IMPORTRANGE(\"URL\",\"A:J\"),INDEX(IMPORTRANGE(\"URL\",\"A:J\"),0,3)=\"Yes\")",
+          "Date Modified" : "2020-12-30 23:23:00 -0500",
+          "Note" : "https:\/\/webapps.stackexchange.com\/questions\/87272\/using-filter-or-importrange-to-bring-in-and-filter-data-from-another-spreadsheet",
+          "Title" : "ex_one",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 23:21:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:08:01 -0500",
+      "Date Modified" : "2021-01-28 21:08:07 -0500",
+      "Folder" : "js",
+      "Title" : "One Liner to Download the Latest Release from Github Repo",
+      "Fragments" : [
+        {
+          "Content" : "curl -s https:\/\/api.github.com\/repos\/jgm\/pandoc\/releases\/latest \\\n| grep \"browser_download_url.*deb\" \\\n| cut -d : -f 2,3 \\\n| tr -d \\\" \\\n| wget -qi -",
+          "Date Modified" : "2021-01-28 21:08:08 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:08:01 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 18:43:23 -0400",
+      "Date Modified" : "2020-10-25 18:44:07 -0400",
+      "Folder" : "macOS",
+      "Title" : "Turn Off Echo in macOS CLI",
+      "Fragments" : [
+        {
+          "Content" : "stty -echoctl",
+          "Date Modified" : "2020-10-25 18:46:28 -0400",
+          "Note" : "KbSRC - https:\/\/itrau.co\/3kp4CxE",
+          "Title" : "Temporarily Turn Off Echo",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 18:43:23 -0400"
+        },
+        {
+          "Content" : "stty echoctl",
+          "Date Modified" : "2020-10-25 18:44:42 -0400",
+          "Note" : "",
+          "Title" : "Turn On Echo",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 18:44:07 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-02 12:28:21 -0500",
+      "Date Modified" : "2020-12-02 12:28:21 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "untitled snippet",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-02 12:28:21 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-02 12:28:21 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 23:31:32 -0500",
+      "Date Modified" : "2021-01-27 23:32:43 -0500",
+      "Folder" : "gspread",
+      "Title" : "Download Plain Text from Cell",
+      "Fragments" : [
+        {
+          "Content" : "test_list = ['Text in Row 1','Text in Row 2','Text in Row 3']\n\noutput_list = \" \".join(str(x) for x in test_list)\n\nprint(output_list)\n",
+          "Date Modified" : "2021-01-27 23:31:57 -0500",
+          "Note" : "And the output would be :\n\nText in Row 1 Text in Row 2 Text in Row 3\n\nhttps:\/\/stackoverflow.com\/questions\/56450052\/how-to-download-plain-text-from-google-spreadsheet-cell",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 23:31:32 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 07:50:50 -0400",
+      "Date Modified" : "2020-10-01 07:51:37 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "Conditional Formatting: Errors",
+      "Fragments" : [
+        {
+          "Content" : "=error.type(A1)>0\n\n=iserror(A1)=true\n\n=type(A1)=16\n\n=iferror(A1,true)",
+          "Date Modified" : "2020-10-01 07:51:20 -0400",
+          "Note" : "There are four formulas. Use any of the ones to highlight total error cells.",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 07:50:50 -0400"
+        }
+      ],
+      "Tags" : [
+        "google sheets",
+        "errors",
+        "conditional formatting"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 08:08:54 -0500",
+      "Date Modified" : "2021-01-30 08:08:54 -0500",
+      "Folder" : "gas",
+      "Title" : "untitled snippet",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2021-01-30 08:08:54 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 08:08:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-02 18:06:24 -0400",
+      "Date Modified" : "2020-10-02 18:07:03 -0400",
+      "Folder" : "VLOOKUP",
+      "Title" : "Comparing Two Columns",
+      "Fragments" : [
+        {
+          "Content" : "=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])\n\n",
+          "Date Modified" : "2020-10-02 18:07:14 -0400",
+          "Note" : "lookup_value – the value that we want to find in the table_array\ntable_array – the range of cells containing the data we want to find or retrieve\ncol_index_num – the column number in the table_array corresponding to the information we want to retrieve, relative to the lookup_value\n[range_lookup] – optional; value can either be TRUE or FALSE\nif TRUE or omitted, VLOOKUP returns either an exact or approximate match\nif FALSE, VLOOKUP will only find an exact match",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-02 18:06:24 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-23 12:02:40 -0500",
+      "Date Modified" : "2020-12-23 12:02:40 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "untitled snippet",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-23 12:02:40 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-23 12:02:40 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:07:17 -0500",
+      "Date Modified" : "2021-01-28 21:07:26 -0500",
+      "Folder" : "gas",
+      "Title" : "Google Apps Script for importing CSV files from Drive into Fulcrum",
+      "Fragments" : [
+        {
+          "Content" : "\/**\n Title:   Google Apps Script for importing CSV files from Drive into Fulcrum\n Notes:   Be sure to manually run the getFiles() function at least once to authorize the script. Set a timed trigger to automate imports.\n Author:  Bryan R. McBride\n --CSV file format--\n latitude,longitude,name,color\n 27.770787,-82.638039,Building 1,red\n**\/\n \nvar fulcrumToken = \"abcdefghijklmnopqrstuvwxyz\";\nvar fulcrumFormID = \"a123b456-7c89-0123-4567-de8f910g0123\";\nvar filesToImportFolder = \"1_NGfsxszanv2evVJgfKMXxmU54SZ92FW\";\nvar importedFilesFolder = \"1l0KX8VWjhijsEylnnhGCVIdRmSzatglm\";\n\nfunction getFiles() {\n  \/\/ get the CSV files in the specified Drive folder\n  var files = DriveApp.getFolderById(filesToImportFolder).getFiles();\n  \/\/ loop through the files\n  while (files.hasNext()) {\n    \/\/ get the file\n    var file = files.next();\n    \/\/ parse the CSV\n    var data = Utilities.parseCsv(file.getBlob().getDataAsString());\n    \/\/ pass the file and the parsed data to the import function\n    importData(file, data);\n  }\n}\n\nfunction importData(file, data) {\n  \/\/ loop through the CSV rows skipping the first row headers\n  for (var i = 1; i < data.length; i++) {\n    \/\/ build the record JSON expected by Fulcrum\n    var record = {\n      \"record\": {\n        \"form_id\": fulcrumFormID,\n        \"status\": \"Imported\", \/\/ hard coded status for imported records\n        \"latitude\": data[i][0],\n        \"longitude\": data[i][1],\n        \"form_values\": {\n          \"2832\": data[i][2], \/\/ name\n          \"0dda\": {\n            \"choice_values\": [\n              data[i][3] \/\/ color\n            ]\n          }\n        }\n      }\n    };\n\n    \/\/ POST the record JSON to the Fulcrum API\n    UrlFetchApp.fetch(\"https:\/\/api.fulcrumapp.com\/api\/v2\/records.json\", {\n      \"method\": \"POST\",\n      \"contentType\": \"application\/json\",\n      \"payload\": JSON.stringify(record),\n      \"headers\": {\n        \"X-ApiToken\": fulcrumToken,\n        \"Accept\": \"application\/json\"\n      }\n    });\n  }\n\n  \/\/ remove the CSV file from the \"Files to Import\" folder \n  file.getParents().next().removeFile(file);\n  \/\/ add the removed CSV file to the \"Imported Files\" folder\n  DriveApp.getFolderById(importedFilesFolder).addFile(file);\n  \/\/ send the email notification with the record count\n  sendEmail(data.length - 1);\n}\n\nfunction sendEmail(count) {\n  MailApp.sendEmail({\n    to: \"someone@yourdomain.com\",\n    name: \"Fulcrum Import Notifier\",\n    subject: count + \" records imported into Fulcrum\",\n    htmlBody: \"Congratulations! \" + count + \" records have been successfully imported into Fulcrum.\"\n  });\n}",
+          "Date Modified" : "2021-01-28 21:07:31 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:07:17 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-28 14:24:02 -0500",
+      "Date Modified" : "2020-12-28 14:26:22 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "Combine Excel Sheets to Master",
+      "Fragments" : [
+        {
+          "Content" : "import os\nimport pandas as pd\n\n\ncwd = os.path.abspath('')\nfiles = os.listdir(cwd)\n\ndf = pd.DataFrame()\n\nfor file in files:\n    if file.endswith('.xlsx'):\n        df = df.append(pd.read_excel(file), ignore_index=True)\n\ndf.to_excel('output.xlsx')",
+          "Date Modified" : "2020-12-28 14:55:39 -0500",
+          "Note" : "https:\/\/pythoninoffice.com\/use-python-to-combine-multiple-excel-files\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-28 14:24:02 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 17:00:51 -0400",
+      "Date Modified" : "2019-08-01 17:01:14 -0400",
+      "Folder" : "git",
+      "Title" : "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit",
+      "Fragments" : [
+        {
+          "Content" : "git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit\n",
+          "Date Modified" : "2019-08-01 17:01:05 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 17:00:51 -0400"
+        }
+      ],
+      "Tags" : [
+        "git",
+        "git log"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-30 03:08:46 -0500",
+      "Date Modified" : "2021-01-30 03:08:57 -0500",
+      "Folder" : "vim",
+      "Title" : "Enable \/ Disable Relative Line Numbers",
+      "Fragments" : [
+        {
+          "Content" : "\" turn absolute line numbers on\n:set number\n:set nu\n\n\" turn absolute line numbers off\n:set nonumber\n:set nonu\n\n\" toggle absolute line numbers\n:set number!\n:set nu!",
+          "Date Modified" : "2021-01-30 03:09:08 -0500",
+          "Note" : "https:\/\/jeffkreeftmeijer.com\/vim-number\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-30 03:08:46 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 15:43:34 -0400",
+      "Date Modified" : "2020-10-01 16:51:55 -0400",
+      "Folder" : "vim",
+      "Title" : "sessions",
+      "Fragments" : [
+        {
+          "Content" : ":mks ~\/.SpaveVim.d\/sessions\/file_name.vim               to save sessions\n\n\n:source ~\/.SpaveVim.d\/sessions\/file_name.vim            to restore session:w\n\n\nvim -S ~\/.SpaveVim.d\/sessions\/file_name.vim             -run on vim initalization",
+          "Date Modified" : "2020-10-01 16:51:17 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 15:43:34 -0400"
+        }
+      ],
+      "Tags" : [
+        "sessions",
+        "vim"
+      ]
+    },
+    {
+      "Date Created" : "2020-11-02 19:17:49 -0500",
+      "Date Modified" : "2020-11-02 19:17:57 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Removing the last number of characters from a string in Excel and Google Spreadsheets",
+      "Fragments" : [
+        {
+          "Content" : "=LEFT(A1,LEN(A1)-3)\n\n# Or more generally:\n\n=LEFT(A1,LEN(A1)-[number of characters to remove])",
+          "Date Modified" : "2020-11-02 19:18:43 -0500",
+          "Note" : "Source: http:\/\/spreadsheetpro.net\/removing-the-last-x-number-of-characters-from-a-string-in-excel-and-google-spreadsheets\/\n\nSometimes you want to remove some number of last letters from a string in your spreadsheet. For this you can use a very handy function: LEFT()\n\nLEFT() returns the first X characters in a string, based on the amount of characters you specify. Like: LEFT(text,num_chars)\n\nSay you want to remove the last 3 characters from a string in cell A1 you can use:\n\n=LEFT(A1,LEN(A1)-3)\n\nOr more generally:\n\n=LEFT(A1,LEN(A1)-[number of characters to remove])\n\nHow does this LEFT() function work?\nSay for example that in cell A1 you have a string “IncomeMAX” and you want to remove the last three characters (“MAX”):\n\nFirst, LEN(A1) returns how long the string in cell A1 is: 8 characters\nThen it subtracts 3, in order to leave out the last 3 characters: 8-3=5\nThen LEFT() makes sure that only the first 5 characters from the left are returned: Income\nThat’s it! As always, let me know in the comments when you have any questions!",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-02 19:17:49 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 21:08:42 -0500",
+      "Date Modified" : "2020-12-29 21:08:50 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=MATCH(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\n=MATCH(\n    search_key,\n    range,\n    [search_type]\n)",
+          "Date Modified" : "2020-12-29 22:00:42 -0500",
+          "Note" : "# legend\n# search_key - the value to search for\n# range - the one-dimensional array to search\n# search_type - [OPTIONAL -1 by default] The manner5 in which to search\n# OPTIONAL VALUES\n# 1 - default value, causes MATCH to assume that the range is sorted in ascending order and return the largest value less than or equal to 'search_key'\n# 0 - indicates exact match and is required in situations where RANGE IS NOT SORTED\n# -1 - causes MATCH to assume that the range is sorted in descernding order and retuirn the smallest value greater then or equal to 'search_key'",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 21:08:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-02 15:55:35 -0400",
+      "Date Modified" : "2020-12-10 24:43:36 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Whole Row Highlighting",
+      "Fragments" : [
+        {
+          "Content" : "=$A2=\"any string\"\n\n=$B=TRUE",
+          "Date Modified" : "2020-11-24 17:16:28 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-02 15:55:35 -0400"
+        },
+        {
+          "Content" : "=$A2<>\"\" ",
+          "Date Modified" : "2020-12-10 24:43:54 -0500",
+          "Note" : "",
+          "Title" : "Empty Cell",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-10 24:43:36 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-02 16:03:30 -0500",
+      "Date Modified" : "2020-12-02 16:03:41 -0500",
+      "Folder" : "gas",
+      "Title" : "GAS - Delete Rows",
+      "Fragments" : [
+        {
+          "Content" : "function deleteRows() {\n  var sheet = SpreadsheetApp.getActiveSheet();\n  var rows = sheet.getDataRange();\n  var numRows = rows.getNumRows();\n  var values = rows.getValues();\n\n  var rowsDeleted = 0;\n  for (var i = 0; i <= numRows - 1; i++) {\n    var row = values[i];\n    if (row[0] == 'Learn more' || row[0] == '') { \/\/ This searches all cells in columns A (change to row[1] for columns B and so on) and deletes row if cell is empty or has value 'delete'.\n      sheet.deleteRow((parseInt(i)+1) - rowsDeleted);\n      rowsDeleted++;\n    }\n  }\n};",
+          "Date Modified" : "2020-12-02 16:04:10 -0500",
+          "Note" : "https:\/\/gist.github.com\/dDondero\/285f8fd557c07e07af0e#:~:text=Google%20Apps%20script%20function%20to%20delete%20rows%20based%20on%20value%20in%20cell.,-find%2Dcell%2Dvalue&text=var%20row%20%3D%20values%5Bi%5D,or%20has%20value%20'delete'.",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-02 16:03:30 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 18:17:33 -0500",
+      "Date Modified" : "2020-12-30 18:21:40 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=OFFSET(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax\n=OFFSET(\n    cell_reference,\n    offset_rows,\n    offset_columns,\n    [height],\n    [width]\n)",
+          "Date Modified" : "2020-12-30 18:25:34 -0500",
+          "Note" : "# legend\n# cell_reference - the startin reference cell(or base cell) from which the range of cells is displaced\n# offset_rows - the number of rows the range of cells displaces by, value = integer\n# offset_columns - num of columns a range of cells displaces\n# [height] - an optional parameter that specifies the height of the returning range of cells\n# [width] - optional parameter that specifies the width of the returning range of cells \n#\n\nSRCKb - https:\/\/blog.sheetgo.com\/google-sheets-formulas\/offset-formula-google-sheets\/\n",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 18:17:33 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:21:33 -0400",
+      "Date Modified" : "2020-10-25 22:22:29 -0400",
+      "Folder" : "vim",
+      "Title" : "Comments to Spaces",
+      "Fragments" : [
+        {
+          "Content" : ":%s\/\\#\/ \/g",
+          "Date Modified" : "2020-10-25 22:21:54 -0400",
+          "Note" : "Comments to Spaces",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:21:33 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:04:54 -0500",
+      "Date Modified" : "2021-01-27 01:06:05 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "How to measure time efficiently",
+      "Fragments" : [
+        {
+          "Content" : "import time\nstart_time = time.time()\ndo_something()\nprint(“%s seconds” % (time.time() — start_time))",
+          "Date Modified" : "2021-01-27 01:37:02 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:04:54 -0500"
+        },
+        {
+          "Content" : "",
+          "Date Modified" : "2021-01-27 01:37:04 -0500",
+          "Note" : "A somewhat important point here is that there is overhead associated with timing itself. One way to see what the overhead is would be to run the script without anything to actually time.",
+          "Title" : "Fragment 2",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:06:05 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-22 18:45:12 -0500",
+      "Date Modified" : "2021-01-22 18:45:21 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "add delimiter to last line in every cell",
+      "Fragments" : [
+        {
+          "Content" : "=SUBSTITUTE(O2,CHAR(10),\",\" & CHAR(10)) &\",\"",
+          "Date Modified" : "2021-01-22 18:45:22 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-22 18:45:12 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-29 20:31:56 -0500",
+      "Date Modified" : "2020-12-30 23:23:54 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=INDEX(function)",
+      "Fragments" : [
+        {
+          "Content" : "# syntax =INDEX(\n    array,\n    row_num,\n    [col_num],\n    [area_num]\n)\n",
+          "Date Modified" : "2020-12-29 22:01:39 -0500",
+          "Note" : "[TECHNICAL]\nThe INDEX function returns the value at a given position in a range or array. \n\nINDEX is frequently used together with the MATCH function. \n\nMATCH locates and feeds a position to INDEX,which returns the value at that position.\n\n# legend\n\nhttps:\/\/exceljet.net\/excel-functions\/excel-index-function",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-29 20:31:56 -0500"
+        },
+        {
+          "Content" : "=filter(\n        IMPORTRANGE(\n                    \"URL\",\n                    \"A:J\"),\n        INDEX(\n             IMPORTRANGE(\n                        \"URL\",\n                        \"A:J\"),\n             0,\n             3)\n        =\"Yes\")",
+          "Date Modified" : "2020-12-30 23:30:10 -0500",
+          "Note" : "",
+          "Title" : "filter && importrange",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 23:23:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-31 24:58:42 -0500",
+      "Date Modified" : "2020-12-31 01:00:00 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=COUNT(function)",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-31 24:58:42 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:58:42 -0500"
+        },
+        {
+          "Content" : "=COUNT( FILTER( $A$2:$A$95, $A$2:$A$95 <= $E$2, $A$2:$A$95 >= $D$2 ))",
+          "Date Modified" : "2020-12-31 24:59:14 -0500",
+          "Note" : "",
+          "Title" : "filter_count",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 24:58:51 -0500"
+        },
+        {
+          "Content" : "=SUM(FILTER($B$2:$B$95, MONTH($A$2:$A$95)=12))\n",
+          "Date Modified" : "2020-12-31 01:00:24 -0500",
+          "Note" : "",
+          "Title" : "sum-filter",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-31 01:00:00 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:07:10 -0400",
+      "Date Modified" : "2020-10-01 16:13:46 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "← → First Whitespace Text Extraction",
+      "Fragments" : [
+        {
+          "Content" : "=LEFT(B3,FIND(\" \",B3)-1)",
+          "Date Modified" : "2020-10-01 16:16:38 -0400",
+          "Note" : "",
+          "Title" : "Left ← ",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:07:10 -0400"
+        },
+        {
+          "Content" : "=MID(B2,FIND(\" \",B2)+1,256)",
+          "Date Modified" : "2020-10-01 16:16:49 -0400",
+          "Note" : "",
+          "Title" : "→ Right ",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:13:46 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 06:41:34 -0400",
+      "Date Modified" : "2020-10-01 06:41:45 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "Insert Brackets Around Text In A Cell",
+      "Fragments" : [
+        {
+          "Content" : "=\"(\"&A2&\")\"",
+          "Date Modified" : "2020-10-01 16:04:08 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 06:41:34 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-26 15:11:38 -0500",
+      "Date Modified" : "2021-01-26 15:11:47 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Dynamic Row Hiding",
+      "Fragments" : [
+        {
+          "Content" : "\/** \n* TITLE:\n*     Hide a row if a value is inputted. \n*\/\n\n\/\/**GLOBALS**\n\/\/ Sheet the data is on.\nvar SHEET = \"SNOW\";\n\/\/ The value that will cause the row to hide. \nvar VALUE = true;\n\/\/ The column we will be using \nvar COLUMN_NUMBER = 1\n\nfunction onEdit(e) {\n  var ss = SpreadsheetApp.getActiveSpreadsheet();\n  var activeSheet = ss.getActiveSheet();\n  \n  \/\/Ensure on correct sheet.\n  if(SHEET == activeSheet.getName()){\n    var cell = ss.getActiveCell()\n    var cellValue = cell.getValue();\n    \n    \/\/Ensure we are looking at the correct column.\n    if(cell.getColumn() == COLUMN_NUMBER){\n      \/\/If the cell matched the value we require,hide the row. \n      if(cellValue == VALUE){\n        activeSheet.hideRow(cell);\n      };\n    };\n  };\n}",
+          "Date Modified" : "2021-01-27 15:32:16 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-26 15:11:38 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-15 23:46:35 -0400",
+      "Date Modified" : "2019-08-15 23:46:53 -0400",
+      "Folder" : "Uncategorized",
+      "Title" : "output keycodes in js",
+      "Fragments" : [
+        {
+          "Content" : "function setupKeyLogger() {\n         document.onkeydown = function(e) {\n           console.log(e);\n         }\n}",
+          "Date Modified" : "2020-10-01 02:32:34 -0400",
+          "Note" : "\nuse just the following simple handler to output the key codes to the JavaScript console.",
+          "Title" : "Fragment",
+          "Language" : "Python",
+          "Date Created" : "2019-08-15 23:46:35 -0400"
+        }
+      ],
+      "Tags" : [
+        "keycodes",
+        "keyboard"
+      ]
+    },
+    {
+      "Date Created" : "2020-10-25 22:22:22 -0400",
+      "Date Modified" : "2020-10-25 22:22:40 -0400",
+      "Folder" : "vim",
+      "Title" : "Vim Surround",
+      "Fragments" : [
+        {
+          "Content" : "ds(    delete first surrounding pair of parentheses\n2ds(   delete second surrounding pair of parentheses\ncs[{   change surrounding pair of square brackets into a pair of braces\nSee :help surround.",
+          "Date Modified" : "2020-10-25 22:22:41 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-25 22:22:22 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-01 15:37:38 -0500",
+      "Date Modified" : "2020-12-01 15:41:15 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Count Cells If Not Blank Using COUNTIF function",
+      "Fragments" : [
+        {
+          "Content" : "=COUNTIF($A$1:$A$13,”?*”)+COUNT($A$1:$A$13)\n\n",
+          "Date Modified" : "2020-12-01 15:41:05 -0500",
+          "Note" : "https:\/\/productivityspot.com\/count-non-blank-cells-google-sheets\/",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-01 15:37:38 -0500"
+        },
+        {
+          "Content" : "=SUMPRODUCT(LEN(A1:A13)>0)",
+          "Date Modified" : "2020-12-01 15:41:36 -0500",
+          "Note" : "",
+          "Title" : "SUMPRODUCT",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-01 15:41:15 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:17:50 -0500",
+      "Date Modified" : "2021-01-27 01:18:25 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "paratest",
+      "Fragments" : [
+        {
+          "Content" : "import paratext\ndata = paratext.load_csv_to_pandas(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:19:10 -0500",
+          "Note" : "With paratext you can import csv either to pandas or to a dictionary similarly to two of the other methods I described above. In order to do either of those one can use the following code snippets:\n\nAs you can see in this reddit post Damian Eads (who apparently is the man behind Paratext) explains that you need a CSV file of at least 100 MBs in order to see the benefits of the library. The overhead or the initial load of setting up parallel processing is not negligible and therefore the gains from using it will be more apparent in more formidable tasks like importing a multi-gigabyte data set. But again, one needs the proper setup in order to reap the benefits of this library.",
+          "Title" : "v1",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:17:50 -0500"
+        },
+        {
+          "Content" : "data = paratext.load_csv_to_dict(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:19:06 -0500",
+          "Note" : "As you can see in this reddit post Damian Eads (who apparently is the man behind Paratext) explains that you need a CSV file of at least 100 MBs in order to see the benefits of the library. The overhead or the initial load of setting up parallel processing is not negligible and therefore the gains from using it will be more apparent in more formidable tasks like importing a multi-gigabyte data set. But again, one needs the proper setup in order to reap the benefits of this library.",
+          "Title" : "v2",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:18:25 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 23:33:04 -0500",
+      "Date Modified" : "2021-01-27 23:33:15 -0500",
+      "Folder" : "gspread",
+      "Title" : "PUBLIC Stack Overflow Tags Users FIND A JOB Jobs Companies TEAMS What’s this? Free 30 Day Trial How to get the co-ordinate of a cell in gspread by using cell value in Python 3.6",
+      "Fragments" : [
+        {
+          "Content" : "cell = worksheet.find(\"12-11-2017\") #Find a cell with exact string value\nprint(\"Text found at R%sC%s\" % (cell.row, cell.col))\n\n\n",
+          "Date Modified" : "2021-01-27 23:34:16 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 23:33:04 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-22 12:52:31 -0400",
+      "Date Modified" : "2020-10-22 12:53:12 -0400",
+      "Folder" : "hotkey-shortcuts",
+      "Title" : "Confluence",
+      "Fragments" : [
+        {
+          "Content" : "# Block Formatting\n⌘+0 - Paragraph\n⌘+1 - Heading 1\n⌘+6 - Heading 6 \n⌘+7 -  Preformatted\n⌘+8 - Quote\n⌘+Shift+B - Bullet list\n⌘+Shift+N - Numbered list\n\n# Rich Formatting\n⌘+M - Files and images\n⌘+K - Link\n⌘+Shift+D - Insert markup\n⌘+Shift+A - Macro\n⌘+Shift+I - Table\n⌘+Shift+X - Cut row\n⌘+Shift+C - Copy row\n⌘+Shift+V - Paste row above\n\n# Editing Actions\n⌘+Shift+E - Preview\n⌘+S - Save",
+          "Date Modified" : "2020-10-22 12:58:44 -0400",
+          "Note" : "Official hotkey shortcuts for Confluence. ",
+          "Title" : "Editor Hotkeys",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-22 12:52:31 -0400"
+        },
+        {
+          "Content" : "# Font Formatting\n*Bold* - Bold text\n+Underline+ - Underline text\n_Italic_ - Italic text\n{{Monospace}} - Monospace text\n\n# Autocomplete\n! - Image\/Media\n[ - Link\nMacro - {\n\n# Tables\t \t \t \n||||| + enter - first cell\n||heading||heading|| - heading\theading\n\n# Styles\nh1. Heading - Heading\nh3. Heading - Heading\nbq. Quote - Quote\n\n# Emoticons\n(\/)\n::)\n\n# Lists\n# list - list\n* bullets - bullets\ntask - [] task\n",
+          "Date Modified" : "2020-10-22 14:02:06 -0400",
+          "Note" : "",
+          "Title" : "Autoformat",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-22 12:53:12 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 16:06:20 -0400",
+      "Date Modified" : "2020-10-01 16:06:52 -0400",
+      "Folder" : "g-sheets",
+      "Title" : "Concat 2 Cells Together",
+      "Fragments" : [
+        {
+          "Content" : "=CONCATENATE(D2:E2)",
+          "Date Modified" : "2020-10-01 16:06:56 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 16:06:20 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:06:49 -0500",
+      "Date Modified" : "2021-01-28 21:06:55 -0500",
+      "Folder" : "gas",
+      "Title" : "if else text",
+      "Fragments" : [
+        {
+          "Content" : "if(rng[i]==\"赤テキスト\"){\nsht.getRange(i+4,4).setValue('赤文字').setHorizontalAlignment(\"center\").setFontColor(\"red\");\n}else if(rng[i]==\"赤テキスト黄色塗り\"){\nsht.getRange(i+4,4).setValue('赤＆黄色').setHorizontalAlignment(\"center\").setFontColor(\"red\").setBackground(color);\n}else{\nsht.getRange(i+4,4).setValue('青文字').setHorizontalAlignment(\"center\").setFontColor(\"blue\");\n}",
+          "Date Modified" : "2021-01-28 21:06:57 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:06:49 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 23:38:18 -0500",
+      "Date Modified" : "2021-01-27 23:38:50 -0500",
+      "Folder" : "gspread",
+      "Title" : "How do you copy values from one spreadsheet to another using gspread or some other way?",
+      "Fragments" : [
+        {
+          "Content" : "spreadsheetId = \"###\"  # Please set the Spreadsheet ID.\nsourceSheetName = \"Sheet1\"  # Please set the sheet name of source sheet.\ndestinationSheetName = \"Sheet2\"  # Please set the sheet name of destination sheet.\n\nclient = gspread.authorize(credentials)\nspreadsheet = client.open_by_key(spreadsheetId)\nsourceSheetId = spreadsheet.worksheet(sourceSheetName)._properties['sheetId']\ndestinationSheetId = spreadsheet.worksheet(destinationSheetName)._properties['sheetId']\nbody = {\n    \"requests\": [\n        {\n            \"copyPaste\": {\n                \"source\": {\n                    \"sheetId\": sourceSheetId,\n                    \"startRowIndex\": 0,\n                    \"endRowIndex\": 5,\n                    \"startColumnIndex\": 0,\n                    \"endColumnIndex\": 5\n                },\n                \"destination\": {\n                    \"sheetId\": destinationSheetId,\n                    \"startRowIndex\": 0,\n                    \"endRowIndex\": 5,\n                    \"startColumnIndex\": 0,\n                    \"endColumnIndex\": 5\n                },\n                \"pasteType\": \"PASTE_VALUES\"\n            }\n        }\n    ]\n}\nres = spreadsheet.batch_update(body)\nprint(res)",
+          "Date Modified" : "2021-01-27 23:38:50 -0500",
+          "Note" : "1\n\nYou want to copy the values from a sheet to other sheet in a Google Spreadsheet.\nYou want to achieve this using gspread with python.\nYou have already been able to get and put values for Google Spreadsheet using Google Sheets API.\nIf my understanding is correct, how about this answer? Please think of this as just one of several possible answers.\n\nIn this answer, I would like to propose to use batch_update for copying the values from from a sheet to other sheet in the Spreadsheet. In this case, your goal can be achieved by one API call.\n\nSample script:\nIn this sample script, the script of authorization is removed. The sample script for copying values from a sheet to other sheet in the Spreadsheet is shown. So when you use this script, please add the authorization script, and run the script.\n\n",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 23:38:18 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 21:09:51 -0500",
+      "Date Modified" : "2021-01-28 21:10:04 -0500",
+      "Folder" : "js",
+      "Title" : "send mail with google apps script",
+      "Fragments" : [
+        {
+          "Content" : "sendMailGoogleAppsScript\nfunction sendMailAvaliacaoFicha() {\n  var sheet = SpreadsheetApp.getActiveSheet();\n  var startRow = 2;  \/\/ First row of data to process\n  var numRows = 9;   \/\/ Number of rows to process\n  \/\/ Fetch the range of cells A2:F10\n  var dataRange = sheet.getRange(startRow, 1, numRows, 6)\n  \/\/ Fetch values for each row in the Range.\n  var data = dataRange.getValues();\n  for (i in data) {\n    var row = data[i];\n    var emailAddress = row[1];  \/\/ First column\n    var message = \"Bom dia \" + row[5] +\",<br\/>\\n\"+\n        'Analisamos a sua <strong>avaliação<\/strong>:<br\/>'+'<pre style=\"font-family: monospace;font-size: 14px;\">' + row[2]+\"<\/pre><br\/>\\n\"+\n        \"Para atender sua avaliação identificamos as seguintes <strong>ações<\/strong> :\\n\"+'<pre style=\"font-family: monospace;font-size: 14px;\">' +\n        row[3]+\"<\/pre><br\/>\\n\"+\n        \"Estas ações devem atender \" + (row[4]*100) + \"% de sua avaliação.<br\/>\" +\n        \"Caso deseje mais alguma informação entrar em contato com <br\/><br\/>\"+\n        \"Fábio Almeida<br\/>\"   ;       \/\/ Second column\n    var subject = \"::Resultado da Avaliação da Ficha\";\n    MailApp.sendEmail(emailAddress, subject, \"\", { htmlBody:message, bcc: \"mymail@example.com\" });\n  }\n}",
+          "Date Modified" : "2021-01-28 21:10:06 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 21:09:51 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 03:37:18 -0400",
+      "Date Modified" : "2020-10-01 16:52:06 -0400",
+      "Folder" : "vim",
+      "Title" : "Folding Commands",
+      "Fragments" : [
+        {
+          "Content" : "zf#j creates a fold from the cursor down # lines.\n\nzf\/string creates a fold from the cursor to string.\n\nzj moves the cursor to the next fold.\n\nzk moves the cursor to the previous fold.\n\nzo opens a fold at the cursor.\n\nzO opens all folds at the cursor.\n\nzm increases the foldlevel by one.\n\nzM closes all open folds.\n\nzr decreases the foldlevel by one.\n\nzR decreases the foldlevel to zero — all folds will be open.\n\nzd deletes the fold at the cursor.\n\nzE deletes all folds.\n\n[z move to start of open fold.\n\n]z move to end of open fold.",
+          "Date Modified" : "2020-10-01 03:38:12 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 03:37:18 -0400"
+        }
+      ],
+      "Tags" : [
+        "folding",
+        "vim"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:15:55 -0500",
+      "Date Modified" : "2021-01-27 01:15:57 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "dask.dataframe",
+      "Fragments" : [
+        {
+          "Content" : "import dask.dataframe\ndata = dask.dataframe.read_csv(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:16:54 -0500",
+          "Note" : "The dask.dataframe is a collection of smaller pandas data frames split by the index (the row labels used for identification of data), which can be processed in parallel on a single machine or on multiple machines on a cluster. I learnt about dask from this useful post by Eric Brown.",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:15:55 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 19:54:49 -0400",
+      "Date Modified" : "2019-08-01 19:55:25 -0400",
+      "Folder" : "git",
+      "Title" : "git diff --stat <hashID> <hashID>",
+      "Fragments" : [
+        {
+          "Content" : "git diff --stat ",
+          "Date Modified" : "2019-08-01 19:55:46 -0400",
+          "Note" : "http:\/\/bit.ly\/2GGHmte",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 19:54:49 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 18:44:42 -0500",
+      "Date Modified" : "2020-12-30 18:44:48 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=query(query(A:A, \"SELECT * OFFSET 1\",0),\"select * skipping 2 \",0)",
+      "Fragments" : [
+        {
+          "Content" : "=query(query(A:A, \"SELECT * OFFSET 1\",0),\"select * skipping 2 \",0)\n",
+          "Date Modified" : "2020-12-30 18:44:55 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/48265170\/query-select-skipping-with-offset-issue",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 18:44:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 02:50:47 -0400",
+      "Date Modified" : "2020-10-01 02:52:05 -0400",
+      "Folder" : "macOS",
+      "Title" : "Mac Keyboard Icons ⌘ ⌥ ⌃",
+      "Fragments" : [
+        {
+          "Content" : "⌘ is the Command () key.\n\n⌃ is the Control key.\n\n⌥ is the Option (alt) key.\n\n⇧ is the Shift key.\n\n⇪ is the Caps Lock key.\n\nfn is the Function key. Now you know, but if the symbols confuse you, don't feel too bad about it.",
+          "Date Modified" : "2020-10-01 15:48:29 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 02:50:47 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-28 23:54:42 -0500",
+      "Date Modified" : "2021-01-28 23:54:56 -0500",
+      "Folder" : "gas",
+      "Title" : "Copy Formulas Down",
+      "Fragments" : [
+        {
+          "Content" : "\/**\n * Copy Formulas Down\n * This script copies functions from a source row (usually the first data row in a spreadsheet) to\n * rows at the end of the sheet, where the colums for these formulas are still empty.\n * It checks row from the bottom upwards, copying formulas into the rows where there are no formulas yet,\n * and stops as soon as it finds a row which has a formula already.\n * When copying formulas, it leaves values in other cells unchanged.\n *\/\n\n\/**\n * Copy formulas from the a source row in a sheet to rows below\n * @param  {Sheet} sheet     \tGoogle Spreadsheet sheet\n * @param  {int} sourceRow \t\t(optional) 1-based index of source row from which formulas are copied, default: 2\n *\/\nfunction copyFormulasDown(sheet, sourceRow) {\n    if (sourceRow === undefined) {\n        sourceRow = 2;\n    }\n    var formulas = getFormulas_(sheet, sourceRow);\n    if (formulas !== {}) {\n        var rows = sheet.getDataRange().getFormulas();\n        for (var r = rows.length - 1; r >= sourceRow && rows[r].join('') === ''; r--) {\n            copyFormulas_(sheet, r, formulas);\n        }\n    }\n}\n\/**\n * Copy formulas into row r in sheet\n * @param  {Sheet} sheet     \tGoogle Spreadsheet sheet\n * @param  {int} r \t\t\t\t1-based index of row where formulas will be copied\n * @param  {array} formulas \tarray of objects with column index and formula string\n *\/\nfunction copyFormulas_(sheet, r, formulas) {\n    for (var i = 0; i < formulas.length; i++) {\n        sheet.getRange(r + 1, formulas[i].c + 1).setFormulaR1C1(formulas[i].formula);\n    }\n}\n\/**\n * Read formulas from the source row, creating an array of objects\n * Each objects contains the column index and formula string\n * @param  {Sheet} sheet     \tGoogle Spreadsheet sheet\n * @param  {int} r\t\t\t\t1-based index of source row\n * @return {array}\t\t\t\tarray of objects\n *\/\nfunction getFormulas_(sheet, r) {\n    var row = sheet.getRange(r, 1, 1, sheet.getLastColumn()).getFormulasR1C1()[0];\n    var formulas = [];\n    for (var c = 0; c < row.length; c++) {\n        if (row[c] !== '') {\n            formulas.push({\n                c: c,\n                formula: row[c]\n            });\n        }\n    }\n    return formulas;\n}",
+          "Date Modified" : "2021-01-28 23:54:58 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-28 23:54:42 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-12-30 21:27:45 -0500",
+      "Date Modified" : "2020-12-30 21:27:54 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "=IFERROR(function)",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-30 21:27:45 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-30 21:27:45 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 15:59:23 -0400",
+      "Date Modified" : "2020-10-01 15:59:35 -0400",
+      "Folder" : "bash",
+      "Title" : "Batch Whois Domain Lookup",
+      "Fragments" : [
+        {
+          "Content" : "#!\/usr\/bin\/env bash\n\n#!\/bin\/bash\nfor domain in `cat domains.txt`\ndo\n   echo $domain\n   `whois $domain >> whois-results.txt`\ndone",
+          "Date Modified" : "2020-10-01 16:01:37 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Bash",
+          "Date Created" : "2020-10-01 15:59:23 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-01-27 01:13:33 -0500",
+      "Date Modified" : "2021-01-27 01:15:05 -0500",
+      "Folder" : "data-analysis-python",
+      "Title" : "pandas.read_csv()",
+      "Fragments" : [
+        {
+          "Content" : "import pandas\ndata = pd.read_csv(“random.csv”)",
+          "Date Modified" : "2021-01-27 01:14:51 -0500",
+          "Note" : " Pandas are data structures tailored for data analysis and data science work. They are suited for tabular data with heterogeneously-typed columns (integers, floats, strings like the random data we already created), as well as time series. \n\nAn importnat point here is that pandas.read_csv() can be run with the chunksize option. This will break the input file into chunks instead of loading the whole file into memory. This will reduce the pressure on memory for large input files and given an optimal chunksize found through trial and error, there can be significant increase in efficiency. The code below will split the input file into chunks of 100 000 lines",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:13:33 -0500"
+        },
+        {
+          "Content" : "chunks = pd.read_csv(input_file, chunksize=100000)\ndata = pd.concat(chunks)",
+          "Date Modified" : "2021-01-27 01:15:49 -0500",
+          "Note" : "An importnat point here is that pandas.read_csv() can be run with the chunksize option. This will break the input file into chunks instead of loading the whole file into memory. This will reduce the pressure on memory for large input files and given an optimal chunksize found through trial and error, there can be significant increase in efficiency. \n\nThe code below will split the input file into chunks of 100 000 lines\n",
+          "Title" : "100,000 lines",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-27 01:15:05 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-18 17:47:05 -0500",
+      "Date Modified" : "2020-11-23 12:13:46 -0500",
+      "Folder" : "python3",
+      "Title" : "Python ENV Start \/ Stop",
+      "Fragments" : [
+        {
+          "Content" : " python3 -m venv venv\n source venv\/bin\/activate",
+          "Date Modified" : "2020-12-16 20:52:41 -0500",
+          "Note" : "",
+          "Title" : "Create ENV",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:47:05 -0500"
+        },
+        {
+          "Content" : "source venv\/bin\/activate",
+          "Date Modified" : "2020-11-18 17:48:03 -0500",
+          "Note" : "",
+          "Title" : "Activate ENV",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:47:39 -0500"
+        },
+        {
+          "Content" : "deactivate",
+          "Date Modified" : "2020-11-18 17:48:25 -0500",
+          "Note" : "",
+          "Title" : "Deactive ENV",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-18 17:48:12 -0500"
+        },
+        {
+          "Content" : " python3 -m venv venv\n source venv\/bin\/activate",
+          "Date Modified" : "2020-11-23 12:14:04 -0500",
+          "Note" : "",
+          "Title" : "Combo",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-11-23 12:13:46 -0500"
+        }
+      ],
+      "Tags" : [
+        "vevnv"
+      ]
+    },
+    {
+      "Date Created" : "2021-01-29 24:42:08 -0500",
+      "Date Modified" : "2021-01-29 24:42:17 -0500",
+      "Folder" : "gas",
+      "Title" : "copy formula down",
+      "Fragments" : [
+        {
+          "Content" : "\/\/ Google Apps Script to take a value in column A and fill it down until a new value shows up in a cell for Google Sheets\n\/\/ Author: Al Chen (al@coda.io)\n\/\/ Last Updated: September 6th, 2020\n\/\/ Video tutorial: https:\/\/youtu.be\/t-32QkyjKVE?t=106\n\nfunction fillValuesDown() {\n  var spreadsheet = SpreadsheetApp.getActive()\n  var currentRange = spreadsheet.getRange(\"A2:A\" + spreadsheet.getLastRow())\n  var newRange = []\n  var newFillValue\n  currentRange.getValues().map(function(value) {\n    if (value[0] !== '') {\n      newFillValue = value[0]\n      newRange.push([newFillValue])\n    } else {\n      newRange.push([newFillValue])\n    }\n  })\n  currentRange.setValues(newRange)\n}",
+          "Date Modified" : "2021-01-29 24:42:23 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-01-29 24:42:08 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-10-01 17:27:09 -0400",
+      "Date Modified" : "2020-10-01 17:27:19 -0400",
+      "Folder" : "SpaceVim",
+      "Title" : "CntrlSpace Keybindings",
+      "Fragments" : [
+        {
+          "Content" : "\nKeybindings\tDescriptions\n\nh\ttoggle view home (buffers) list\n\nH\tenter home (buffers) list in search\n\no\ttoggle view project files list\n\nO\tenter project files in search\n\nl\ttoggle view tabs list\n\nL\tenter tabs search in search\n\nw\ttoggle view workspaces list\n\nW\tenter workspaces list in search\n\nb\ttoggle view bookmarks list\n\nB\tenter bookmarks list in search\n\n\/\ttoggle search mode for current list\n\n?\tdisplay help for current list and mode",
+          "Date Modified" : "2020-10-01 17:27:36 -0400",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-10-01 17:27:09 -0400"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2020-11-04 19:46:05 -0500",
+      "Date Modified" : "2020-11-04 19:47:42 -0500",
+      "Folder" : "gas",
+      "Title" : "Export Formulas and Notes from a Google Spreadsheet",
+      "Fragments" : [
+        {
+          "Content" : "\/\/ Credit: github.com\/danthareja\n\nfunction doGet(request) {\n\n  \/\/ ID of Google Spreadsheet\n  var json = getNotesAndFormulas(request.parameter.id);\n\n  return ContentService.createTextOutput(JSON.stringify(cache))\n  .setMimeType(ContentService.MimeType.JSON);\n}\n\nfunction getNotesAndFormulas(spreadsheetId) {\n  return SpreadsheetApp\n  .openById(spreadsheetId)\n  .getSheets()\n  .reduce(function(cache, sheet) {\n\n    var sheetData = cache[sheet.getName()] = {};\n    var range = sheet.getDataRange();\n\n    sheetData.range = range.getA1Notation();\n    sheetData.notes = range.getNotes();\n    sheetData.formulas = range.getFormulas();\n\n    return cache;\n  }, { spreadsheetId: spreadsheetId });\n}",
+          "Date Modified" : "2020-11-04 19:46:35 -0500",
+          "Note" : "Dan Thareja has written a Google Script that will let you export all the formulas, cell values and notes from a Google Spreadsheet as a JSON file. You can also pull the Google formulas in another web app or Google Apps script using a GET Request. It should come handy when you are reviewing the formulas of a large sheet.\n\nhttps:\/\/www.labnol.org\/code\/20057-export-google-sheet-formulas",
+          "Title" : "Fragment",
+          "Language" : "JavaScript",
+          "Date Created" : "2020-11-04 19:46:05 -0500"
+        }
+      ],
+      "Tags" : [
+        "apps scipt",
+        "google apps script",
+        "gas",
+        "clasp",
+        "g-suite",
+        "g-sheets"
+      ]
+    },
+    {
+      "Date Created" : "2019-08-01 17:03:29 -0400",
+      "Date Modified" : "2019-08-01 17:04:15 -0400",
+      "Folder" : "git",
+      "Title" : "git show <hash> --name-only",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2019-08-01 17:04:10 -0400",
+          "Note" : "Recently I wanted to pull a list of changed files from an older commit from the command line.\n\nTurns out (like most things in Git) this is very easy to do. git show –name-only {commit}\n\nYou can replace {commit} with the SHA1 you want to retrieve, or things like HEAD or HEAD^^\n\nI made this post into a YouTube video",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2019-08-01 17:03:29 -0400"
+        }
+      ],
+      "Tags" : [
+        "git log",
+        "git"
+      ]
+    }
+  ]
+}
