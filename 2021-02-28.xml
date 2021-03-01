@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Date Exported</key>
-	<string>2021-02-14 23:07:29 -0500</string>
+	<string>2021-02-28 21:52:01 -0500</string>
 	<key>Library Name</key>
 	<string>main.snippetslablibrary</string>
 	<key>Snippets</key>
@@ -21,13 +21,13 @@
 					<key>Content</key>
 					<string>=QUERY(
        {IMPORTRANGE("https://docs.google.com/spreadsheets/d/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk","kt_schedule")},
-       "SELECT Col1 WHERE Col1 is not null",
+       "]0iis not null",
        1
 )</string>
 					<key>Date Created</key>
 					<string>2021-01-25 16:43:14 -0500</string>
 					<key>Date Modified</key>
-					<string>2021-01-25 16:43:19 -0500</string>
+					<string>2021-02-16 19:25:38 -0500</string>
 					<key>Language</key>
 					<string>Plain Text</string>
 					<key>Note</key>
@@ -95,9 +95,9 @@ while True:
 					<key>Date Created</key>
 					<string>2020-12-16 20:45:58 -0500</string>
 					<key>Date Modified</key>
-					<string>2020-12-16 20:46:38 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string>https://gist.github.com/iTrauco/79f9ac98830be9d44cb675bfc44b0dc3</string>
 					<key>Title</key>
@@ -257,9 +257,9 @@ print json[0]['title']</string>
 					<key>Date Created</key>
 					<string>2021-01-28 21:20:36 -0500</string>
 					<key>Date Modified</key>
-					<string>2021-01-28 21:20:49 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string></string>
 					<key>Title</key>
@@ -568,6 +568,39 @@ press d or x to delete characters, repeatedly if necessary</string>
 			</array>
 			<key>Title</key>
 			<string>Bulk Line Comments</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-19 20:52:35 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-19 20:52:42 -0500</string>
+			<key>Folder</key>
+			<string>JSON</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>Pretty print JSON in Vim
+
+1.  Esc into Normal mode
+2. Type :
+3. Enter “%!python -m json.tool”</string>
+					<key>Date Created</key>
+					<string>2021-02-19 20:52:35 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-19 20:52:47 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Pretty print JSON in Vim</string>
 		</dict>
 		<dict>
 			<key>Date Created</key>
@@ -1349,7 +1382,7 @@ table.commit()</string>
 			<key>Date Modified</key>
 			<string>2021-01-29 01:04:48 -0500</string>
 			<key>Folder</key>
-			<string>SXMP</string>
+			<string>sox</string>
 			<key>Fragments</key>
 			<array>
 				<dict>
@@ -1623,9 +1656,9 @@ with open(str(file)[:-3]+'csv', 'w', encoding='utf8', newline='') as f:
 					<key>Date Created</key>
 					<string>2020-11-18 17:50:42 -0500</string>
 					<key>Date Modified</key>
-					<string>2020-11-19 22:50:58 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string></string>
 					<key>Title</key>
@@ -1636,35 +1669,6 @@ with open(str(file)[:-3]+'csv', 'w', encoding='utf8', newline='') as f:
 			<array/>
 			<key>Title</key>
 			<string>Convert VTT to CSV</string>
-		</dict>
-		<dict>
-			<key>Date Created</key>
-			<string>2021-01-29 22:28:32 -0500</string>
-			<key>Date Modified</key>
-			<string>2021-01-29 22:28:48 -0500</string>
-			<key>Folder</key>
-			<string>grep-awk-sed</string>
-			<key>Fragments</key>
-			<array>
-				<dict>
-					<key>Content</key>
-					<string>grep "boo" a_file</string>
-					<key>Date Created</key>
-					<string>2021-01-29 22:28:32 -0500</string>
-					<key>Date Modified</key>
-					<string>2021-01-29 22:28:54 -0500</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string></string>
-					<key>Title</key>
-					<string>Fragment</string>
-				</dict>
-			</array>
-			<key>Tags</key>
-			<array/>
-			<key>Title</key>
-			<string>find a file(basic)</string>
 		</dict>
 		<dict>
 			<key>Date Created</key>
@@ -1918,9 +1922,9 @@ and so</string>
 					<key>Date Created</key>
 					<string>2021-01-29 23:18:28 -0500</string>
 					<key>Date Modified</key>
-					<string>2021-01-30 02:15:28 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string>https://testdriven.io/blog/modern-tdd/</string>
 					<key>Title</key>
@@ -2232,6 +2236,245 @@ df.to_csv(“random.csv”, sep=’,’)</string>
 			<array/>
 			<key>Title</key>
 			<string>random_data_csv.py</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-01-28 24:10:33 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-01-28 24:12:05 -0500</string>
+			<key>Folder</key>
+			<string>gspread</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>from google.colab import auth
+auth.authenticate_user()
+
+import gspread
+from oauth2client.client import GoogleCredentials
+
+gc = gspread.authorize(GoogleCredentials.get_application_default())
+
+sh = gc.create('A new spreadsheet')
+
+# Open our new sheet and add some data.
+worksheet = gc.open('A new spreadsheet').sheet1
+
+cell_list = worksheet.range('A1:C2')
+
+import random
+for cell in cell_list:
+  cell.value = random.randint(1, 10)
+
+worksheet.update_cells(cell_list)
+# Go to https://sheets.google.com to see your new spreadsheet.</string>
+					<key>Date Created</key>
+					<string>2021-01-28 24:10:33 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-01-28 24:14:24 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>!pip install --upgrade gspread</string>
+					<key>Title</key>
+					<string>!pip install --upgrade gspread</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>from google.colab import auth
+auth.authenticate_user()
+
+import gspread
+from oauth2client.client import GoogleCredentials
+
+gc = gspread.authorize(GoogleCredentials.get_application_default())
+
+worksheet = gc.open('Your spreadsheet name').sheet1
+
+# get_all_values gives a list of rows.
+rows = worksheet.get_all_values()
+print(rows)
+
+# Convert to a DataFrame and render.
+import pandas as pd
+pd.DataFrame.from_records(rows)</string>
+					<key>Date Created</key>
+					<string>2021-01-28 24:11:38 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-01-28 24:13:44 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>!pip install --upgrade gspread</string>
+					<key>Title</key>
+					<string>Importing data from Google Sheets</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Import / Export Sheet Data</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-29 20:25:00 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-30 23:21:54 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string># syntax
+FILTER(
+    range,          
+    condition,
+    [options,...]
+)</string>
+					<key>Date Created</key>
+					<string>2020-12-29 20:25:00 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-29 22:01:47 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string># legend
+# range = range of cells to filter
+# condition = the columns/row(corresponding to the column/row of the dataset), returns an array of booleans TRUE/FALSE
+# [options,..] = second condition, can return an array of booleans TRUE/FALSE
+
+https://spreadsheetpoint.com/filter-function-google-sheets/
+
+</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>=filter(IMPORTRANGE("URL","A:J"),INDEX(IMPORTRANGE("URL","A:J"),0,3)="Yes")</string>
+					<key>Date Created</key>
+					<string>2020-12-30 23:21:54 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-30 23:23:00 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://webapps.stackexchange.com/questions/87272/using-filter-or-importrange-to-bring-in-and-filter-data-from-another-spreadsheet</string>
+					<key>Title</key>
+					<string>ex_one</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>=FILTER(function)</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-12-02 12:28:21 -0500</string>
+			<key>Date Modified</key>
+			<string>2020-12-02 12:28:21 -0500</string>
+			<key>Folder</key>
+			<string>Uncategorized</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string></string>
+					<key>Date Created</key>
+					<string>2020-12-02 12:28:21 -0500</string>
+					<key>Date Modified</key>
+					<string>2020-12-02 12:28:21 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>untitled snippet</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-01-28 21:08:01 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-01-28 21:08:07 -0500</string>
+			<key>Folder</key>
+			<string>js</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>curl -s https://api.github.com/repos/jgm/pandoc/releases/latest \
+| grep "browser_download_url.*deb" \
+| cut -d : -f 2,3 \
+| tr -d \" \
+| wget -qi -</string>
+					<key>Date Created</key>
+					<string>2021-01-28 21:08:01 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-01-28 21:08:08 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>One Liner to Download the Latest Release from Github Repo</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2020-10-25 18:43:23 -0400</string>
+			<key>Date Modified</key>
+			<string>2020-10-25 18:44:07 -0400</string>
+			<key>Folder</key>
+			<string>macOS</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>stty -echoctl</string>
+					<key>Date Created</key>
+					<string>2020-10-25 18:43:23 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 18:46:28 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>KbSRC - https://itrau.co/3kp4CxE</string>
+					<key>Title</key>
+					<string>Temporarily Turn Off Echo</string>
+				</dict>
+				<dict>
+					<key>Content</key>
+					<string>stty echoctl</string>
+					<key>Date Created</key>
+					<string>2020-10-25 18:44:07 -0400</string>
+					<key>Date Modified</key>
+					<string>2020-10-25 18:44:42 -0400</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Turn On Echo</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Turn Off Echo in macOS CLI</string>
 		</dict>
 		<dict>
 			<key>Date Created</key>
@@ -2959,158 +3202,24 @@ About
 		</dict>
 		<dict>
 			<key>Date Created</key>
-			<string>2021-01-28 24:10:33 -0500</string>
+			<string>2021-02-19 19:13:47 -0500</string>
 			<key>Date Modified</key>
-			<string>2021-01-28 24:12:05 -0500</string>
+			<string>2021-02-19 19:14:08 -0500</string>
 			<key>Folder</key>
-			<string>gspread</string>
+			<string>hex</string>
 			<key>Fragments</key>
 			<array>
 				<dict>
 					<key>Content</key>
-					<string>from google.colab import auth
-auth.authenticate_user()
-
-import gspread
-from oauth2client.client import GoogleCredentials
-
-gc = gspread.authorize(GoogleCredentials.get_application_default())
-
-sh = gc.create('A new spreadsheet')
-
-# Open our new sheet and add some data.
-worksheet = gc.open('A new spreadsheet').sheet1
-
-cell_list = worksheet.range('A1:C2')
-
-import random
-for cell in cell_list:
-  cell.value = random.randint(1, 10)
-
-worksheet.update_cells(cell_list)
-# Go to https://sheets.google.com to see your new spreadsheet.</string>
+					<string>Primary - #005179
+Secondary -  #00A0EE
+Tertiary - #0DA7E1
+Filler
+ #00A0EE</string>
 					<key>Date Created</key>
-					<string>2021-01-28 24:10:33 -0500</string>
+					<string>2021-02-19 19:13:47 -0500</string>
 					<key>Date Modified</key>
-					<string>2021-01-28 24:14:24 -0500</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string>!pip install --upgrade gspread</string>
-					<key>Title</key>
-					<string>!pip install --upgrade gspread</string>
-				</dict>
-				<dict>
-					<key>Content</key>
-					<string>from google.colab import auth
-auth.authenticate_user()
-
-import gspread
-from oauth2client.client import GoogleCredentials
-
-gc = gspread.authorize(GoogleCredentials.get_application_default())
-
-worksheet = gc.open('Your spreadsheet name').sheet1
-
-# get_all_values gives a list of rows.
-rows = worksheet.get_all_values()
-print(rows)
-
-# Convert to a DataFrame and render.
-import pandas as pd
-pd.DataFrame.from_records(rows)</string>
-					<key>Date Created</key>
-					<string>2021-01-28 24:11:38 -0500</string>
-					<key>Date Modified</key>
-					<string>2021-01-28 24:13:44 -0500</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string>!pip install --upgrade gspread</string>
-					<key>Title</key>
-					<string>Importing data from Google Sheets</string>
-				</dict>
-			</array>
-			<key>Tags</key>
-			<array/>
-			<key>Title</key>
-			<string>Import / Export Sheet Data</string>
-		</dict>
-		<dict>
-			<key>Date Created</key>
-			<string>2020-12-29 20:25:00 -0500</string>
-			<key>Date Modified</key>
-			<string>2020-12-30 23:21:54 -0500</string>
-			<key>Folder</key>
-			<string>g-sheets</string>
-			<key>Fragments</key>
-			<array>
-				<dict>
-					<key>Content</key>
-					<string># syntax
-FILTER(
-    range,          
-    condition,
-    [options,...]
-)</string>
-					<key>Date Created</key>
-					<string>2020-12-29 20:25:00 -0500</string>
-					<key>Date Modified</key>
-					<string>2020-12-29 22:01:47 -0500</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string># legend
-# range = range of cells to filter
-# condition = the columns/row(corresponding to the column/row of the dataset), returns an array of booleans TRUE/FALSE
-# [options,..] = second condition, can return an array of booleans TRUE/FALSE
-
-https://spreadsheetpoint.com/filter-function-google-sheets/
-
-</string>
-					<key>Title</key>
-					<string>Fragment</string>
-				</dict>
-				<dict>
-					<key>Content</key>
-					<string>=filter(IMPORTRANGE("URL","A:J"),INDEX(IMPORTRANGE("URL","A:J"),0,3)="Yes")</string>
-					<key>Date Created</key>
-					<string>2020-12-30 23:21:54 -0500</string>
-					<key>Date Modified</key>
-					<string>2020-12-30 23:23:00 -0500</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string>https://webapps.stackexchange.com/questions/87272/using-filter-or-importrange-to-bring-in-and-filter-data-from-another-spreadsheet</string>
-					<key>Title</key>
-					<string>ex_one</string>
-				</dict>
-			</array>
-			<key>Tags</key>
-			<array/>
-			<key>Title</key>
-			<string>=FILTER(function)</string>
-		</dict>
-		<dict>
-			<key>Date Created</key>
-			<string>2021-01-28 21:08:01 -0500</string>
-			<key>Date Modified</key>
-			<string>2021-01-28 21:08:07 -0500</string>
-			<key>Folder</key>
-			<string>js</string>
-			<key>Fragments</key>
-			<array>
-				<dict>
-					<key>Content</key>
-					<string>curl -s https://api.github.com/repos/jgm/pandoc/releases/latest \
-| grep "browser_download_url.*deb" \
-| cut -d : -f 2,3 \
-| tr -d \" \
-| wget -qi -</string>
-					<key>Date Created</key>
-					<string>2021-01-28 21:08:01 -0500</string>
-					<key>Date Modified</key>
-					<string>2021-01-28 21:08:08 -0500</string>
+					<string>2021-02-19 19:15:38 -0500</string>
 					<key>Language</key>
 					<string>Plain Text</string>
 					<key>Note</key>
@@ -3122,79 +3231,7 @@ https://spreadsheetpoint.com/filter-function-google-sheets/
 			<key>Tags</key>
 			<array/>
 			<key>Title</key>
-			<string>One Liner to Download the Latest Release from Github Repo</string>
-		</dict>
-		<dict>
-			<key>Date Created</key>
-			<string>2020-10-25 18:43:23 -0400</string>
-			<key>Date Modified</key>
-			<string>2020-10-25 18:44:07 -0400</string>
-			<key>Folder</key>
-			<string>macOS</string>
-			<key>Fragments</key>
-			<array>
-				<dict>
-					<key>Content</key>
-					<string>stty -echoctl</string>
-					<key>Date Created</key>
-					<string>2020-10-25 18:43:23 -0400</string>
-					<key>Date Modified</key>
-					<string>2020-10-25 18:46:28 -0400</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string>KbSRC - https://itrau.co/3kp4CxE</string>
-					<key>Title</key>
-					<string>Temporarily Turn Off Echo</string>
-				</dict>
-				<dict>
-					<key>Content</key>
-					<string>stty echoctl</string>
-					<key>Date Created</key>
-					<string>2020-10-25 18:44:07 -0400</string>
-					<key>Date Modified</key>
-					<string>2020-10-25 18:44:42 -0400</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string></string>
-					<key>Title</key>
-					<string>Turn On Echo</string>
-				</dict>
-			</array>
-			<key>Tags</key>
-			<array/>
-			<key>Title</key>
-			<string>Turn Off Echo in macOS CLI</string>
-		</dict>
-		<dict>
-			<key>Date Created</key>
-			<string>2020-12-02 12:28:21 -0500</string>
-			<key>Date Modified</key>
-			<string>2020-12-02 12:28:21 -0500</string>
-			<key>Folder</key>
-			<string>Uncategorized</string>
-			<key>Fragments</key>
-			<array>
-				<dict>
-					<key>Content</key>
-					<string></string>
-					<key>Date Created</key>
-					<string>2020-12-02 12:28:21 -0500</string>
-					<key>Date Modified</key>
-					<string>2020-12-02 12:28:21 -0500</string>
-					<key>Language</key>
-					<string>Plain Text</string>
-					<key>Note</key>
-					<string></string>
-					<key>Title</key>
-					<string>Fragment</string>
-				</dict>
-			</array>
-			<key>Tags</key>
-			<array/>
-			<key>Title</key>
-			<string>untitled snippet</string>
+			<string>HED ID Branding</string>
 		</dict>
 		<dict>
 			<key>Date Created</key>
@@ -4214,6 +4251,51 @@ function onEdit(e) {
 		</dict>
 		<dict>
 			<key>Date Created</key>
+			<string>2021-02-25 13:04:36 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-25 13:07:01 -0500</string>
+			<key>Folder</key>
+			<string>python3</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>def splitDataFrameList(df,target_column,separator):
+    ''' df = dataframe to split,
+    target_column = the column containing the values to split
+    separator = the symbol used to perform the split
+    returns: a dataframe with each entry for the target column separated, with each element moved into a new row. 
+    The values in the other columns are duplicated across the newly divided rows.
+    '''
+    def splitListToRows(row,row_accumulator,target_column,separator):
+        split_row = row[target_column].split(separator)
+        for s in split_row:
+            new_row = row.to_dict()
+            new_row[target_column] = s
+            row_accumulator.append(new_row)
+    new_rows = []
+    df.apply(splitListToRows,axis=1,args = (new_rows,target_column,separator))
+    new_df = pandas.DataFrame(new_rows)
+    return new_df</string>
+					<key>Date Created</key>
+					<string>2021-02-25 13:04:36 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-25 13:07:36 -0500</string>
+					<key>Language</key>
+					<string>Python 3</string>
+					<key>Note</key>
+					<string>https://gist.github.com/jlln/338b4b0b55bd6984f883#file-separator-py</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Efficiently split Pandas Dataframe cells containing lists into multiple rows, duplicating the other column's values.</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
 			<string>2019-08-15 23:46:35 -0400</string>
 			<key>Date Modified</key>
 			<string>2019-08-15 23:46:53 -0400</string>
@@ -4499,6 +4581,54 @@ task - [] task
 		</dict>
 		<dict>
 			<key>Date Created</key>
+			<string>2021-02-15 09:57:52 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-15 09:58:11 -0500</string>
+			<key>Folder</key>
+			<string>pygsheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>import pygsheets
+import pandas as pd
+#authorization
+gc = pygsheets.authorize(service_file='/Users/erikrood/desktop/QS_Model/creds.json')
+
+# Create empty dataframe
+df = pd.DataFrame()
+
+# Create a column
+df['name'] = ['John', 'Steve', 'Sarah']
+
+#open the google spreadsheet (where 'PY to Gsheet Test' is the name of my sheet)
+sh = gc.open('PY to Gsheet Test')
+
+#select the first sheet 
+wks = sh[0]
+
+#update the first sheet with df, starting at cell B2. 
+wks.set_dataframe(df,(1,1))
+</string>
+					<key>Date Created</key>
+					<string>2021-02-15 09:57:52 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-15 09:58:14 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://www.codegrepper.com/code-examples/groovy/how+to+export+to+a+google+sheet+python</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>“how to export to a google sheet python”</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
 			<string>2020-10-01 16:06:20 -0400</string>
 			<key>Date Modified</key>
 			<string>2020-10-01 16:06:52 -0400</string>
@@ -4633,6 +4763,36 @@ In this sample script, the script of authorization is removed. The sample script
 			<array/>
 			<key>Title</key>
 			<string>How do you copy values from one spreadsheet to another using gspread or some other way?</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-25 13:31:43 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-25 13:32:16 -0500</string>
+			<key>Folder</key>
+			<string>g-sheets</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>=REGEXREPLACE(REGEXREPLACE(F2,"((,+ ,)|,+)",","), "^,+", "")
+</string>
+					<key>Date Created</key>
+					<string>2021-02-25 13:31:43 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-25 13:32:21 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>https://stackoverflow.com/questions/29679543/regexreplace-in-google-spreadsheet</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>Cleanup Data w/ Arbitrary Comas</string>
 		</dict>
 		<dict>
 			<key>Date Created</key>
@@ -5087,9 +5247,9 @@ The code below will split the input file into chunks of 100 000 lines
 					<key>Date Created</key>
 					<string>2020-11-18 17:47:05 -0500</string>
 					<key>Date Modified</key>
-					<string>2020-12-16 20:52:41 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string></string>
 					<key>Title</key>
@@ -5101,9 +5261,9 @@ The code below will split the input file into chunks of 100 000 lines
 					<key>Date Created</key>
 					<string>2020-11-18 17:47:39 -0500</string>
 					<key>Date Modified</key>
-					<string>2020-11-18 17:48:03 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string></string>
 					<key>Title</key>
@@ -5115,9 +5275,9 @@ The code below will split the input file into chunks of 100 000 lines
 					<key>Date Created</key>
 					<string>2020-11-18 17:48:12 -0500</string>
 					<key>Date Modified</key>
-					<string>2020-11-18 17:48:25 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string></string>
 					<key>Title</key>
@@ -5130,9 +5290,9 @@ The code below will split the input file into chunks of 100 000 lines
 					<key>Date Created</key>
 					<string>2020-11-23 12:13:46 -0500</string>
 					<key>Date Modified</key>
-					<string>2020-11-23 12:14:04 -0500</string>
+					<string>2021-02-25 13:07:41 -0500</string>
 					<key>Language</key>
-					<string>Plain Text</string>
+					<string>Python 3</string>
 					<key>Note</key>
 					<string></string>
 					<key>Title</key>
@@ -5350,8 +5510,590 @@ I made this post into a YouTube video</string>
 			<key>Title</key>
 			<string>git show &lt;hash&gt; --name-only</string>
 		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-28 21:20:54 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-28 21:21:37 -0500</string>
+			<key>Folder</key>
+			<string>/.work-configs</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>G# iTrauco's .gitignore_global #
+###############################
+
+##############
+# TESTED OSs #
+##############
+# macOS Catalina v10.15.3
+# Ubuntu 20.04 x86_64
+# RHEL 8.1 x86_64
+# Kali Linux 2020.1b x86_64
+
+#########
+# USAGE #
+#########
+# 1. Place a copy if this at ~/.gitignore_global
+# 2. Open terminal and run `git config --global core.excludesfile ~/.gitignore_global`
+
+############
+# COMPILED #
+############
+*.com
+*.class
+*.dll
+*.so
+*.pyc
+*.pyo
+
+############
+# PACKAGES #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.msi
+
+######
+# vi #
+######
+*~
+
+###########
+# LOGS/DB #
+###########
+log/
+*.log
+*.sql
+*.sqlite
+
+########################
+# OPERATING SYSTEM(OS) #
+########################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.Thumbs.db
+
+##############
+# TEMP files #
+##############
+*.bak
+*.swp
+*.swo
+*~
+*#
+
+#######
+# IDE #
+#######
+.vscode
+.idea
+.iml
+*.sublime-workspace
+
+###########
+# JS/NODE #
+###########
+node_modules
+npm-debug.log
+
+##########
+# PYTHON #
+##########
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Li]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+venv/
+
+# TERRAFORM #
+#############
+.terraform
+*.tfstate
+*.tfstate.backup
+
+
+#######
+# GCP #
+#######
+cloud-ops-cli-f8d9ca11d84f.json
+*client_secret.json
+*.googleapis.com-python.json</string>
+					<key>Date Created</key>
+					<string>2021-02-28 21:20:54 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-28 21:21:41 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>.gitignore_global</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-28 21:21:45 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-28 21:21:48 -0500</string>
+			<key>Folder</key>
+			<string>/.work-configs</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string># If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+###############################
+ZSH_DISABLE_COMPFIX="true"
+###############################
+#
+# Path to your oh-my-zsh installation.
+# export ZSH="/home/trauco/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="rkj-repos"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git zsh-autosuggestions)
+#########
+# source $ZSH/oh-my-zsh.sh
+#########
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# source virtualenvwrapper.sh source /home/trauco/.zshrc
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/ctrauco/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="powerlevel10k"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
+#####################################
+# Python Virtual Environment Indicator
+#
+plugins=(virtualenv)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)
+###################################
+##################################
+# ZSH ignores insecure directories
+ZSH_DISABLE_COMPFIX="true"
+###################################
+
+function gam() { "/Users/ctrauco/bin/gam/gam" "$@" ; }
+
+# &gt;&gt;&gt; conda initialize &gt;&gt;&gt;
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/ctrauco/anaconda3/bin/conda' 'shell.zsh' 'hook' 2&gt; /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/ctrauco/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ctrauco/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/ctrauco/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# &lt;&lt;&lt; conda initialize &lt;&lt;&lt;
+
+</string>
+					<key>Date Created</key>
+					<string>2021-02-28 21:21:45 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-28 21:44:27 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>.zshrc</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-28 21:37:02 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-28 21:37:21 -0500</string>
+			<key>Folder</key>
+			<string>/.work-configs</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2017 Wang Shidong &amp; Contributors
+# Author: Wang Shidong &lt; wsdjeg at 163.com &gt;
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    colorscheme = "onedark"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_inactive_separator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    filetree_direction = "left"
+    filemanager = "nerdtree"
+    enable_ycm = false
+    autocomplete_method = "completor"
+    bootstrap_before = "custom_init#before"
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+ auto_completion_return_key_behavior = "complete"
+# auto_completion_tab_key_behavior = "smart"
+
+
+[[layers]]
+name = 'shell'
+# default_shell = "VimShell"
+default_position = 'bottom'
+default_height = 30
+
+[[layers]]
+  name = "lang#python"
+  python_file_head = [
+      '#!/usr/bin/env python3',
+      '# -*- coding: utf-8 -*-',
+      '',
+      ''
+  ]
+
+  [[layers]]
+  name = "colorscheme"
+
+[[layers]]
+  name = "git"
+
+[[layers]]
+  name = "lang#sh"
+
+[[layers]]
+    name = 'core'
+    filetree_show_hidden = true
+
+[[layers]]
+  name = "lang#javascript"
+
+[[custom_plugins]]
+  name = "hashivim/vim-terraform"
+  merged = false
+  
+[[custom_plugins]]
+  name = "tpope/vim-surround"
+  merged = false
+
+#[[layers]]
+#  name = "ctrlspace"
+#  iautosave-workspaces = true
+#  enable-spacevim-styled-keys = false
+
+</string>
+					<key>Date Created</key>
+					<string>2021-02-28 21:37:02 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-28 21:37:31 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>spacevim.d/init.toml</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-28 21:37:46 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-28 21:41:23 -0500</string>
+			<key>Folder</key>
+			<string>/.work-configs</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>unknown</string>
+					<key>Date Created</key>
+					<string>2021-02-28 21:37:46 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-28 21:42:40 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string>is this even on here?</string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>~/.config</string>
+		</dict>
+		<dict>
+			<key>Date Created</key>
+			<string>2021-02-28 21:37:54 -0500</string>
+			<key>Date Modified</key>
+			<string>2021-02-28 21:39:49 -0500</string>
+			<key>Folder</key>
+			<string>/.work-configs</string>
+			<key>Fragments</key>
+			<array>
+				<dict>
+					<key>Content</key>
+					<string>function! custom_init#before() abort
+    set mouse=r
+endf 
+
+function! custom_init#before() abort
+  let g:terraform_align=1
+  let g:terraform_fold_sections=1
+  let g:terraform_fmt_on_save=1
+endf </string>
+					<key>Date Created</key>
+					<string>2021-02-28 21:37:54 -0500</string>
+					<key>Date Modified</key>
+					<string>2021-02-28 21:39:54 -0500</string>
+					<key>Language</key>
+					<string>Plain Text</string>
+					<key>Note</key>
+					<string></string>
+					<key>Title</key>
+					<string>Fragment</string>
+				</dict>
+			</array>
+			<key>Tags</key>
+			<array/>
+			<key>Title</key>
+			<string>spacevim.d/autoload/custom_init.vim</string>
+		</dict>
 	</array>
 	<key>Snippets Count</key>
-	<string>97</string>
+	<string>106</string>
 </dict>
 </plist>

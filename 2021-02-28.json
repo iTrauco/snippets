@@ -1,7 +1,7 @@
 {
   "Library Name" : "main.snippetslablibrary",
-  "Date Exported" : "2021-02-14 23:07:22 -0500",
-  "Snippets Count" : "97",
+  "Date Exported" : "2021-02-28 21:51:54 -0500",
+  "Snippets Count" : "106",
   "Snippets" : [
     {
       "Date Created" : "2021-01-25 16:43:14 -0500",
@@ -10,8 +10,8 @@
       "Title" : "Example Query",
       "Fragments" : [
         {
-          "Content" : "=QUERY(\n       {IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk\",\"kt_schedule\")},\n       \"SELECT Col1 WHERE Col1 is not null\",\n       1\n)",
-          "Date Modified" : "2021-01-25 16:43:19 -0500",
+          "Content" : "=QUERY(\n       {IMPORTRANGE(\"https:\/\/docs.google.com\/spreadsheets\/d\/1UBobgPrK1rWi68kNh45OCWywFJyBOZeF5GauEEHLWIk\",\"kt_schedule\")},\n       \"]0iis not null\",\n       1\n)",
+          "Date Modified" : "2021-02-16 19:25:38 -0500",
           "Note" : "",
           "Title" : "Fragment",
           "Language" : "Plain Text",
@@ -49,10 +49,10 @@
       "Fragments" : [
         {
           "Content" : "#! \/usr\/bin\/env python3\n\nimport webbrowser\nfrom time import sleep\n\nurl = input('Input the URL to reload, including \"http:\/\/: ')\n\nwhile True:\n    print(\"refreshing...\")\n    webbrowser.open(url, new=0)\n    sleep(10)",
-          "Date Modified" : "2020-12-16 20:46:38 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "https:\/\/gist.github.com\/iTrauco\/79f9ac98830be9d44cb675bfc44b0dc3",
           "Title" : "Fragment",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2020-12-16 20:45:58 -0500"
         }
       ],
@@ -125,10 +125,10 @@
       "Fragments" : [
         {
           "Content" : "# Load Json into a Python object\n\nimport urllib2\nimport json\nreq = urllib2.Request(\"http:\/\/localhost:81\/sensors\/temperature.json\")\nopener = urllib2.build_opener()\nf = opener.open(req)\njson = json.loads(f.read())\nprint json\nprint json['unit']\n\n# Array example\n\nimport urllib2\nimport json\nreq = urllib2.Request(\"http:\/\/vimeo.com\/api\/v2\/video\/38356.json\")\nopener = urllib2.build_opener()\nf = opener.open(req)\njson = json.loads(f.read())\nprint json\nprint json[0]['title']",
-          "Date Modified" : "2021-01-28 21:20:49 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "",
           "Title" : "Fragment",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2021-01-28 21:20:36 -0500"
         }
       ],
@@ -252,6 +252,25 @@
         "vim",
         "comments",
         "multiple lines"
+      ]
+    },
+    {
+      "Date Created" : "2021-02-19 20:52:35 -0500",
+      "Date Modified" : "2021-02-19 20:52:42 -0500",
+      "Folder" : "JSON",
+      "Title" : "Pretty print JSON in Vim",
+      "Fragments" : [
+        {
+          "Content" : "Pretty print JSON in Vim\n\n1.  Esc into Normal mode\n2. Type :\n3. Enter “%!python -m json.tool”",
+          "Date Modified" : "2021-02-19 20:52:47 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-19 20:52:35 -0500"
+        }
+      ],
+      "Tags" : [
+
       ]
     },
     {
@@ -513,7 +532,7 @@
     {
       "Date Created" : "2021-01-29 01:03:44 -0500",
       "Date Modified" : "2021-01-29 01:04:48 -0500",
-      "Folder" : "SXMP",
+      "Folder" : "sox",
       "Title" : "SOX",
       "Fragments" : [
         {
@@ -629,30 +648,11 @@
       "Fragments" : [
         {
           "Content" : "# import packages\nimport re\nimport csv\n\nfile = 'captions.vtt'\nopened_file = open(file,encoding='utf8')\ncontent = opened_file.read()\nsegments = content.split('\\n\\n') # split on double line\n\n# wrangle segments\nm = re.compile(r\"\\<.*?\\>\") # strip\/remove unwanted tags\no = re.compile(r\"\\.+\\d+\") # strip\/remove miliseconds\n\ndef clean(content):\n    new_content = m.sub('',content)\n    new_content = o.sub('',new_content)\n    new_content = new_content.replace('align:start position:0%','')\n    new_content = new_content.replace('-->','')\n    return new_content\n\nnew_segments = [clean(s) for s in segments if len(s)!=0][2:]\n\n# trim time codes for g suite plain text formatting conversion to seconds w\/ formula '=value(str*24*3600)'\ndef clean_time(time):\n    time = time.split(':')\n    if time[0]=='00':\n        return time[1]+':'+time[2]\n    if not time[0]=='00':\n        return time[0]+':'+time[1]+':'+time[2]\n\ntrimmed_segments = []\nfor segment in new_segments:\n    split_segment = segment.split()\n    time_code = split_segment[0]\n    text = ' '.join(segment.split()[2:])\n    trimmed_segment = (time_code, text)\n    trimmed_segments.append(trimmed_segment)\n\n# write output as csv file\nwith open(str(file)[:-3]+'csv', 'w', encoding='utf8', newline='') as f:\n    for line in trimmed_segments:\n        thewriter = csv.writer(f)\n        thewriter.writerow(line)",
-          "Date Modified" : "2020-11-19 22:50:58 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "",
           "Title" : "Fragment",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2020-11-18 17:50:42 -0500"
-        }
-      ],
-      "Tags" : [
-
-      ]
-    },
-    {
-      "Date Created" : "2021-01-29 22:28:32 -0500",
-      "Date Modified" : "2021-01-29 22:28:48 -0500",
-      "Folder" : "grep-awk-sed",
-      "Title" : "find a file(basic)",
-      "Fragments" : [
-        {
-          "Content" : "grep \"boo\" a_file",
-          "Date Modified" : "2021-01-29 22:28:54 -0500",
-          "Note" : "",
-          "Title" : "Fragment",
-          "Language" : "Plain Text",
-          "Date Created" : "2021-01-29 22:28:32 -0500"
         }
       ],
       "Tags" : [
@@ -762,10 +762,10 @@
       "Fragments" : [
         {
           "Content" : "",
-          "Date Modified" : "2021-01-30 02:15:28 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "https:\/\/testdriven.io\/blog\/modern-tdd\/",
           "Title" : "Fragment",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2021-01-29 23:18:28 -0500"
         }
       ],
@@ -907,25 +907,6 @@
       ]
     },
     {
-      "Date Created" : "2021-01-28 21:05:27 -0500",
-      "Date Modified" : "2021-01-28 21:05:39 -0500",
-      "Folder" : "gas",
-      "Title" : "review",
-      "Fragments" : [
-        {
-          "Content" : "Skip to content\n \nSearch…\nAll gists\nBack to GitHub\n@iTrauco \n@eojji\neojji\/JavaScript.html\nCreated 3 years ago • Report abuse\n1\n0\n Code\n Revisions 1\n Stars 1\n<script src=\"https:\/\/gist.github.com\/eojji\/73ef2b6f55cd38953c1c5e767cc56777.js\"><\/script>\nCopy to team drive - review. Listing folders - 8 https:\/\/m.cafe.naver.com\/eojji\/311\ncode.gs\n\/\/ Web App Exec: \n\/\/ https:\/\/script.google.com\/macros\/s\/AKfycbxa1mBiEPGwHpVDxw6V6p1bRBWSXHm8qbIea7Kjmv9rQUyv68_Z\/exec\nfunction doGet(request) {\n  var output = HtmlService.createTemplateFromFile('Page').evaluate();\n  return output.addMetaTag('viewport', 'width=device-width, initial-scale=1');\n}\n   \nfunction include(filename) {\n  return HtmlService.createHtmlOutputFromFile(filename)\n  .getContent();\n}\n\nfunction copyDriveFile_(title, fileId, parentId) {\n  var resource = {\n    'title': title,\n    parents: [{ id: parentId }]\n  };  \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  try {\n    return Drive.Files.copy(resource, fileId, optionalArgs);\n  } catch(error) {\n    return error; \/\/ error.name, error.message;\n  }\n}\n\nfunction createFolderSpreadsheet_(title, folderId) {\n  var ssNew, ssId, sheetFolder, sheetFiles;\n  var title = '_gfolder, ' + Date.now() + ' ' + title;\n  try {\n    ssNew = SpreadsheetApp.create(title);    \n    sheetFolder = ssNew.getSheets()[0]; \n    sheetFolder.setName('folder');    \n    sheetFolder.appendRow([\"row to read\", 3]);\n    sheetFolder.appendRow([\"title\", \"id\", \"id2\", \"files\", \"fileSize\", \"start\", \"end\", \"file row\", \"parent\"]);\n    \n    \/\/ files    \n    sheetFiles = ssNew.insertSheet('files');\n    sheetFiles.appendRow([\"row to read\", 3, \"page token\"]);\n    sheetFiles.appendRow(['title', 'id', 'mime', 'size', 'copy', 'name', 'message', 'check', 'parent']);\n    \n    \/\/ https:\/\/developers.google.com\/drive\/api\/v2\/reference\/parents\/insert\n    var resource= { \"id\": folderId };    \n    var optionalArgs = { \"supportsTeamDrives\" : true };        \n    \/\/ Drive.Parents.insert(resource, fileId, optionalArgs);\n    ssId = ssNew.getId();    \n    Drive.Parents.insert(resource, ssId, optionalArgs);\n    Drive.Parents.remove(ssId, DriveApp.getRootFolder().getId());\n    \n    return ssNew;\n  } catch(e) {\n    console.warn('Error: %s, %s - createFolderSpreadsheet: %s', e.name, e.message, folderId);\n  }\n}\n\nfunction fileCopyFromInput_(file, folderId) {\n  var appMessage = {};\n  if (! file.copyable) {\n    appMessage.url = file.alternateLink;\n    appMessage.title = file.title;\n    appMessage.message = 'The file can not be copied to My Drive.';\n    return appMessage;              \n  }        \n  \n  var aCopy = copyDriveFile_(file.title, file.id, folderId);    \n  if (aCopy.id) {\n    \/\/ console.log('Title: %s, Mimetype: %s, ID: %s', aCopy.title, aCopy.mimeType, aCopy.id);   \n    appMessage.url = aCopy.alternateLink;\n    appMessage.title = aCopy.title;\n    appMessage.message = 'The copy is complete. Size: ' + aCopy.fileSize;            \n  } else if (aCopy.name) {\n    console.warn('An error occurred while copying. Error Name: %s, Message: %s', aCopy.name, aCopy.message);      \n    appMessage.message = 'An error occurred while copying. '+aCopy.name+ ', Message: '+ aCopy.message;\n    appMessage.url = file.alternateLink;\n    appMessage.title = file.title;        \n  }\n  return appMessage;                \n}\n\nfunction getFolderByGdUrl_(url) {\n  var idx = url.lastIndexOf('google.com');\n  if (idx < 0) {    \n    var rtn = url.match(\/[-\\w]{15,}\/);\n    if (rtn) {\n      return getDriveFileById_(rtn[0]);\n    } \n    return;    \n  }\n  \n  var decUrl = url.substr(idx+10);\n  var arr = [\"\/d\/\", \"\/folders\/\", \"?id=\", \"&id=\"];    \n  for (var i=0; i<arr.length; i++) {\n    idx = decUrl.indexOf(arr[i]);\n    if (idx < 0) { \n      continue; \n    }\n    var str = decUrl.substr(idx + arr[i].length);\n    var idMatchStr = str.match(\/[-\\w]{15,}\/);\n    if (idMatchStr) {\n      return getDriveFileById_(idMatchStr[0]);        \n    } else {\n      return;\n    }    \n  }  \n}\n\nfunction setPageTokenProperty(value) {\n  PropertiesService.getUserProperties().setProperty('PAGE_TOKEN', value);  \n}  \n\nfunction getPageTokenProperty() {\n  var pageTokenProperty = PropertiesService.getUserProperties().getProperty('PAGE_TOKEN');  \n  return pageTokenProperty;  \n}\n\nfunction deletePageTokenProperty() {\n  PropertiesService.getUserProperties().deleteProperty('PAGE_TOKEN');\n}\n\nfunction doCopyFolder_(sheetFolder, folderRowNum, sheetFiles, startTime) {\n  var folderRange, folderInfo;\n  try {\n    folderRange = sheetFolder.getRange(folderRowNum, 1, 1, 9);\n    folderInfo = folderRange.getValues()[0];\n  } catch(e) {\n    console.warn('Error: %s, %s - doCopyFolder', e.name, e.message);\n    return '-1';\n  }\n  \n  var title, folderId, copyFolderId, fileRowNum;\n  title = folderInfo[0];\n  folderId = folderInfo[1];\n  copyFolderId = folderInfo[2];\n  fileRowNum = folderInfo[7];    \n  if (!fileRowNum || fileRowNum < 3) {\n    var pageToken;\n    var objFiles = listFilesByPageToken_(folderId, pageToken, startTime);\n    if (!objFiles) {\n      return '9';\n    }\n    \n    var parentId = folderInfo[8];\n    var resp = insertFolderById_(parentId, title);\n    if (!resp || !resp.id) {\n      console.warn('Error: %s, %s - insertFolderById(parentId: %s, %s)', resp.name, resp.message, parentId, title);\n      return '-1';\n    } \n    \n    folderInfo[7] = sheetFiles.getLastRow() + 1; \/\/ fileRowNum\n    sheetAppendFiles_(resp.id, objFiles.files, sheetFolder, sheetFiles);      \n    folderInfo[2] = resp.id; \/\/ copyFolderId   \n    folderRange.setValues([folderInfo]); \n    \n    if (objFiles.pageToken) {\n      setPageTokenProperty(folderId+','+objFiles.pageToken);\n      return '1';   \n    }\n    return copyFilesBySheet_(startTime, sheetFiles);   \n  }\n  \n  var pageTokenProperty = getPageTokenProperty();\n  if (pageTokenProperty) {\n    var arrIdAndPageToken = pageTokenProperty.split(',');\n    if (arrIdAndPageToken[0] == folderId && arrIdAndPageToken[1]) {\n      var objFiles = listFilesByPageToken_(folderId, arrIdAndPageToken[1], startTime);\n      if (objFiles) {\n        sheetAppendFiles_(copyFolderId, objFiles.files, sheetFolder, sheetFiles); \n        if (objFiles.pageToken) {\n          setPageTokenProperty(folderId+','+objFiles.pageToken);\n          return '1';\n        }\n      }\n    } else {\n      deletePageTokenProperty();\n    }\n  }\n  \n  return copyFilesBySheet_(startTime, sheetFiles);   \n}\n\nfunction sheetAppendFiles_(parentId, data, sheetFolder, sheetFiles) {\n  if (!data || data.length < 1) {\n    return;\n  }\n  \n  var folderData = [];\n  var newDate = new Date();\n  \/\/ title, id\n  \/\/ id2, files, fileSize, start, end, file row, parent\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n  var newFolderContents = ['', 0, 0, newDate, newDate, 0, parentId];\n  \n  var fileData = [];\n  \/\/ copy, name, message, check, parent\n  var newFileContents = ['', '', '', '', parentId];\n  \n  var len = data.length;\n  for (var i = 0; i < len; i++) {\n    \/\/ title, id, mimeType, fileSize\n    var mimeType = data[i][2]; \/\/ mimeType\n    if (mimeType == 'application\/vnd.google-apps.folder') {\n      folderData.push(data[i].slice(0, 2).concat(newFolderContents));\n    } else {\n      fileData.push(data[i].concat(newFileContents));\n    }\n  }\n  \n  if (folderData && folderData.length > 0) {\n    sheetFolder.getRange(sheetFolder.getLastRow() + 1, 1, folderData.length, folderData[0].length).setValues(folderData);\n  }\n  \n  if (fileData && fileData.length > 0) {\n    sheetFiles.getRange(sheetFiles.getLastRow() + 1, 1, fileData.length, fileData[0].length).setValues(fileData);\n  }\n}\n\nfunction insertFolderById_(parentId, folderName) {\n  var resource= {\n    \"parents\": [\n      {\n        \"id\": parentId\n      }\n    ],\n    \"title\": folderName,\n    \"mimeType\": \"application\/vnd.google-apps.folder\"\n  };    \n  \n  \/\/ https:\/\/stackoverflow.com\/questions\/28378738\/create-a-new-blob-in-memory-using-apps-script\n  \/\/ var blob = Utilities.newBlob(folderName);    \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  \/\/ var folder;\n  try {\n    \/\/ https:\/\/developers.google.com\/drive\/v2\/reference\/files#resource\n    return Drive.Files.insert(resource, Utilities.newBlob(folderName), optionalArgs); \n  } catch(error) {    \n    return error;\n  }\n}\n\nfunction triggerAfterByName(functionName, time) {\n  ScriptApp.newTrigger(functionName)\n  .timeBased().after(time).create();\n  \n  console.log('%s, %s, Time: %s - trigger AfterByName', Session.getEffectiveUser().getEmail(), functionName, time);\n}\n\nfunction setFolderSSIdProperty(value) {\n  return PropertiesService.getUserProperties().setProperty('FOLDER_SS_ID', value);\n}\n\nfunction getFolderSSIdProperty() {\n  return PropertiesService.getUserProperties().getProperty('FOLDER_SS_ID');\n}\n\nfunction deleteFolderSSIdProperty() {\n  return PropertiesService.getUserProperties().deleteProperty('FOLDER_SS_ID');\n}\n\nfunction deleteTriggerByName(name) {\n  var getPropTrigger = PropertiesService.getUserProperties().getProperty('atHour'+name);\n  if (!getPropTrigger) {\n    getPropTrigger = 'x';\n  }\n  \n  var triggers = ScriptApp.getProjectTriggers();    \n  for (var i = 0; i < triggers.length; i++) {\n    if (triggers[i].getHandlerFunction() == name && triggers[i].getUniqueId() != getPropTrigger) {\n      ScriptApp.deleteTrigger(triggers[i]);\n    }\n  }\n}\n\n\/\/ https:\/\/developers.google.com\/drive\/v2\/reference\/files\nfunction getDriveFileById_(id) {\n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  try {\n    return Drive.Files.get(id, optionalArgs);\n  } catch(error) {         \n    return error; \/\/ error.name, error.message;\n  }\n}\n\nfunction getSpreadsheetById(ssId) {\n  if (!ssId || ssId < 10) {\n    console.warn('!ssId || ssId.length < 10 - getSpreadsheetById');\n    return;\n  }\n  \n  try {\n    var resp = getDriveFileById_(ssId);\n    if (resp.id && !resp.labels.trashed) {\n      return SpreadsheetApp.openById(ssId);\n    }    \n  } catch(e) {\n    console.warn('Error: %s, %s - DriveApp.getFileById(%s) in getSpreadsheetById', e.name, e.message, ssId);\n  }  \n}\n\n\/*\n * check: 파일 복사 함수 호출의 반환값으로 다음 작업을 결정합니다.\n * '1': 계속 진행 \n * '-1': 프로세스 중단\n * '-2': after 트리거 생성\n * '-3': hour  트리거 생성\n**\/\n\nfunction callFileCopy_(title, id, parentId) {\n  var copiedState = {\n    copy: '1',\n    link: '',  \/\/ or Error name\n    message: 'Ok', \n    check: '1'\n  }\n  \n  var resource = {\n    'title': title,\n    parents: [{ id: parentId }]\n  };  \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  var resp;\n  try {\n    resp = Drive.Files.copy(resource, id, optionalArgs);\n    if (resp && resp.id) {\n      copiedState.link = resp.alternateLink; \n      return copiedState;\n    }    \n  } catch(error) {\n    resp = error; \/\/ error.name, error.message;\n  }\n  \n  copiedState.copy = '0'; \/\/ Not copy\n  \n  var rowContents;\n  \n  var thisFunctionName = 'Call Drive.Files.copy';\n  var email = Session.getEffectiveUser().getEmail();\n  if (!resp || !resp.name) {\n    console.warn('%s, Error !resp.name, Title: %s - %s', email, title, thisFunctionName);\n    \n    copiedState.link = '';\n    copiedState.message = '';\n    copiedState.check = '-2';\n    return copiedState;\n  }\n  \n  copiedState.link = resp.name;\n  copiedState.message = resp.message;\n  \n  console.warn('%s, Error: %s, Message: %s, Title: %s - %s', email, resp.name, resp.message, title, thisFunctionName);\n  \n  if (resp.message.indexOf('User rate limit exceeded') >= 0) {\n    copiedState.check = '-3'; \/\/ create trigger, hour\n  } else if (resp.message.indexOf('The user has exceeded') >= 0 || \n             resp.message.indexOf('The file limit for this Team Drive') >= 0) {\n    copiedState.check = '-1'; \/\/ process kill \n  } else {\n    copiedState.check = '1'; \/\/ Skip\n    \/\/ Error Name: Exception\n    \/\/ 'Internal Error'\n    \/\/ '빈 응답'\n  }\n  return copiedState;\n}\n\nfunction copyFilesBySheet_(startTime, sheet) {\n  var lastRow = sheet.getLastRow();\n  if (!lastRow || lastRow < 3) {\n    return '9';\n  }\n  \n  var startRow = sheet.getRange('B1').getValue();\n  if (!startRow || startRow < 3) {\n    startRow = 3;\n  }\n  \n  if (startRow > lastRow) {\n    return '9';\n  }\n  \n  var rows = lastRow - startRow + 1;\n  var fileValues = sheet.getRange(startRow, 1, rows, 9).getValues();\n  var fileCont;\n  var valuesCopyfile = [];  \n  for (var idx = 0; idx < rows; idx++) {\n    fileCont = fileValues[idx]\n    var title = fileCont[0];\n    var id = fileCont[1];\n    var parent = fileCont[8];\n    var copiedState = callFileCopy_(title, id, parent);  \n    var arr = [copiedState.copy];\n    arr.push(copiedState.link);\n    arr.push(copiedState.message);\n    arr.push(copiedState.check);    \n    valuesCopyfile.push(arr);    \n    \n    if (copiedState.check === '1') {\n      \/\/ console.log('copiedState.chek: %s === 1', copiedState.check);\n    } else {       \n      console.log('%s Not === 1, break copyFilesBySheet, copiedState.chek', copiedState.check);\n      break;      \n    }\n    \n    if (!timeCheck(startTime, 30000)) { \/\/ needTime: 30 sec\n      break;\n    }\n    \/\/ end for var idx\n  }\n\n  var valuesLength = valuesCopyfile.length;  \n  sheet.getRange(startRow, 5, valuesLength, valuesCopyfile[0].length).setValues(valuesCopyfile);\n  \n  var readToRow = (copiedState.check === '1') ? (startRow + valuesLength) : (startRow + valuesLength - 1);\n  sheet.getRange('B1').setValue(readToRow);\n  \n  if (idx >= rows) {\n    return '9'; \n  }\n  \n  return copiedState.check;\n}\n\nfunction timeCheck(startTime, needTime) {\n  var nowDate = new Date();\n  \/\/  remain = 6 min - ( now - start )\n  var remain = 360000 - (nowDate.getTime() - startTime);\n  if (remain < needTime) {\n    return false;\n  } else {\n    return true;\n  }\n}\n\n\n\n\nfunction trigCpFolderBySheet_() {\n  var newDate = new Date();  \n  var COPY_START_TIME = newDate.getTime();\n  \n  \/\/ Deletes triggers\n  var thisFunctionName = 'trigCpFolderBySheet_';  \n  deleteTriggerByName(thisFunctionName);\n  \n  var ssId = getFolderSSIdProperty();\n  if (!ssId || ssId.length < 10) {\n    console.warn('Error getProperty(FOLDER_SS_ID), %s', thisFunctionName);\n    return;\n  }\n  \n  var copyFolderSs = getSpreadsheetById(ssId);\n  if (!copyFolderSs) {\n    console.warn('getSpreadsheetById(%s), at %s', ssId, thisFunctionName);\n    return;\n  }\n  \n  var sheetFolder = copyFolderSs.getSheetByName('folder');    \n  var sheetFiles = copyFolderSs.getSheetByName('files');  \n  \n  var folderRow = sheetFolder.getRange('B1').getValue(); \/\/ row to read\n  \n  var timeResp;  \n  var title, id, id2, files, filesArrayLength, fileRow;\n  var lastRowFiles, pageTokenProperty;\n  do {\n    var resp = doCopyFolder_(sheetFolder, folderRow, sheetFiles, COPY_START_TIME); \n    if (resp === '1') {\n      if (!timeCheck(COPY_START_TIME, 120000)) {\n        console.log('timeCheck -> triggerAfter');\n        triggerAfterByName(thisFunctionName, 1000); \/\/ trigger 기동\n        return;\n      }\n    }\n  } while(resp === '1');\n}\n\nfunction listFilesByPageToken_(folderId, pageToken, startTime) {\n  var query = '\"'+ folderId +'\" in parents and trashed = false';\n  var files, resp;\n  var data = [];  \n  var fileCont = [];\n  do {\n    files = Drive.Files.list({\n      includeTeamDriveItems : true,\n      supportsTeamDrives : true,\n      q: query,\n      maxResults: 100,\n      pageToken: pageToken,\n    });\n    if (files.items && files.items.length > 0) {\n      for (var i = 0; i < files.items.length; i++) {\n        var file = files.items[i];\n        fileCont = [file.title]; \/\/ file.title, file.id, file.mimeType, file.fileSize\n        fileCont.push(file.id);     \n        fileCont.push(file.mimeType);\n        if (!file.fileSize) {\n          fileCont.push(0);\n        } else {\n          fileCont.push(file.fileSize);\n        }            \n        data.push(fileCont);        \n      }\n    }\n    pageToken = files.nextPageToken;\n  } while (pageToken && timeCheck(startTime, 30000)); \/\/ needTime: 30 sec\n  \n  if (data.length > 0) {\n    var objFiles = {};\n    objFiles.pageToken = pageToken;\n    objFiles.files = data;\n    return objFiles;\n  }\n}\n\nfunction funcCopyFromInput_(argUrl, argFolder) {\n  var appMessage = {};\n  appMessage.url = argUrl;\n  appMessage.title = argUrl;   \n  \n  if (!argUrl || argUrl.length < 15) {\n    appMessage.message = argUrl + ' is too short to be processed.';\n    return appMessage;\n  }\n  \n  var file = getFolderByGdUrl_(argUrl); \/\/ return Drive.Files.get(id, optionalArgs);\n  if (!file || !file.id) {\n    var appMessage = file;\n    if (appMessage && appMessage.name) {\n      console.log('Error Name: %s, Message: %s, Form Input Url: %s', appMessage.name, appMessage.message, argUrl);      \n      appMessage.message = 'Error Name: '+appMessage.name+', Message: '+appMessage.message;\n    } else {\n      console.log('Error input Url Validate. URL does not have file ID. [%s]', argUrl);\n      appMessage.message = 'Error ['+argUrl+'] Validate.';\n    }\n    return appMessage;\n  }\n  \n  var title = file.title;\n  if (file.mimeType != 'application\/vnd.google-apps.folder') {\n    return fileCopyFromInput_(file, argFolder.id);\n  } else {\n    var ss = createFolderSpreadsheet_(title, argFolder.id);    \n    var sheetFolder = ss.getSheets()[0];\n    var newDate = new Date();\n    sheetFolder.appendRow([title, file.id, '', 0, 0, newDate, newDate, 0, argFolder.id]);\n    setFolderSSIdProperty(ss.getId());\n    \n    appMessage.url = ss.getUrl();\n    appMessage.title = ss.getName();\n    appMessage.message = 'Create Spreadsheet';\n    \n    \/\/ trigger 기동\n    triggerAfterByName('trigCpFolderBySheet_', 1000);\n    return appMessage;    \n  }\n}\n\nfunction processForm(formObject) {\n  var formFromUrl = formObject.fromFolder.trim();\t\n  var formToUrl = formObject.toFolder.trim();\t\n  \nvar appMessage = {};    \n   var toFolder =  getFolderByGdUrl_(formToUrl);\n  if (!toFolder || !toFolder.id) {\n    console.warn('Error Get to folder');\n    appMessage.message = 'Error Get to folder';\n    return JSON.stringify(appMessage);  \n  }\n\n  var fcResp = funcCopyFromInput_(formFromUrl, toFolder);\n  if (!fcResp) {    \n    appMessage.url = 'https:\/\/drive.google.com';\n    appMessage.title = 'My Drive';\n    appMessage.message = 'can not copy!';\n  } else {\n    appMessage = fcResp;\n  }\n  return JSON.stringify(appMessage);  \n}\nJavaScript.html\n<script>\nwindow.addEventListener('load', function() {\n  \/\/ console.log('Page is loaded');\n});\n\n\/\/ Prevent forms from submitting.\nfunction preventFormSubmit() {\n  var forms = document.querySelectorAll('form');\n  for (var i = 0; i < forms.length; i++) {\n    forms[i].addEventListener('submit', function(event) {\n      event.preventDefault();\n    });\n  }\n}\nwindow.addEventListener('load', preventFormSubmit);\n\nfunction handleFormSubmit(formObject) {\n  google.script.run.withSuccessHandler(updateUrl).processForm(formObject);\n  formObject.fromFolder.value = '';\t\t\n}\n\nfunction updateUrl(appMessage) {\n  var json;\n  if (appMessage) {\n    json = JSON.parse(appMessage);\n    if (json.url) {\n      \/\/ var url  \n      var div = document.getElementById('output');\n      div.innerHTML = 'Link: <a href=\"' + json.url + '\" target=\"_blank\">'+json.title+'<\/a>';\n    }      \n    if (json.message) {\n      var message = document.getElementById('message');\n      message.innerHTML = 'Message: '+json.message;        \n    }\n  }\n}      \n<\/script>\nPage.html\n<!DOCTYPE html>\n<html>\n  <head>\n    <base target=\"_top\">\n    <?!= include('Stylesheet'); ?>\n  <\/head>\n  <body>\n    <h1>Copy to team drive review<\/h1>\n    <a href=\"https:\/\/gfoldercopy.eojji.com\/group\" target=\"_blank\">G folder copy group<\/a>\n    <br><br>\n    <form id=\"myForm\" onsubmit=\"handleFormSubmit(this)\">\n    From: <input name=\"fromFolder\" type=\"text\" required \/> <br>\n\tTo: <input name=\"toFolder\" type=\"text\" required \/>\n    <input type=\"submit\" value=\"Copy\" \/>\n    <\/form>\n    <br>\n    <div id=\"message\">Message: <\/div>     \n    <div id=\"output\">Link: <\/div>    \n    <br>    \n    Create a <a href=\"https:\/\/gsuite.google.com\/learning-center\/products\/drive\/get-started-team-drive\/\">Team Drive<\/a>: <a href=\"https:\/\/goo.gl\/forms\/1az5A9lwcG2HpL5s2\">Request Form<\/a>  |  <a href=\"https:\/\/hi.eojji.com\/\">Contact<\/a>\n    <br><br>\n    <a href=\"https:\/\/copy.gfolder.net\/\" target=\"_blank\">copy.gfolder.net<\/a>  |  <a href=\"https:\/\/hi.eojji.com\/privacy\" target=\"_blank\">Privacy Policy<\/a>    \n    <?!= include('JavaScript'); ?>\n  <\/body>\n<\/html>\nStylesheet.html\n<style>\np {\n  color: green;\n}\n<\/style>\n@iTrauco\n \nLeave a comment\nNo file chosen\nAttach files by dragging & dropping, selecting or pasting them.\n© 2021 GitHub, Inc.\nTerms\nPrivacy\nSecurity\nStatus\nDocs\nContact GitHub\nPricing\nAPI\nTraining\nBlog\nAbout\n",
-          "Date Modified" : "2021-01-28 21:05:31 -0500",
-          "Note" : "",
-          "Title" : "Fragment",
-          "Language" : "Plain Text",
-          "Date Created" : "2021-01-28 21:05:27 -0500"
-        }
-      ],
-      "Tags" : [
-
-      ]
-    },
-    {
       "Date Created" : "2021-01-28 24:10:33 -0500",
       "Date Modified" : "2021-01-28 24:12:05 -0500",
       "Folder" : "gspread",
@@ -980,6 +961,25 @@
       ]
     },
     {
+      "Date Created" : "2020-12-02 12:28:21 -0500",
+      "Date Modified" : "2020-12-02 12:28:21 -0500",
+      "Folder" : "Uncategorized",
+      "Title" : "untitled snippet",
+      "Fragments" : [
+        {
+          "Content" : "",
+          "Date Modified" : "2020-12-02 12:28:21 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2020-12-02 12:28:21 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
       "Date Created" : "2021-01-28 21:08:01 -0500",
       "Date Modified" : "2021-01-28 21:08:07 -0500",
       "Folder" : "js",
@@ -1026,18 +1026,37 @@
       ]
     },
     {
-      "Date Created" : "2020-12-02 12:28:21 -0500",
-      "Date Modified" : "2020-12-02 12:28:21 -0500",
-      "Folder" : "Uncategorized",
-      "Title" : "untitled snippet",
+      "Date Created" : "2021-01-28 21:05:27 -0500",
+      "Date Modified" : "2021-01-28 21:05:39 -0500",
+      "Folder" : "gas",
+      "Title" : "review",
       "Fragments" : [
         {
-          "Content" : "",
-          "Date Modified" : "2020-12-02 12:28:21 -0500",
+          "Content" : "Skip to content\n \nSearch…\nAll gists\nBack to GitHub\n@iTrauco \n@eojji\neojji\/JavaScript.html\nCreated 3 years ago • Report abuse\n1\n0\n Code\n Revisions 1\n Stars 1\n<script src=\"https:\/\/gist.github.com\/eojji\/73ef2b6f55cd38953c1c5e767cc56777.js\"><\/script>\nCopy to team drive - review. Listing folders - 8 https:\/\/m.cafe.naver.com\/eojji\/311\ncode.gs\n\/\/ Web App Exec: \n\/\/ https:\/\/script.google.com\/macros\/s\/AKfycbxa1mBiEPGwHpVDxw6V6p1bRBWSXHm8qbIea7Kjmv9rQUyv68_Z\/exec\nfunction doGet(request) {\n  var output = HtmlService.createTemplateFromFile('Page').evaluate();\n  return output.addMetaTag('viewport', 'width=device-width, initial-scale=1');\n}\n   \nfunction include(filename) {\n  return HtmlService.createHtmlOutputFromFile(filename)\n  .getContent();\n}\n\nfunction copyDriveFile_(title, fileId, parentId) {\n  var resource = {\n    'title': title,\n    parents: [{ id: parentId }]\n  };  \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  try {\n    return Drive.Files.copy(resource, fileId, optionalArgs);\n  } catch(error) {\n    return error; \/\/ error.name, error.message;\n  }\n}\n\nfunction createFolderSpreadsheet_(title, folderId) {\n  var ssNew, ssId, sheetFolder, sheetFiles;\n  var title = '_gfolder, ' + Date.now() + ' ' + title;\n  try {\n    ssNew = SpreadsheetApp.create(title);    \n    sheetFolder = ssNew.getSheets()[0]; \n    sheetFolder.setName('folder');    \n    sheetFolder.appendRow([\"row to read\", 3]);\n    sheetFolder.appendRow([\"title\", \"id\", \"id2\", \"files\", \"fileSize\", \"start\", \"end\", \"file row\", \"parent\"]);\n    \n    \/\/ files    \n    sheetFiles = ssNew.insertSheet('files');\n    sheetFiles.appendRow([\"row to read\", 3, \"page token\"]);\n    sheetFiles.appendRow(['title', 'id', 'mime', 'size', 'copy', 'name', 'message', 'check', 'parent']);\n    \n    \/\/ https:\/\/developers.google.com\/drive\/api\/v2\/reference\/parents\/insert\n    var resource= { \"id\": folderId };    \n    var optionalArgs = { \"supportsTeamDrives\" : true };        \n    \/\/ Drive.Parents.insert(resource, fileId, optionalArgs);\n    ssId = ssNew.getId();    \n    Drive.Parents.insert(resource, ssId, optionalArgs);\n    Drive.Parents.remove(ssId, DriveApp.getRootFolder().getId());\n    \n    return ssNew;\n  } catch(e) {\n    console.warn('Error: %s, %s - createFolderSpreadsheet: %s', e.name, e.message, folderId);\n  }\n}\n\nfunction fileCopyFromInput_(file, folderId) {\n  var appMessage = {};\n  if (! file.copyable) {\n    appMessage.url = file.alternateLink;\n    appMessage.title = file.title;\n    appMessage.message = 'The file can not be copied to My Drive.';\n    return appMessage;              \n  }        \n  \n  var aCopy = copyDriveFile_(file.title, file.id, folderId);    \n  if (aCopy.id) {\n    \/\/ console.log('Title: %s, Mimetype: %s, ID: %s', aCopy.title, aCopy.mimeType, aCopy.id);   \n    appMessage.url = aCopy.alternateLink;\n    appMessage.title = aCopy.title;\n    appMessage.message = 'The copy is complete. Size: ' + aCopy.fileSize;            \n  } else if (aCopy.name) {\n    console.warn('An error occurred while copying. Error Name: %s, Message: %s', aCopy.name, aCopy.message);      \n    appMessage.message = 'An error occurred while copying. '+aCopy.name+ ', Message: '+ aCopy.message;\n    appMessage.url = file.alternateLink;\n    appMessage.title = file.title;        \n  }\n  return appMessage;                \n}\n\nfunction getFolderByGdUrl_(url) {\n  var idx = url.lastIndexOf('google.com');\n  if (idx < 0) {    \n    var rtn = url.match(\/[-\\w]{15,}\/);\n    if (rtn) {\n      return getDriveFileById_(rtn[0]);\n    } \n    return;    \n  }\n  \n  var decUrl = url.substr(idx+10);\n  var arr = [\"\/d\/\", \"\/folders\/\", \"?id=\", \"&id=\"];    \n  for (var i=0; i<arr.length; i++) {\n    idx = decUrl.indexOf(arr[i]);\n    if (idx < 0) { \n      continue; \n    }\n    var str = decUrl.substr(idx + arr[i].length);\n    var idMatchStr = str.match(\/[-\\w]{15,}\/);\n    if (idMatchStr) {\n      return getDriveFileById_(idMatchStr[0]);        \n    } else {\n      return;\n    }    \n  }  \n}\n\nfunction setPageTokenProperty(value) {\n  PropertiesService.getUserProperties().setProperty('PAGE_TOKEN', value);  \n}  \n\nfunction getPageTokenProperty() {\n  var pageTokenProperty = PropertiesService.getUserProperties().getProperty('PAGE_TOKEN');  \n  return pageTokenProperty;  \n}\n\nfunction deletePageTokenProperty() {\n  PropertiesService.getUserProperties().deleteProperty('PAGE_TOKEN');\n}\n\nfunction doCopyFolder_(sheetFolder, folderRowNum, sheetFiles, startTime) {\n  var folderRange, folderInfo;\n  try {\n    folderRange = sheetFolder.getRange(folderRowNum, 1, 1, 9);\n    folderInfo = folderRange.getValues()[0];\n  } catch(e) {\n    console.warn('Error: %s, %s - doCopyFolder', e.name, e.message);\n    return '-1';\n  }\n  \n  var title, folderId, copyFolderId, fileRowNum;\n  title = folderInfo[0];\n  folderId = folderInfo[1];\n  copyFolderId = folderInfo[2];\n  fileRowNum = folderInfo[7];    \n  if (!fileRowNum || fileRowNum < 3) {\n    var pageToken;\n    var objFiles = listFilesByPageToken_(folderId, pageToken, startTime);\n    if (!objFiles) {\n      return '9';\n    }\n    \n    var parentId = folderInfo[8];\n    var resp = insertFolderById_(parentId, title);\n    if (!resp || !resp.id) {\n      console.warn('Error: %s, %s - insertFolderById(parentId: %s, %s)', resp.name, resp.message, parentId, title);\n      return '-1';\n    } \n    \n    folderInfo[7] = sheetFiles.getLastRow() + 1; \/\/ fileRowNum\n    sheetAppendFiles_(resp.id, objFiles.files, sheetFolder, sheetFiles);      \n    folderInfo[2] = resp.id; \/\/ copyFolderId   \n    folderRange.setValues([folderInfo]); \n    \n    if (objFiles.pageToken) {\n      setPageTokenProperty(folderId+','+objFiles.pageToken);\n      return '1';   \n    }\n    return copyFilesBySheet_(startTime, sheetFiles);   \n  }\n  \n  var pageTokenProperty = getPageTokenProperty();\n  if (pageTokenProperty) {\n    var arrIdAndPageToken = pageTokenProperty.split(',');\n    if (arrIdAndPageToken[0] == folderId && arrIdAndPageToken[1]) {\n      var objFiles = listFilesByPageToken_(folderId, arrIdAndPageToken[1], startTime);\n      if (objFiles) {\n        sheetAppendFiles_(copyFolderId, objFiles.files, sheetFolder, sheetFiles); \n        if (objFiles.pageToken) {\n          setPageTokenProperty(folderId+','+objFiles.pageToken);\n          return '1';\n        }\n      }\n    } else {\n      deletePageTokenProperty();\n    }\n  }\n  \n  return copyFilesBySheet_(startTime, sheetFiles);   \n}\n\nfunction sheetAppendFiles_(parentId, data, sheetFolder, sheetFiles) {\n  if (!data || data.length < 1) {\n    return;\n  }\n  \n  var folderData = [];\n  var newDate = new Date();\n  \/\/ title, id\n  \/\/ id2, files, fileSize, start, end, file row, parent\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n  var newFolderContents = ['', 0, 0, newDate, newDate, 0, parentId];\n  \n  var fileData = [];\n  \/\/ copy, name, message, check, parent\n  var newFileContents = ['', '', '', '', parentId];\n  \n  var len = data.length;\n  for (var i = 0; i < len; i++) {\n    \/\/ title, id, mimeType, fileSize\n    var mimeType = data[i][2]; \/\/ mimeType\n    if (mimeType == 'application\/vnd.google-apps.folder') {\n      folderData.push(data[i].slice(0, 2).concat(newFolderContents));\n    } else {\n      fileData.push(data[i].concat(newFileContents));\n    }\n  }\n  \n  if (folderData && folderData.length > 0) {\n    sheetFolder.getRange(sheetFolder.getLastRow() + 1, 1, folderData.length, folderData[0].length).setValues(folderData);\n  }\n  \n  if (fileData && fileData.length > 0) {\n    sheetFiles.getRange(sheetFiles.getLastRow() + 1, 1, fileData.length, fileData[0].length).setValues(fileData);\n  }\n}\n\nfunction insertFolderById_(parentId, folderName) {\n  var resource= {\n    \"parents\": [\n      {\n        \"id\": parentId\n      }\n    ],\n    \"title\": folderName,\n    \"mimeType\": \"application\/vnd.google-apps.folder\"\n  };    \n  \n  \/\/ https:\/\/stackoverflow.com\/questions\/28378738\/create-a-new-blob-in-memory-using-apps-script\n  \/\/ var blob = Utilities.newBlob(folderName);    \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  \/\/ var folder;\n  try {\n    \/\/ https:\/\/developers.google.com\/drive\/v2\/reference\/files#resource\n    return Drive.Files.insert(resource, Utilities.newBlob(folderName), optionalArgs); \n  } catch(error) {    \n    return error;\n  }\n}\n\nfunction triggerAfterByName(functionName, time) {\n  ScriptApp.newTrigger(functionName)\n  .timeBased().after(time).create();\n  \n  console.log('%s, %s, Time: %s - trigger AfterByName', Session.getEffectiveUser().getEmail(), functionName, time);\n}\n\nfunction setFolderSSIdProperty(value) {\n  return PropertiesService.getUserProperties().setProperty('FOLDER_SS_ID', value);\n}\n\nfunction getFolderSSIdProperty() {\n  return PropertiesService.getUserProperties().getProperty('FOLDER_SS_ID');\n}\n\nfunction deleteFolderSSIdProperty() {\n  return PropertiesService.getUserProperties().deleteProperty('FOLDER_SS_ID');\n}\n\nfunction deleteTriggerByName(name) {\n  var getPropTrigger = PropertiesService.getUserProperties().getProperty('atHour'+name);\n  if (!getPropTrigger) {\n    getPropTrigger = 'x';\n  }\n  \n  var triggers = ScriptApp.getProjectTriggers();    \n  for (var i = 0; i < triggers.length; i++) {\n    if (triggers[i].getHandlerFunction() == name && triggers[i].getUniqueId() != getPropTrigger) {\n      ScriptApp.deleteTrigger(triggers[i]);\n    }\n  }\n}\n\n\/\/ https:\/\/developers.google.com\/drive\/v2\/reference\/files\nfunction getDriveFileById_(id) {\n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  try {\n    return Drive.Files.get(id, optionalArgs);\n  } catch(error) {         \n    return error; \/\/ error.name, error.message;\n  }\n}\n\nfunction getSpreadsheetById(ssId) {\n  if (!ssId || ssId < 10) {\n    console.warn('!ssId || ssId.length < 10 - getSpreadsheetById');\n    return;\n  }\n  \n  try {\n    var resp = getDriveFileById_(ssId);\n    if (resp.id && !resp.labels.trashed) {\n      return SpreadsheetApp.openById(ssId);\n    }    \n  } catch(e) {\n    console.warn('Error: %s, %s - DriveApp.getFileById(%s) in getSpreadsheetById', e.name, e.message, ssId);\n  }  \n}\n\n\/*\n * check: 파일 복사 함수 호출의 반환값으로 다음 작업을 결정합니다.\n * '1': 계속 진행 \n * '-1': 프로세스 중단\n * '-2': after 트리거 생성\n * '-3': hour  트리거 생성\n**\/\n\nfunction callFileCopy_(title, id, parentId) {\n  var copiedState = {\n    copy: '1',\n    link: '',  \/\/ or Error name\n    message: 'Ok', \n    check: '1'\n  }\n  \n  var resource = {\n    'title': title,\n    parents: [{ id: parentId }]\n  };  \n  \n  var optionalArgs = {\n    supportsTeamDrives : true\n  };\n  \n  var resp;\n  try {\n    resp = Drive.Files.copy(resource, id, optionalArgs);\n    if (resp && resp.id) {\n      copiedState.link = resp.alternateLink; \n      return copiedState;\n    }    \n  } catch(error) {\n    resp = error; \/\/ error.name, error.message;\n  }\n  \n  copiedState.copy = '0'; \/\/ Not copy\n  \n  var rowContents;\n  \n  var thisFunctionName = 'Call Drive.Files.copy';\n  var email = Session.getEffectiveUser().getEmail();\n  if (!resp || !resp.name) {\n    console.warn('%s, Error !resp.name, Title: %s - %s', email, title, thisFunctionName);\n    \n    copiedState.link = '';\n    copiedState.message = '';\n    copiedState.check = '-2';\n    return copiedState;\n  }\n  \n  copiedState.link = resp.name;\n  copiedState.message = resp.message;\n  \n  console.warn('%s, Error: %s, Message: %s, Title: %s - %s', email, resp.name, resp.message, title, thisFunctionName);\n  \n  if (resp.message.indexOf('User rate limit exceeded') >= 0) {\n    copiedState.check = '-3'; \/\/ create trigger, hour\n  } else if (resp.message.indexOf('The user has exceeded') >= 0 || \n             resp.message.indexOf('The file limit for this Team Drive') >= 0) {\n    copiedState.check = '-1'; \/\/ process kill \n  } else {\n    copiedState.check = '1'; \/\/ Skip\n    \/\/ Error Name: Exception\n    \/\/ 'Internal Error'\n    \/\/ '빈 응답'\n  }\n  return copiedState;\n}\n\nfunction copyFilesBySheet_(startTime, sheet) {\n  var lastRow = sheet.getLastRow();\n  if (!lastRow || lastRow < 3) {\n    return '9';\n  }\n  \n  var startRow = sheet.getRange('B1').getValue();\n  if (!startRow || startRow < 3) {\n    startRow = 3;\n  }\n  \n  if (startRow > lastRow) {\n    return '9';\n  }\n  \n  var rows = lastRow - startRow + 1;\n  var fileValues = sheet.getRange(startRow, 1, rows, 9).getValues();\n  var fileCont;\n  var valuesCopyfile = [];  \n  for (var idx = 0; idx < rows; idx++) {\n    fileCont = fileValues[idx]\n    var title = fileCont[0];\n    var id = fileCont[1];\n    var parent = fileCont[8];\n    var copiedState = callFileCopy_(title, id, parent);  \n    var arr = [copiedState.copy];\n    arr.push(copiedState.link);\n    arr.push(copiedState.message);\n    arr.push(copiedState.check);    \n    valuesCopyfile.push(arr);    \n    \n    if (copiedState.check === '1') {\n      \/\/ console.log('copiedState.chek: %s === 1', copiedState.check);\n    } else {       \n      console.log('%s Not === 1, break copyFilesBySheet, copiedState.chek', copiedState.check);\n      break;      \n    }\n    \n    if (!timeCheck(startTime, 30000)) { \/\/ needTime: 30 sec\n      break;\n    }\n    \/\/ end for var idx\n  }\n\n  var valuesLength = valuesCopyfile.length;  \n  sheet.getRange(startRow, 5, valuesLength, valuesCopyfile[0].length).setValues(valuesCopyfile);\n  \n  var readToRow = (copiedState.check === '1') ? (startRow + valuesLength) : (startRow + valuesLength - 1);\n  sheet.getRange('B1').setValue(readToRow);\n  \n  if (idx >= rows) {\n    return '9'; \n  }\n  \n  return copiedState.check;\n}\n\nfunction timeCheck(startTime, needTime) {\n  var nowDate = new Date();\n  \/\/  remain = 6 min - ( now - start )\n  var remain = 360000 - (nowDate.getTime() - startTime);\n  if (remain < needTime) {\n    return false;\n  } else {\n    return true;\n  }\n}\n\n\n\n\nfunction trigCpFolderBySheet_() {\n  var newDate = new Date();  \n  var COPY_START_TIME = newDate.getTime();\n  \n  \/\/ Deletes triggers\n  var thisFunctionName = 'trigCpFolderBySheet_';  \n  deleteTriggerByName(thisFunctionName);\n  \n  var ssId = getFolderSSIdProperty();\n  if (!ssId || ssId.length < 10) {\n    console.warn('Error getProperty(FOLDER_SS_ID), %s', thisFunctionName);\n    return;\n  }\n  \n  var copyFolderSs = getSpreadsheetById(ssId);\n  if (!copyFolderSs) {\n    console.warn('getSpreadsheetById(%s), at %s', ssId, thisFunctionName);\n    return;\n  }\n  \n  var sheetFolder = copyFolderSs.getSheetByName('folder');    \n  var sheetFiles = copyFolderSs.getSheetByName('files');  \n  \n  var folderRow = sheetFolder.getRange('B1').getValue(); \/\/ row to read\n  \n  var timeResp;  \n  var title, id, id2, files, filesArrayLength, fileRow;\n  var lastRowFiles, pageTokenProperty;\n  do {\n    var resp = doCopyFolder_(sheetFolder, folderRow, sheetFiles, COPY_START_TIME); \n    if (resp === '1') {\n      if (!timeCheck(COPY_START_TIME, 120000)) {\n        console.log('timeCheck -> triggerAfter');\n        triggerAfterByName(thisFunctionName, 1000); \/\/ trigger 기동\n        return;\n      }\n    }\n  } while(resp === '1');\n}\n\nfunction listFilesByPageToken_(folderId, pageToken, startTime) {\n  var query = '\"'+ folderId +'\" in parents and trashed = false';\n  var files, resp;\n  var data = [];  \n  var fileCont = [];\n  do {\n    files = Drive.Files.list({\n      includeTeamDriveItems : true,\n      supportsTeamDrives : true,\n      q: query,\n      maxResults: 100,\n      pageToken: pageToken,\n    });\n    if (files.items && files.items.length > 0) {\n      for (var i = 0; i < files.items.length; i++) {\n        var file = files.items[i];\n        fileCont = [file.title]; \/\/ file.title, file.id, file.mimeType, file.fileSize\n        fileCont.push(file.id);     \n        fileCont.push(file.mimeType);\n        if (!file.fileSize) {\n          fileCont.push(0);\n        } else {\n          fileCont.push(file.fileSize);\n        }            \n        data.push(fileCont);        \n      }\n    }\n    pageToken = files.nextPageToken;\n  } while (pageToken && timeCheck(startTime, 30000)); \/\/ needTime: 30 sec\n  \n  if (data.length > 0) {\n    var objFiles = {};\n    objFiles.pageToken = pageToken;\n    objFiles.files = data;\n    return objFiles;\n  }\n}\n\nfunction funcCopyFromInput_(argUrl, argFolder) {\n  var appMessage = {};\n  appMessage.url = argUrl;\n  appMessage.title = argUrl;   \n  \n  if (!argUrl || argUrl.length < 15) {\n    appMessage.message = argUrl + ' is too short to be processed.';\n    return appMessage;\n  }\n  \n  var file = getFolderByGdUrl_(argUrl); \/\/ return Drive.Files.get(id, optionalArgs);\n  if (!file || !file.id) {\n    var appMessage = file;\n    if (appMessage && appMessage.name) {\n      console.log('Error Name: %s, Message: %s, Form Input Url: %s', appMessage.name, appMessage.message, argUrl);      \n      appMessage.message = 'Error Name: '+appMessage.name+', Message: '+appMessage.message;\n    } else {\n      console.log('Error input Url Validate. URL does not have file ID. [%s]', argUrl);\n      appMessage.message = 'Error ['+argUrl+'] Validate.';\n    }\n    return appMessage;\n  }\n  \n  var title = file.title;\n  if (file.mimeType != 'application\/vnd.google-apps.folder') {\n    return fileCopyFromInput_(file, argFolder.id);\n  } else {\n    var ss = createFolderSpreadsheet_(title, argFolder.id);    \n    var sheetFolder = ss.getSheets()[0];\n    var newDate = new Date();\n    sheetFolder.appendRow([title, file.id, '', 0, 0, newDate, newDate, 0, argFolder.id]);\n    setFolderSSIdProperty(ss.getId());\n    \n    appMessage.url = ss.getUrl();\n    appMessage.title = ss.getName();\n    appMessage.message = 'Create Spreadsheet';\n    \n    \/\/ trigger 기동\n    triggerAfterByName('trigCpFolderBySheet_', 1000);\n    return appMessage;    \n  }\n}\n\nfunction processForm(formObject) {\n  var formFromUrl = formObject.fromFolder.trim();\t\n  var formToUrl = formObject.toFolder.trim();\t\n  \nvar appMessage = {};    \n   var toFolder =  getFolderByGdUrl_(formToUrl);\n  if (!toFolder || !toFolder.id) {\n    console.warn('Error Get to folder');\n    appMessage.message = 'Error Get to folder';\n    return JSON.stringify(appMessage);  \n  }\n\n  var fcResp = funcCopyFromInput_(formFromUrl, toFolder);\n  if (!fcResp) {    \n    appMessage.url = 'https:\/\/drive.google.com';\n    appMessage.title = 'My Drive';\n    appMessage.message = 'can not copy!';\n  } else {\n    appMessage = fcResp;\n  }\n  return JSON.stringify(appMessage);  \n}\nJavaScript.html\n<script>\nwindow.addEventListener('load', function() {\n  \/\/ console.log('Page is loaded');\n});\n\n\/\/ Prevent forms from submitting.\nfunction preventFormSubmit() {\n  var forms = document.querySelectorAll('form');\n  for (var i = 0; i < forms.length; i++) {\n    forms[i].addEventListener('submit', function(event) {\n      event.preventDefault();\n    });\n  }\n}\nwindow.addEventListener('load', preventFormSubmit);\n\nfunction handleFormSubmit(formObject) {\n  google.script.run.withSuccessHandler(updateUrl).processForm(formObject);\n  formObject.fromFolder.value = '';\t\t\n}\n\nfunction updateUrl(appMessage) {\n  var json;\n  if (appMessage) {\n    json = JSON.parse(appMessage);\n    if (json.url) {\n      \/\/ var url  \n      var div = document.getElementById('output');\n      div.innerHTML = 'Link: <a href=\"' + json.url + '\" target=\"_blank\">'+json.title+'<\/a>';\n    }      \n    if (json.message) {\n      var message = document.getElementById('message');\n      message.innerHTML = 'Message: '+json.message;        \n    }\n  }\n}      \n<\/script>\nPage.html\n<!DOCTYPE html>\n<html>\n  <head>\n    <base target=\"_top\">\n    <?!= include('Stylesheet'); ?>\n  <\/head>\n  <body>\n    <h1>Copy to team drive review<\/h1>\n    <a href=\"https:\/\/gfoldercopy.eojji.com\/group\" target=\"_blank\">G folder copy group<\/a>\n    <br><br>\n    <form id=\"myForm\" onsubmit=\"handleFormSubmit(this)\">\n    From: <input name=\"fromFolder\" type=\"text\" required \/> <br>\n\tTo: <input name=\"toFolder\" type=\"text\" required \/>\n    <input type=\"submit\" value=\"Copy\" \/>\n    <\/form>\n    <br>\n    <div id=\"message\">Message: <\/div>     \n    <div id=\"output\">Link: <\/div>    \n    <br>    \n    Create a <a href=\"https:\/\/gsuite.google.com\/learning-center\/products\/drive\/get-started-team-drive\/\">Team Drive<\/a>: <a href=\"https:\/\/goo.gl\/forms\/1az5A9lwcG2HpL5s2\">Request Form<\/a>  |  <a href=\"https:\/\/hi.eojji.com\/\">Contact<\/a>\n    <br><br>\n    <a href=\"https:\/\/copy.gfolder.net\/\" target=\"_blank\">copy.gfolder.net<\/a>  |  <a href=\"https:\/\/hi.eojji.com\/privacy\" target=\"_blank\">Privacy Policy<\/a>    \n    <?!= include('JavaScript'); ?>\n  <\/body>\n<\/html>\nStylesheet.html\n<style>\np {\n  color: green;\n}\n<\/style>\n@iTrauco\n \nLeave a comment\nNo file chosen\nAttach files by dragging & dropping, selecting or pasting them.\n© 2021 GitHub, Inc.\nTerms\nPrivacy\nSecurity\nStatus\nDocs\nContact GitHub\nPricing\nAPI\nTraining\nBlog\nAbout\n",
+          "Date Modified" : "2021-01-28 21:05:31 -0500",
           "Note" : "",
           "Title" : "Fragment",
           "Language" : "Plain Text",
-          "Date Created" : "2020-12-02 12:28:21 -0500"
+          "Date Created" : "2021-01-28 21:05:27 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-02-19 19:13:47 -0500",
+      "Date Modified" : "2021-02-19 19:14:08 -0500",
+      "Folder" : "hex",
+      "Title" : "HED ID Branding",
+      "Fragments" : [
+        {
+          "Content" : "Primary - #005179\nSecondary -  #00A0EE\nTertiary - #0DA7E1\nFiller\n #00A0EE",
+          "Date Modified" : "2021-02-19 19:15:38 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-19 19:13:47 -0500"
         }
       ],
       "Tags" : [
@@ -1534,6 +1553,25 @@
       ]
     },
     {
+      "Date Created" : "2021-02-25 13:04:36 -0500",
+      "Date Modified" : "2021-02-25 13:07:01 -0500",
+      "Folder" : "python3",
+      "Title" : "Efficiently split Pandas Dataframe cells containing lists into multiple rows, duplicating the other column's values.",
+      "Fragments" : [
+        {
+          "Content" : "def splitDataFrameList(df,target_column,separator):\n    ''' df = dataframe to split,\n    target_column = the column containing the values to split\n    separator = the symbol used to perform the split\n    returns: a dataframe with each entry for the target column separated, with each element moved into a new row. \n    The values in the other columns are duplicated across the newly divided rows.\n    '''\n    def splitListToRows(row,row_accumulator,target_column,separator):\n        split_row = row[target_column].split(separator)\n        for s in split_row:\n            new_row = row.to_dict()\n            new_row[target_column] = s\n            row_accumulator.append(new_row)\n    new_rows = []\n    df.apply(splitListToRows,axis=1,args = (new_rows,target_column,separator))\n    new_df = pandas.DataFrame(new_rows)\n    return new_df",
+          "Date Modified" : "2021-02-25 13:07:36 -0500",
+          "Note" : "https:\/\/gist.github.com\/jlln\/338b4b0b55bd6984f883#file-separator-py",
+          "Title" : "Fragment",
+          "Language" : "Python 3",
+          "Date Created" : "2021-02-25 13:04:36 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
       "Date Created" : "2019-08-15 23:46:35 -0400",
       "Date Modified" : "2019-08-15 23:46:53 -0400",
       "Folder" : "Uncategorized",
@@ -1673,6 +1711,25 @@
       ]
     },
     {
+      "Date Created" : "2021-02-15 09:57:52 -0500",
+      "Date Modified" : "2021-02-15 09:58:11 -0500",
+      "Folder" : "pygsheets",
+      "Title" : "“how to export to a google sheet python”",
+      "Fragments" : [
+        {
+          "Content" : "import pygsheets\nimport pandas as pd\n#authorization\ngc = pygsheets.authorize(service_file='\/Users\/erikrood\/desktop\/QS_Model\/creds.json')\n\n# Create empty dataframe\ndf = pd.DataFrame()\n\n# Create a column\ndf['name'] = ['John', 'Steve', 'Sarah']\n\n#open the google spreadsheet (where 'PY to Gsheet Test' is the name of my sheet)\nsh = gc.open('PY to Gsheet Test')\n\n#select the first sheet \nwks = sh[0]\n\n#update the first sheet with df, starting at cell B2. \nwks.set_dataframe(df,(1,1))\n",
+          "Date Modified" : "2021-02-15 09:58:14 -0500",
+          "Note" : "https:\/\/www.codegrepper.com\/code-examples\/groovy\/how+to+export+to+a+google+sheet+python",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-15 09:57:52 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
       "Date Created" : "2020-10-01 16:06:20 -0400",
       "Date Modified" : "2020-10-01 16:06:52 -0400",
       "Folder" : "g-sheets",
@@ -1723,6 +1780,25 @@
           "Title" : "Fragment",
           "Language" : "Plain Text",
           "Date Created" : "2021-01-27 23:38:18 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-02-25 13:31:43 -0500",
+      "Date Modified" : "2021-02-25 13:32:16 -0500",
+      "Folder" : "g-sheets",
+      "Title" : "Cleanup Data w\/ Arbitrary Comas",
+      "Fragments" : [
+        {
+          "Content" : "=REGEXREPLACE(REGEXREPLACE(F2,\"((,+ ,)|,+)\",\",\"), \"^,+\", \"\")\n",
+          "Date Modified" : "2021-02-25 13:32:21 -0500",
+          "Note" : "https:\/\/stackoverflow.com\/questions\/29679543\/regexreplace-in-google-spreadsheet",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-25 13:31:43 -0500"
         }
       ],
       "Tags" : [
@@ -1936,34 +2012,34 @@
       "Fragments" : [
         {
           "Content" : " python3 -m venv venv\n source venv\/bin\/activate",
-          "Date Modified" : "2020-12-16 20:52:41 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "",
           "Title" : "Create ENV",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2020-11-18 17:47:05 -0500"
         },
         {
           "Content" : "source venv\/bin\/activate",
-          "Date Modified" : "2020-11-18 17:48:03 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "",
           "Title" : "Activate ENV",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2020-11-18 17:47:39 -0500"
         },
         {
           "Content" : "deactivate",
-          "Date Modified" : "2020-11-18 17:48:25 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "",
           "Title" : "Deactive ENV",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2020-11-18 17:48:12 -0500"
         },
         {
           "Content" : " python3 -m venv venv\n source venv\/bin\/activate",
-          "Date Modified" : "2020-11-23 12:14:04 -0500",
+          "Date Modified" : "2021-02-25 13:07:41 -0500",
           "Note" : "",
           "Title" : "Combo",
-          "Language" : "Plain Text",
+          "Language" : "Python 3",
           "Date Created" : "2020-11-23 12:13:46 -0500"
         }
       ],
@@ -2051,6 +2127,101 @@
       "Tags" : [
         "git log",
         "git"
+      ]
+    },
+    {
+      "Date Created" : "2021-02-28 21:20:54 -0500",
+      "Date Modified" : "2021-02-28 21:21:37 -0500",
+      "Folder" : "\/.work-configs",
+      "Title" : ".gitignore_global",
+      "Fragments" : [
+        {
+          "Content" : "G# iTrauco's .gitignore_global #\n###############################\n\n##############\n# TESTED OSs #\n##############\n# macOS Catalina v10.15.3\n# Ubuntu 20.04 x86_64\n# RHEL 8.1 x86_64\n# Kali Linux 2020.1b x86_64\n\n#########\n# USAGE #\n#########\n# 1. Place a copy if this at ~\/.gitignore_global\n# 2. Open terminal and run `git config --global core.excludesfile ~\/.gitignore_global`\n\n############\n# COMPILED #\n############\n*.com\n*.class\n*.dll\n*.so\n*.pyc\n*.pyo\n\n############\n# PACKAGES #\n############\n*.7z\n*.dmg\n*.gz\n*.iso\n*.jar\n*.rar\n*.tar\n*.zip\n*.msi\n\n######\n# vi #\n######\n*~\n\n###########\n# LOGS\/DB #\n###########\nlog\/\n*.log\n*.sql\n*.sqlite\n\n########################\n# OPERATING SYSTEM(OS) #\n########################\n.DS_Store\n.DS_Store?\n._*\n.Spotlight-V100\n.Trashes\n.Thumbs.db\n\n##############\n# TEMP files #\n##############\n*.bak\n*.swp\n*.swo\n*~\n*#\n\n#######\n# IDE #\n#######\n.vscode\n.idea\n.iml\n*.sublime-workspace\n\n###########\n# JS\/NODE #\n###########\nnode_modules\nnpm-debug.log\n\n##########\n# PYTHON #\n##########\n.Python\n[Bb]in\n[Ii]nclude\n[Ll]ib\n[Li]ib64\n[Ll]ocal\n[Ss]cripts\npyvenv.cfg\n.venv\nvenv\/\n\n# TERRAFORM #\n#############\n.terraform\n*.tfstate\n*.tfstate.backup\n\n\n#######\n# GCP #\n#######\ncloud-ops-cli-f8d9ca11d84f.json\n*client_secret.json\n*.googleapis.com-python.json",
+          "Date Modified" : "2021-02-28 21:21:41 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-28 21:20:54 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-02-28 21:21:45 -0500",
+      "Date Modified" : "2021-02-28 21:21:48 -0500",
+      "Folder" : "\/.work-configs",
+      "Title" : ".zshrc",
+      "Fragments" : [
+        {
+          "Content" : "# If you come from bash you might have to change your $PATH.\nexport PATH=$HOME\/bin:\/usr\/local\/bin:$PATH\n\n###############################\nZSH_DISABLE_COMPFIX=\"true\"\n###############################\n#\n# Path to your oh-my-zsh installation.\n# export ZSH=\"\/home\/trauco\/.oh-my-zsh\"\n\n# Set name of the theme to load --- if set to \"random\", it will\n# load a random theme each time oh-my-zsh is loaded, in which case,\n# to know which specific one was loaded, run: echo $RANDOM_THEME\n# See https:\/\/github.com\/ohmyzsh\/ohmyzsh\/wiki\/Themes\nZSH_THEME=\"rkj-repos\"\n\n# Set list of themes to pick from when loading at random\n# Setting this variable when ZSH_THEME=random will cause zsh to load\n# a theme from this variable instead of looking in ~\/.oh-my-zsh\/themes\/\n# If set to an empty array, this variable will have no effect.\n# ZSH_THEME_RANDOM_CANDIDATES=( \"robbyrussell\" \"agnoster\" )\n\n# Uncomment the following line to use case-sensitive completion.\n# CASE_SENSITIVE=\"true\"\n\n# Uncomment the following line to use hyphen-insensitive completion.\n# Case-sensitive completion must be off. _ and - will be interchangeable.\n# HYPHEN_INSENSITIVE=\"true\"\n\n# Uncomment the following line to disable bi-weekly auto-update checks.\n# DISABLE_AUTO_UPDATE=\"true\"\n\n# Uncomment the following line to automatically update without prompting.\n# DISABLE_UPDATE_PROMPT=\"true\"\n\n# Uncomment the following line to change how often to auto-update (in days).\n# export UPDATE_ZSH_DAYS=13\n\n# Uncomment the following line if pasting URLs and other text is messed up.\n# DISABLE_MAGIC_FUNCTIONS=true\n\n# Uncomment the following line to disable colors in ls.\n# DISABLE_LS_COLORS=\"true\"\n\n# Uncomment the following line to disable auto-setting terminal title.\n# DISABLE_AUTO_TITLE=\"true\"\n\n# Uncomment the following line to enable command auto-correction.\n# ENABLE_CORRECTION=\"true\"\n\n# Uncomment the following line to display red dots whilst waiting for completion.\n# COMPLETION_WAITING_DOTS=\"true\"\n\n# Uncomment the following line if you want to disable marking untracked files\n# under VCS as dirty. This makes repository status check for large repositories\n# much, much faster.\n# DISABLE_UNTRACKED_FILES_DIRTY=\"true\"\n\n# Uncomment the following line if you want to change the command execution time\n# stamp shown in the history command output.\n# You can set one of the optional three formats:\n# \"mm\/dd\/yyyy\"|\"dd.mm.yyyy\"|\"yyyy-mm-dd\"\n# or set a custom format using the strftime function format specifications,\n# see 'man strftime' for details.\n# HIST_STAMPS=\"mm\/dd\/yyyy\"\n\n# Would you like to use another custom folder than $ZSH\/custom?\n# ZSH_CUSTOM=\/path\/to\/new-custom-folder\n\n# Which plugins would you like to load?\n# Standard plugins can be found in ~\/.oh-my-zsh\/plugins\/*\n# Custom plugins may be added to ~\/.oh-my-zsh\/custom\/plugins\/\n# Example format: plugins=(rails git textmate ruby lighthouse)\n# Add wisely, as too many plugins slow down shell startup.\nplugins=(git zsh-autosuggestions)\n#########\n# source $ZSH\/oh-my-zsh.sh\n#########\n# User configuration\n\n# export MANPATH=\"\/usr\/local\/man:$MANPATH\"\n\n# You may need to manually set your language environment\n# export LANG=en_US.UTF-8\n\n# Preferred editor for local and remote sessions\n# if [[ -n $SSH_CONNECTION ]]; then\n#   export EDITOR='vim'\n# else\n#   export EDITOR='mvim'\n# fi\n\n# Compilation flags\n# export ARCHFLAGS=\"-arch x86_64\"\n\n# Set personal aliases, overriding those provided by oh-my-zsh libs,\n# plugins, and themes. Aliases can be placed here, though oh-my-zsh\n# users are encouraged to define aliases within the ZSH_CUSTOM folder.\n# For a full list of active aliases, run `alias`.\n#\n# Example aliases\n# alias zshconfig=\"mate ~\/.zshrc\"\n# alias ohmyzsh=\"mate ~\/.oh-my-zsh\"\n# source virtualenvwrapper.sh source \/home\/trauco\/.zshrc\n# If you come from bash you might have to change your $PATH.\n# export PATH=$HOME\/bin:\/usr\/local\/bin:$PATH\nexport PATH=\/usr\/local\/sbin:$PATH\n# Path to your oh-my-zsh installation.\nexport ZSH=\"\/Users\/ctrauco\/.oh-my-zsh\"\n\n# Set name of the theme to load --- if set to \"random\", it will\n# load a random theme each time oh-my-zsh is loaded, in which case,\n# to know which specific one was loaded, run: echo $RANDOM_THEME\n# See https:\/\/github.com\/ohmyzsh\/ohmyzsh\/wiki\/Themes\n# ZSH_THEME=\"robbyrussell\"\n# ZSH_THEME=\"powerlevel10k\"\n\n# Set list of themes to pick from when loading at random\n# Setting this variable when ZSH_THEME=random will cause zsh to load\n# a theme from this variable instead of looking in ~\/.oh-my-zsh\/themes\/\n# If set to an empty array, this variable will have no effect.\n# ZSH_THEME_RANDOM_CANDIDATES=( \"robbyrussell\" \"agnoster\" )\n\n# Uncomment the following line to use case-sensitive completion.\n# CASE_SENSITIVE=\"true\"\n\n# Uncomment the following line to use hyphen-insensitive completion.\n# Case-sensitive completion must be off. _ and - will be interchangeable.\n# HYPHEN_INSENSITIVE=\"true\"\n\n# Uncomment the following line to disable bi-weekly auto-update checks.\n# DISABLE_AUTO_UPDATE=\"true\"\n\n# Uncomment the following line to automatically update without prompting.\n# DISABLE_UPDATE_PROMPT=\"true\"\n\n# Uncomment the following line to change how often to auto-update (in days).\n# export UPDATE_ZSH_DAYS=13\n\n# Uncomment the following line if pasting URLs and other text is messed up.\n# DISABLE_MAGIC_FUNCTIONS=true\n\n# Uncomment the following line to disable colors in ls.\n# DISABLE_LS_COLORS=\"true\"\n\n# Uncomment the following line to disable auto-setting terminal title.\n# DISABLE_AUTO_TITLE=\"true\"\n\n# Uncomment the following line to enable command auto-correction.\n# ENABLE_CORRECTION=\"true\"\n\n# Uncomment the following line to display red dots whilst waiting for completion.\n# COMPLETION_WAITING_DOTS=\"true\"\n\n# Uncomment the following line if you want to disable marking untracked files\n# under VCS as dirty. This makes repository status check for large repositories\n# much, much faster.\n# DISABLE_UNTRACKED_FILES_DIRTY=\"true\"\n\n# Uncomment the following line if you want to change the command execution time\n# stamp shown in the history command output.\n# You can set one of the optional three formats:\n# \"mm\/dd\/yyyy\"|\"dd.mm.yyyy\"|\"yyyy-mm-dd\"\n# or set a custom format using the strftime function format specifications,\n# see 'man strftime' for details.\n# HIST_STAMPS=\"mm\/dd\/yyyy\"\n\n# Would you like to use another custom folder than $ZSH\/custom?\n# ZSH_CUSTOM=\/path\/to\/new-custom-folder\n\n# Which plugins would you like to load?\n# Standard plugins can be found in ~\/.oh-my-zsh\/plugins\/*\n# Custom plugins may be added to ~\/.oh-my-zsh\/custom\/plugins\/\n# Example format: plugins=(rails git textmate ruby lighthouse)\n# Add wisely, as too many plugins slow down shell startup.\nplugins=(git)\n\nsource $ZSH\/oh-my-zsh.sh\n\n# User configuration\n\n# export MANPATH=\"\/usr\/local\/man:$MANPATH\"\n\n# You may need to manually set your language environment\n# export LANG=en_US.UTF-8\n\n# Preferred editor for local and remote sessions\n# if [[ -n $SSH_CONNECTION ]]; then\n#   export EDITOR='vim'\n# else\n#   export EDITOR='mvim'\n# fi\n\n# Compilation flags\n# export ARCHFLAGS=\"-arch x86_64\"\n\n# Set personal aliases, overriding those provided by oh-my-zsh libs,\n# plugins, and themes. Aliases can be placed here, though oh-my-zsh\n# users are encouraged to define aliases within the ZSH_CUSTOM folder.\n# For a full list of active aliases, run `alias`.\n#\n# Example aliases\n# alias zshconfig=\"mate ~\/.zshrc\"\n# alias ohmyzsh=\"mate ~\/.oh-my-zsh\"\n# source ~\/powerlevel10k\/powerlevel10k.zsh-theme\nPOWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true\n\n#####################################\n# Python Virtual Environment Indicator\n#\nplugins=(virtualenv)\nPOWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status virtualenv)\n###################################\n##################################\n# ZSH ignores insecure directories\nZSH_DISABLE_COMPFIX=\"true\"\n###################################\n\nfunction gam() { \"\/Users\/ctrauco\/bin\/gam\/gam\" \"$@\" ; }\n\n# >>> conda initialize >>>\n# !! Contents within this block are managed by 'conda init' !!\n__conda_setup=\"$('\/Users\/ctrauco\/anaconda3\/bin\/conda' 'shell.zsh' 'hook' 2> \/dev\/null)\"\nif [ $? -eq 0 ]; then\n    eval \"$__conda_setup\"\nelse\n    if [ -f \"\/Users\/ctrauco\/anaconda3\/etc\/profile.d\/conda.sh\" ]; then\n        . \"\/Users\/ctrauco\/anaconda3\/etc\/profile.d\/conda.sh\"\n    else\n        export PATH=\"\/Users\/ctrauco\/anaconda3\/bin:$PATH\"\n    fi\nfi\nunset __conda_setup\n# <<< conda initialize <<<\n\n",
+          "Date Modified" : "2021-02-28 21:44:27 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-28 21:21:45 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-02-28 21:37:02 -0500",
+      "Date Modified" : "2021-02-28 21:37:21 -0500",
+      "Folder" : "\/.work-configs",
+      "Title" : "spacevim.d\/init.toml",
+      "Fragments" : [
+        {
+          "Content" : "#=============================================================================\n# dark_powered.toml --- dark powered configuration example for SpaceVim\n# Copyright (c) 2016-2017 Wang Shidong & Contributors\n# Author: Wang Shidong < wsdjeg at 163.com >\n# URL: https:\/\/spacevim.org\n# License: GPLv3\n#=============================================================================\n\n# All SpaceVim option below [option] section\n[options]\n    # set spacevim theme. by default colorscheme layer is not loaded,\n    # if you want to use more colorscheme, please load the colorscheme\n    # layer\n    colorscheme = \"onedark\"\n    colorscheme_bg = \"dark\"\n    # Disable guicolors in basic mode, many terminal do not support 24bit\n    # true colors\n    enable_guicolors = true\n    # Disable statusline separator, if you want to use other value, please\n    # install nerd fonts\n    statusline_separator = \"arrow\"\n    statusline_inactive_separator = \"arrow\"\n    buffer_index_type = 4\n    enable_tabline_filetype_icon = true\n    enable_statusline_mode = false\n    filetree_direction = \"left\"\n    filemanager = \"nerdtree\"\n    enable_ycm = false\n    autocomplete_method = \"completor\"\n    bootstrap_before = \"custom_init#before\"\n\n# Enable autocomplete layer\n[[layers]]\nname = 'autocomplete'\n auto_completion_return_key_behavior = \"complete\"\n# auto_completion_tab_key_behavior = \"smart\"\n\n\n[[layers]]\nname = 'shell'\n# default_shell = \"VimShell\"\ndefault_position = 'bottom'\ndefault_height = 30\n\n[[layers]]\n  name = \"lang#python\"\n  python_file_head = [\n      '#!\/usr\/bin\/env python3',\n      '# -*- coding: utf-8 -*-',\n      '',\n      ''\n  ]\n\n  [[layers]]\n  name = \"colorscheme\"\n\n[[layers]]\n  name = \"git\"\n\n[[layers]]\n  name = \"lang#sh\"\n\n[[layers]]\n    name = 'core'\n    filetree_show_hidden = true\n\n[[layers]]\n  name = \"lang#javascript\"\n\n[[custom_plugins]]\n  name = \"hashivim\/vim-terraform\"\n  merged = false\n  \n[[custom_plugins]]\n  name = \"tpope\/vim-surround\"\n  merged = false\n\n#[[layers]]\n#  name = \"ctrlspace\"\n#  iautosave-workspaces = true\n#  enable-spacevim-styled-keys = false\n\n",
+          "Date Modified" : "2021-02-28 21:37:31 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-28 21:37:02 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-02-28 21:37:46 -0500",
+      "Date Modified" : "2021-02-28 21:41:23 -0500",
+      "Folder" : "\/.work-configs",
+      "Title" : "~\/.config",
+      "Fragments" : [
+        {
+          "Content" : "unknown",
+          "Date Modified" : "2021-02-28 21:42:40 -0500",
+          "Note" : "is this even on here?",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-28 21:37:46 -0500"
+        }
+      ],
+      "Tags" : [
+
+      ]
+    },
+    {
+      "Date Created" : "2021-02-28 21:37:54 -0500",
+      "Date Modified" : "2021-02-28 21:39:49 -0500",
+      "Folder" : "\/.work-configs",
+      "Title" : "spacevim.d\/autoload\/custom_init.vim",
+      "Fragments" : [
+        {
+          "Content" : "function! custom_init#before() abort\n    set mouse=r\nendf \n\nfunction! custom_init#before() abort\n  let g:terraform_align=1\n  let g:terraform_fold_sections=1\n  let g:terraform_fmt_on_save=1\nendf ",
+          "Date Modified" : "2021-02-28 21:39:54 -0500",
+          "Note" : "",
+          "Title" : "Fragment",
+          "Language" : "Plain Text",
+          "Date Created" : "2021-02-28 21:37:54 -0500"
+        }
+      ],
+      "Tags" : [
+
       ]
     }
   ]
