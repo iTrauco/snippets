@@ -1,0 +1,834 @@
+{
+  "schema" : "2.2",
+  "app" : "2.2.2",
+  "snippets" : 33,
+  "date" : "2023-02-17T16:34:07Z",
+  "contents" : {
+    "snippets" : [
+      {
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=TRANSPOSE(SPLIT(TRIM(CLEAN(REGEXREPLACE(J14,\"\"\"\",\"\"))),\",\"))",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-01-25T23:58:39Z",
+            "language" : "BatchLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "32DBE7A3-6AB4-4941-AE09-FEE340618A62",
+            "dateModified" : "2023-01-25T23:58:53Z"
+          }
+        ],
+        "title" : "Regex Replace Double Qoutes in Cell",
+        "dateCreated" : "2023-01-25T23:58:39Z",
+        "uuid" : "D877498F-E457-49B5-874C-47CA29B6469F",
+        "tags" : [
+          "719F5579-DD31-4C3B-B464-92B5D06AF2EF",
+          "E81E5387-B3B7-4096-906B-2473674B842B"
+        ],
+        "dateModified" : "2023-01-25T23:59:14Z"
+      },
+      {
+        "dateCreated" : "2022-08-03T22:00:20Z",
+        "title" : "ONLY Email Addresses",
+        "folder" : "A2EF7ADC-9FB7-439F-9E4A-D6668DDF1B1A",
+        "fragments" : [
+          {
+            "content" : "",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-03T22:00:20Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "513A8C48-8630-437C-B30F-3A133BAAD5BA",
+            "dateModified" : "2022-08-03T22:00:20Z"
+          }
+        ],
+        "dateModified" : "2022-08-03T22:00:31Z",
+        "uuid" : "8E24A2B6-51EF-4F14-BF69-76ADA6807616"
+      },
+      {
+        "dateCreated" : "2022-09-14T16:16:53Z",
+        "title" : "Query",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=QUERY(IMPORTRANGE(A1,\"all_apps\"), \"Select * where Col1 is not null AND Col3 contains 'true'\",1)",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-09-14T16:16:53Z",
+            "language" : "BatchLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "0A8C684D-4F5D-4DC0-AFD0-FDA0750062DF",
+            "dateModified" : "2022-09-14T16:17:01Z"
+          }
+        ],
+        "dateModified" : "2022-09-14T16:17:06Z",
+        "uuid" : "9E88F7F4-B0FD-4A44-8E00-76887B57C35A"
+      },
+      {
+        "dateCreated" : "2022-08-10T15:46:58Z",
+        "title" : "untitled snippet",
+        "folder" : "3B729601-1EE3-4771-B8AC-623006E0B6CF",
+        "fragments" : [
+          {
+            "content" : "#!\/usr\/bin\/env bash\n\n\nPROJECT_IDS=$(bq ls -p | sed 's\/[[:blank:]]\\{1,\\}\/,\/g' | awk -F, '{ print $2 }' | tail +3)\n\necho $PROJECT_IDS\n\n\n# sed 's\/[[:blank:]]\\{1,\\}\/,\/g' $PROJECT_IDS >> output\n\n# sed 's\/^.\\{,1\\}\/\/' output\n\n\n\n",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-10T15:46:58Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "E756E810-AF7C-4243-A252-286C740D046E",
+            "dateModified" : "2022-08-10T15:47:00Z"
+          }
+        ],
+        "dateModified" : "2022-08-10T15:46:58Z",
+        "uuid" : "BE5A9D48-9643-46CE-9B82-7BA6D77B78FD"
+      },
+      {
+        "dateCreated" : "2022-11-29T22:31:03Z",
+        "title" : "List the roles associated with a gcp service account?",
+        "fragments" : [
+          {
+            "content" : "gcloud projects list | \\\n  awk '{print $1}' | \\\n  xargs -I % sh -c \"echo \"\"; echo project:% && \\\n  gcloud projects get-iam-policy % \\\n  --flatten='bindings[].members' \\\n  --format='table(bindings.role)' \\\n  --filter='bindings.members:YOU-SERVICE-ACCOUNT@blah.com' \\\n  ;\" ",
+            "note" : "https:\/\/stackoverflow.com\/questions\/47006062\/how-do-i-list-the-roles-associated-with-a-gcp-service-account",
+            "title" : "Fragment",
+            "dateCreated" : "2022-11-29T22:31:03Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "24967D08-32F2-4E05-8CCB-08E3702BFBCE",
+            "dateModified" : "2022-11-29T22:31:36Z"
+          }
+        ],
+        "dateModified" : "2022-11-29T22:31:14Z",
+        "uuid" : "ACBDE883-A759-4D93-874A-A147C3150FC6"
+      },
+      {
+        "dateCreated" : "2022-10-29T01:01:41Z",
+        "title" : "hideRows",
+        "folder" : "13543EA6-AFA9-4528-A16F-109242DB7EA1",
+        "fragments" : [
+          {
+            "content" : "\/\/**GLOBALS**\n\/\/ Sheet the data is on.\nvar SHEET = \"Main\";\nvar SHEET_TO_EDIT = \"Main\";\n\/\/ The value that will cause the row to hide.\nvar VALUE = true;\n\/\/ The column we will be using\nvar COLUMN_NUMBER = 1\n \nfunction onEdit(e) {\n  var ss = SpreadsheetApp.getActiveSpreadsheet();\n  var activeSheet = ss.getActiveSheet();\n  var editingSheet = ss.getSheetByName(SHEET_TO_EDIT)\n  \n  \/\/Ensure on correct cheet.\n  if(SHEET == activeSheet.getName()){\n    var cell = ss.getActiveCell()\n    var cellNotation = cell.getA1Notation();\n    var cellValue = cell.getValue();\n    \n    \/\/Ensure we are looking at the correct column.\n    if(cell.getColumn() == COLUMN_NUMBER){\n      \/\/If the cell matched the value we require,hide the row.\n      if(cellValue == VALUE){\n        var range = editingSheet.getRange(cellNotation);\n        editingSheet.hideRow(range);\n      };\n    };\n  };\n}\n\n\/\/@OnlyCurrentDoc\n\nfunction onOpen() {\n  SpreadsheetApp.getUi().createMenu(\"Custom Filter\")\n    .addItem(\"Filter rows\", \"filterRows\")\n    .addItem(\"Show all rows\", \"showAllRows\")\n    .addToUi();\n}\n\nfunction filterRows() {\n  var sheet = SpreadsheetApp.getActive().getSheetByName(\"Main\");\n  var data = sheet.getDataRange().getValues();\n  for(var i = 1; i < data.length; i++) {\n    \/\/If column C (3rd column) is \"Y\" then hide the row.\n    if(data[i][1] === true) {\n      sheet.hideRows(i + 1);\n    }\n  }\n}\n\nfunction showAllRows() {\n  var sheet = SpreadsheetApp.getActive().getSheetByName(\"Data\");\n  sheet.showRows(1, sheet.getMaxRows());\n}",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-10-29T01:01:41Z",
+            "language" : "JavascriptLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "E6D4119C-C04F-484E-98A7-083A0B3D0FCA",
+            "dateModified" : "2022-10-29T01:01:47Z"
+          }
+        ],
+        "dateModified" : "2022-10-29T01:01:45Z",
+        "uuid" : "899E0152-33F7-4120-BD17-70B228F473FB"
+      },
+      {
+        "dateCreated" : "2022-08-15T22:18:34Z",
+        "title" : "Split cell contents into columns based on carriage return",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=split(A2,char(10)&\",\")",
+            "note" : "https:\/\/www.extendoffice.com\/documents\/excel\/4741-google-sheets-split-by-new-line.html",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-15T22:18:34Z",
+            "language" : "BatchLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "B27D0819-9122-4657-933C-8FD10FEB7FF2",
+            "dateModified" : "2022-08-15T22:18:48Z"
+          }
+        ],
+        "dateModified" : "2022-08-15T22:18:38Z",
+        "uuid" : "A8E6DB01-145F-448B-BDF0-82A22C36578A"
+      },
+      {
+        "dateCreated" : "2022-08-03T21:59:39Z",
+        "title" : "Extract Email Addresses",
+        "folder" : "A2EF7ADC-9FB7-439F-9E4A-D6668DDF1B1A",
+        "fragments" : [
+          {
+            "content" : "grep -e \"[a-zA-Z0-9._]\\+@[a-zA-Z]\\+.[a-zA-Z]\\+\" policy.yaml",
+            "note" : "https:\/\/www.linuxshelltips.com\/extract-email-addresses-from-text-file\/",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-03T21:59:39Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "0A130FFA-4252-4413-96D2-492C64F29E18",
+            "dateModified" : "2022-08-03T21:59:58Z"
+          },
+          {
+            "content" : "grep -oe \"[a-zA-Z0-9._]\\+@[a-zA-Z]\\+.[a-zA-Z]\\+\" test2.txt",
+            "note" : "",
+            "title" : "ONLY Email Addresses",
+            "dateCreated" : "2022-08-03T22:00:40Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "C0FEC142-3FF1-49F0-BC02-B2F8E9A36F86",
+            "dateModified" : "2022-08-03T22:00:55Z"
+          }
+        ],
+        "dateModified" : "2022-08-03T22:00:40Z",
+        "uuid" : "4FD8842D-8237-413E-B9E8-F2492A095CA3"
+      },
+      {
+        "dateCreated" : "2022-12-06T23:56:46Z",
+        "title" : "Remove Google Form created during copy",
+        "folder" : "13543EA6-AFA9-4528-A16F-109242DB7EA1",
+        "fragments" : [
+          {
+            "content" : "\/*\nFunction to make a copy of a Google Sheet. Checks to see if linked Form on Sheet once copied.\nIf so then un-links and deletes the Form.\n*\/\n\n\nfunction makeCopy() {\n  \n  \/\/ get the old file and its name\n  var destinationFolder = DriveApp.getFolderById(\"??????????????\");\n  var templateFile = DriveApp.getFileById(\"???????????????????\");\n  var oldFileName = templateFile.getName();\n  \n  \/\/ get spreadsheet\n  var ss = SpreadsheetApp.getActiveSpreadsheet();\n  \n  \/\/ get the date\n  var d = new Date();\n  var timeZone = ss.getSpreadsheetTimeZone();\n  var niceDate = Utilities.formatDate(d, timeZone, \"yyyy-MM-dd\");\n  Logger.log(niceDate);\n  \n  \/\/ create name for new file\n  var newFileName = oldFileName + \" \" + niceDate;\n  \n  \/\/ make the copy and get its Id\n  var newFileId = templateFile.makeCopy(newFileName, destinationFolder).getId();\n  \n  \/\/ check new file for linked Form\n  var formUrl = SpreadsheetApp.openById(newFileId).getFormUrl();\n  \n  \/\/ check if there is a linked Form as this will need deleting\n  if (formUrl) {\n    \n    \/\/ open linked Form and get its Id\n    var form = FormApp.openByUrl(formUrl);\n    var formId = form.getId();\n    Logger.log('Form Id is: ' + formId);\n    \n    \/\/ Un-link Form from response Sheet\n    form.removeDestination();\n    \n    \/\/ delete Form\n    DriveApp.getFileById(formId).setTrashed(true);\n    \n  }\n  else {\n    \/\/ do nothing as no attached Form found\n  }\n}",
+            "note" : "https:\/\/www.pbainbridge.co.uk\/2020\/06\/remove-google-form-created-during-copy.html",
+            "title" : "Fragment",
+            "dateCreated" : "2022-12-06T23:56:46Z",
+            "language" : "JavaLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "E01E78FE-417B-4415-ACFC-4A0D07137C92",
+            "dateModified" : "2022-12-06T23:57:04Z"
+          }
+        ],
+        "dateModified" : "2022-12-06T23:57:02Z",
+        "uuid" : "3FB9ECB2-1E95-4892-B1F2-EB585314370B"
+      },
+      {
+        "dateCreated" : "2022-08-27T02:04:11Z",
+        "title" : "untitled snippet",
+        "fragments" : [
+          {
+            "content" : "",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-27T02:04:11Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "8DD8A8D8-2EC8-44D4-9168-5253E6DF5439",
+            "dateModified" : "2022-08-27T02:04:11Z"
+          }
+        ],
+        "dateModified" : "2022-08-27T02:04:11Z",
+        "uuid" : "6A467E32-27B5-4885-B140-FA13256BACA4"
+      },
+      {
+        "dateCreated" : "2023-02-08T01:00:33Z",
+        "title" : "Color Contraster",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "https:\/\/webaim.org\/resources\/contrastchecker\/",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-08T01:00:33Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "AC60E8E6-B851-4F4E-85FB-7664156AFF6B",
+            "dateModified" : "2023-02-08T01:00:43Z"
+          }
+        ],
+        "dateModified" : "2023-02-08T01:00:39Z",
+        "uuid" : "F23E1672-E79C-4655-8E59-B77FF9F0B95A"
+      },
+      {
+        "dateCreated" : "2022-08-30T15:01:32Z",
+        "title" : "python gspread import csv to specific work sheet",
+        "folder" : "28A7AE2C-AE14-4AB9-8D85-FF9F6D697304",
+        "fragments" : [
+          {
+            "content" : "client = gspread.authorize(credentials)\nspreadsheetId = '###'  # Please set spreadsheet ID.\nsheetName = 'Sheet2'  # Please set sheet name you want to put the CSV data.\ncsvFile = 'sample.csv'  # Please set the filename and path of csv file.\n\nsh = client.open_by_key(spreadsheetId)\nsh.values_update(\n    sheetName,\n    params={'valueInputOption': 'USER_ENTERED'},\n    body={'values': list(csv.reader(open(csvFile)))}\n)\n",
+            "note" : "https:\/\/stackoverflow.com\/questions\/57264871\/python-gspread-import-csv-to-specific-work-sheet",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-30T15:01:32Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "C5D22AEA-B3FA-4CE6-888D-61F1ECA88B5E",
+            "dateModified" : "2022-08-30T15:01:59Z"
+          }
+        ],
+        "dateModified" : "2022-08-30T15:01:51Z",
+        "uuid" : "8FF6AA2B-9E41-4200-8FBD-65D51F0C50B9"
+      },
+      {
+        "dateCreated" : "2022-11-05T03:36:00Z",
+        "title" : "getSpreadSheetID",
+        "folder" : "13543EA6-AFA9-4528-A16F-109242DB7EA1",
+        "fragments" : [
+          {
+            "content" : "\/\/\/*-----------------------------------------------------------------------\n\/\/\n\/\/ From Sennsei 11\/30\/2017\n\/\/ This function will return the spreadsheet key for your current file. \n\/\/ Use =URL(\"key\") to get the SS key, use =URL() to get the full URL.\n\/\/\n\/\/-----------------------------------------------------------------------*\/\n\nfunction URL(text) {\n   var str = SpreadsheetApp.getActiveSpreadsheet().getUrl();\n   var regex = new RegExp(\"\\\/d\\\/(.+)\\\/edit\");\n   var res = regex.exec(str);\n      \n   if (typeof text == 'string') {\n        return res[1];\n   } else {\n        return str;\n   }\n}",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-11-05T03:36:00Z",
+            "language" : "JavascriptLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "626FEC54-5FF6-4730-BB45-B28ACF6F718C",
+            "dateModified" : "2022-11-05T03:36:06Z"
+          }
+        ],
+        "dateModified" : "2022-11-05T03:36:05Z",
+        "uuid" : "93C87605-B26B-458B-9559-D617181FDF17"
+      },
+      {
+        "dateCreated" : "2022-08-18T15:49:16Z",
+        "title" : "Count Only Non-Empty Cells + Blank Sppace Cells",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=SUMPRODUCT(--(LEN(F2:F)>0))",
+            "note" : "https:\/\/www.lido.app\/tutorials\/count-non-empty-cells-in-google-sheets#:~:text=within%20a%20range%3A-,To%20count%20the%20number%20of%20cells%20that%20are%20not%20blank,cells%20that%20are%20not%20blank.",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-18T15:49:16Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "8393CC03-5BC9-43A0-8055-C38C7401F868",
+            "dateModified" : "2022-08-18T15:50:05Z"
+          }
+        ],
+        "dateModified" : "2022-08-18T15:49:45Z",
+        "uuid" : "D742E169-CEA9-424A-89E3-1440D1B67B72"
+      },
+      {
+        "dateCreated" : "2022-08-02T21:25:20Z",
+        "title" : "Delete All Files In Directory Except...",
+        "folder" : "EC37B3F1-35A2-43F0-BA94-A868C054C3AA",
+        "fragments" : [
+          {
+            "content" : "find . -type f ! -iname \"*.sh\" -delete\n",
+            "note" : "https:\/\/unix.stackexchange.com\/questions\/11801\/replace-all-white-spaces-with-commas-in-a-text-file",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-02T21:25:20Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "5B8421B1-7D70-41C4-85E0-56BF6EA7ABFE",
+            "dateModified" : "2022-08-03T01:56:12Z"
+          }
+        ],
+        "dateModified" : "2022-08-02T21:25:35Z",
+        "uuid" : "F706EFDC-C5AD-406C-AB45-351500CFFC10"
+      },
+      {
+        "dateCreated" : "2022-08-04T00:46:40Z",
+        "title" : "comment multiple rows",
+        "folder" : "BFDF416E-8E10-4676-BE50-FC6176E1DE4C",
+        "fragments" : [
+          {
+            "content" : "15,25s\/^\/#",
+            "note" : "https:\/\/www.maketecheasier.com\/comment-multiple-lines-vim\/",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-04T00:46:40Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "29CBE7B1-F14A-4BD8-9834-DFB7F9623385",
+            "dateModified" : "2022-08-04T00:46:58Z"
+          }
+        ],
+        "dateModified" : "2022-08-04T00:46:45Z",
+        "uuid" : "31E2F7F3-D342-475F-B639-D6BC82E9B745"
+      },
+      {
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=INDIRECT(ADDRESS((ROW($A1)-1)*3+COLUMN(A1),1))\n",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-15T21:02:35Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "474175AF-92F1-4D59-A76A-9513701ACA41",
+            "dateModified" : "2023-01-24T18:01:52Z"
+          }
+        ],
+        "title" : "Columns to N* of Rows",
+        "dateCreated" : "2022-08-15T21:02:35Z",
+        "uuid" : "09A3BBAF-3DB3-4F2F-B983-57A8FD3506C2",
+        "tags" : [
+          "FA2D1564-1723-430D-83C8-0CDEF17665F1",
+          "0AC052C6-67C0-4DA4-8574-B12E63E41A37",
+          "698ED861-FC67-45E8-AE79-CD9954FFAC01"
+        ],
+        "dateModified" : "2022-08-15T21:03:09Z"
+      },
+      {
+        "dateCreated" : "2022-09-12T22:02:38Z",
+        "title" : "Extract All Text After Last URL \/",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=IFERROR(RIGHT(D2,LEN(D2)-SEARCH(\"#\",SUBSTITUTE(D2,\"\/\",\"#\",LEN(D2)-LEN(SUBSTITUTE(D2,\"\/\",\"\"))))),\"\")",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-09-12T22:02:38Z",
+            "language" : "NasmLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "0E86245B-8299-4B27-BD56-38D38F7DE1ED",
+            "dateModified" : "2022-09-12T22:02:55Z"
+          }
+        ],
+        "dateModified" : "2022-09-12T22:02:53Z",
+        "uuid" : "68BBC36E-D8FB-496C-834F-270169275066"
+      },
+      {
+        "dateCreated" : "2022-12-06T23:28:38Z",
+        "title" : "List Google Drive Folder File Names and URLs to a Google Sheet",
+        "folder" : "13543EA6-AFA9-4528-A16F-109242DB7EA1",
+        "fragments" : [
+          {
+            "content" : "\/\/ replace your-folder below with the folder for which you want a listing\nfunction listFolderContents() {\n  var foldername = 'your-folder';\n  var folderlisting = 'listing of folder ' + foldername;\n  \n  var folders = DriveApp.getFoldersByName(foldername)\n  var folder = folders.next();\n  var contents = folder.getFiles();\n  \n  var ss = SpreadsheetApp.create(folderlisting);\n  var sheet = ss.getActiveSheet();\n  sheet.appendRow( ['name', 'link'] );\n  \n  var file;\n  var name;\n  var link;\n  var row;\n  while(contents.hasNext()) {\n    file = contents.next();\n    name = file.getName();\n    link = file.getUrl();\n    sheet.appendRow( [name, link] );     \n  }  \n};",
+            "note" : "https:\/\/www.acrosswalls.org\/ortext-datalinks\/list-google-drive-folder-file-names-urls\/",
+            "title" : "Fragment",
+            "dateCreated" : "2022-12-06T23:28:38Z",
+            "language" : "JavascriptLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "33B99E2D-86E9-4F39-8429-A33F5ACBEF41",
+            "dateModified" : "2022-12-06T23:28:58Z"
+          }
+        ],
+        "dateModified" : "2022-12-06T23:28:56Z",
+        "uuid" : "137E4B91-D7BB-4DFA-965E-CB97C6A8A2FB"
+      },
+      {
+        "dateCreated" : "2022-09-01T19:01:37Z",
+        "title" : "List All Service Accounts",
+        "folder" : "3B729601-1EE3-4771-B8AC-623006E0B6CF",
+        "fragments" : [
+          {
+            "content" : "gcloud projects get-iam-policy ${PROJECT} \\\n--flatten=\"bindings[].members[]\" \\\n--filter=\"bindings.members~\\\"serviceAccount:\\\"\" \\\n--format=\"value(bindings.members.split(sep=\\\":\\\").slice(1))\"",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-09-01T19:01:37Z",
+            "language" : "MarkdownLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "7C0B535A-EEA3-4DFB-A700-4BC1FBAB67EA",
+            "dateModified" : "2022-09-01T19:01:47Z"
+          },
+          {
+            "content" : "FILTER='\n  .bindings[].members[]\n  |select(. | startswith(\"serviceAccount:\"))\n  |.[15:]\n'\n\ngcloud projects get-iam-policy ${PROJECT} \\\n--format=\"json\" \\\n| jq -r \"${FILTER}\"\n",
+            "note" : "https:\/\/stackoverflow.com\/questions\/71153917\/how-can-i-list-all-service-accounts-also-those-created-by-gcp-with-the-gcloud",
+            "title" : "Fragment 2",
+            "dateCreated" : "2022-09-01T19:01:51Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "1E7D6D6E-11F9-4BF7-B8BB-FE1703EAA300",
+            "dateModified" : "2022-09-01T19:02:01Z"
+          }
+        ],
+        "dateModified" : "2022-09-01T19:01:51Z",
+        "uuid" : "AD957D38-2802-40DE-B826-BB46447C14E4"
+      },
+      {
+        "dateCreated" : "2022-08-27T02:04:29Z",
+        "title" : "Export active Okta users to CSV file",
+        "folder" : "EC37B3F1-35A2-43F0-BA94-A868C054C3AA",
+        "fragments" : [
+          {
+            "content" : "#!\/bin\/bash\n\n# add your okta apikey\nOKTA_API_KEY=~\/.config \nOKTA_DOMAIN=color.okta.com\nOUTPUT_FILE=okta-users.csv\n\n# write CSV headers\necho '\"userType\",\"department\",\"firstName\",\"lastName\",\"nickName\",\"displayName\",\"email\",\"title\",\"division\",\"postalAddress\",\"streetAddress\",\"city\",\"state\",\"zipCode\",\"primaryPhone\",\"secondEmail\",\"mobilePhone\"' \\\n> $OUTPUT_FILE\n\n# GET all active Okta users, convert from json to csv, sort\ncurl -s -S -X GET -H \"Accept: application\/json\" \\\n  -H \"Content-Type: application\/json\" \\\n  -H \"Authorization: SSWS ${OKTA_API_KEY}\" \\\n  --data-urlencode \"filter=status eq \\\"ACTIVE\\\"\" \\\n  \"https:\/\/${OKTA_DOMAIN}\/api\/v1\/users\" \\\n| jq -r '.[].profile|[.userType, .department, .firstName, .lastName, .nickName, .displayName, .email, .title, .division, .postalAddress, .streetAddress, .city, .state, .zipCode, .primaryPhone, .secondEmail, .mobilePhone]|@csv' \\\n| sort \\\n>> $OUTPUT_FILE",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-27T02:04:29Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "6F0C9231-0702-4DB2-BDAF-91A7F7778EBD",
+            "dateModified" : "2022-08-27T02:20:00Z"
+          }
+        ],
+        "dateModified" : "2022-08-27T02:04:33Z",
+        "uuid" : "9C168A74-8D70-4B22-9859-89BA81DC558A"
+      },
+      {
+        "dateCreated" : "2022-11-23T20:38:56Z",
+        "title" : "G Sheets to Forms v1",
+        "folder" : "13543EA6-AFA9-4528-A16F-109242DB7EA1",
+        "fragments" : [
+          {
+            "content" : "\/**\n * Auto-populate Question options in Google Forms\n * from values in Google Spreadsheet\n *\n * Written by Amit Agarwal (MIT License)\n *\n **\/\n\nconst populateGoogleForms = () => {\n  const GOOGLE_SHEET_NAME = 'TAB_NAME';\n  const GOOGLE_FORM_ID = 'FORM_ID';\n\n  const ss = SpreadsheetApp.getActiveSpreadsheet();\n\n  const [header, ...data] = ss.getSheetByName(GOOGLE_SHEET_NAME).getDataRange().getDisplayValues();\n\n  const choices = {};\n  header.forEach((title, i) => {\n    choices[title] = data.map((d) => d[i]).filter((e) => e);\n  });\n\n  FormApp.openById(GOOGLE_FORM_ID)\n    .getItems()\n    .map((item) => ({\n      item,\n      values: choices[item.getTitle()],\n    }))\n    .filter(({ values }) => values)\n    .forEach(({ item, values }) => {\n      switch (item.getType()) {\n        case FormApp.ItemType.CHECKBOX:\n          item.asCheckboxItem().setChoiceValues(values);\n          break;\n        case FormApp.ItemType.LIST:\n          item.asListItem().setChoiceValues(values);\n          break;\n        case FormApp.ItemType.MULTIPLE_CHOICE:\n          item.asMultipleChoiceItem().setChoiceValues(values);\n          break;\n        default:\n        \/\/ ignore item\n      }\n    });\n  ss.toast('Google Form Updated !!');\n};\n",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-11-23T20:38:56Z",
+            "language" : "JavascriptLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "C21EC5AD-A9B5-4FC4-81D9-C8455E85921C",
+            "dateModified" : "2022-11-23T20:39:33Z"
+          }
+        ],
+        "dateModified" : "2022-12-02T02:05:56Z",
+        "uuid" : "B43E9457-37E9-4CB9-B768-E1DB197D6C62"
+      },
+      {
+        "dateCreated" : "2022-12-02T02:05:08Z",
+        "title" : "G Sheets to Forms Automation Script",
+        "folder" : "13543EA6-AFA9-4528-A16F-109242DB7EA1",
+        "fragments" : [
+          {
+            "content" : "function onOpen() {\n  var spreadsheet = SpreadsheetApp.getActive();\n  var menuItems = [\n    {name: 'Build Access Review Form', functionName: 'createQuestions'}\n  ];\n  spreadsheet.addMenu('Create Form', menuItems);\n}\n\nfunction createQuestions() {\n  var sheet = SpreadsheetApp.getActiveSheet();\n  var data = sheet.getDataRange().getValues();\n\n  var form_name = data[0][1];\n  var form_desc = data[1][1];\n  var form = FormApp.create(form_name).setDescription(form_desc).setIsQuiz(false);\n\n\/\/ \/\/ create questions as item to form\n\/\/ var  item = form.addTextItem();\n\/\/ item.setTitle('Student ID Number').setRequired(true);\n\n\/\/   item = form.addTextItem();\n\/\/   item.setTitle('Name').setRequired(true);\n\n  var choices = [];\n\n  for (var i = 5; i < data.length; i++) {\n    if (data[i][0] != \"\") {\n      if (data[i][0] == \"-\") {\n        form.addPageBreakItem();\n        continue;\n      }\n\n      noChoice = true;\n      for (var j = 1; j <= 5; j++) {\n        if (data[i][j] != '') {\n          noChoice = false;\n        }\n      }\n\n      if (noChoice == false) {\n        item = form.addCheckboxItem();\n        item.setTitle(data[i][0]).setRequired(true);\n\n        isCorrectA = false;\n        isCorrectB = false;\n        isCorrectC = false;\n        isCorrectD = false;\n        isCorrectE = false;\n\n        switch(data[i][6]) {\n          case 'A': isCorrectA = true; break;\n          case 'B': isCorrectB = true; break;\n          case 'C': isCorrectC = true; break;\n          case 'D': isCorrectD = true; break;\n          case 'E': isCorrectE = true; break;\n        }\n\n        choices = []\n        if (data[i][1] != \"\") {\n          choices.push(item.createChoice(data[i][1], isCorrectA));\n        }\n        if (data[i][2] != \"\") {\n          choices.push(item.createChoice(data[i][2], isCorrectB));\n        }\n        if (data[i][3] != \"\") {\n          choices.push(item.createChoice(data[i][3], isCorrectC));\n        }\n        if (data[i][4] != \"\") {\n          choices.push(item.createChoice(data[i][4], isCorrectD));\n        }\n        if (data[i][5] != \"\") {\n          choices.push(item.createChoice(data[i][5], isCorrectE));\n        }\n\n        item.setChoices(choices);\n      }\n      else {\n        item = form.addParagraphTextItem();\n        item.setTitle(data[i][0]).setRequired(true);\n      }\n\n      var point = parseInt(data[i][7]);\n      if (point > 0) {\n        item.setPoints(point);\n      }\n    }\n  }\n\n  SpreadsheetApp.getUi().alert(\"Google Form untuk kuis dengan nama \\\"\" + form_name + \"\\\" done.\\Please check your Google Drive.\");\n}\n",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-12-02T02:05:08Z",
+            "language" : "JavascriptLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "542CB63E-39B7-4EDC-A953-1698EC0FB02A",
+            "dateModified" : "2022-12-02T02:05:36Z"
+          }
+        ],
+        "dateModified" : "2022-12-02T02:05:34Z",
+        "uuid" : "842EABA5-2A91-4F5F-AFCF-B07A460F5F92"
+      },
+      {
+        "dateCreated" : "2022-08-03T21:34:00Z",
+        "title" : "can list the roles associated to a user or service account by",
+        "folder" : "3B729601-1EE3-4771-B8AC-623006E0B6CF",
+        "fragments" : [
+          {
+            "content" : "gcloud projects get-iam-policy $project_id  \\\n--flatten=\"bindings[].members\" \\\n--format=\"table(bindings.role)\" \\\n--filter=\"bindings.members:<THE USER OR SERVICE ACCOUNT>\"",
+            "note" : "https:\/\/stackoverflow.com\/questions\/59360326\/gcp-command-to-read-all-users-permissions",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-03T21:34:00Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "F22739C3-A1EA-406A-B7B2-CE368E9340DF",
+            "dateModified" : "2022-08-05T18:58:53Z"
+          },
+          {
+            "content" : "gcloud beta asset search-all-iam-policies --scope=organizations\/123 --query=\"policy:foo@bar.com\" | egrep \"resource:|role:|user:foo\"",
+            "note" : "https:\/\/cloud.google.com\/asset-inventory\/docs\/searching-iam-policies",
+            "title" : "Fragment 2",
+            "dateCreated" : "2022-08-03T21:35:35Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "7BC4BED6-5ACE-4A6D-964C-688148579CBE",
+            "dateModified" : "2022-08-03T21:36:33Z"
+          }
+        ],
+        "dateModified" : "2022-08-03T21:35:35Z",
+        "uuid" : "9840D5CB-1738-4220-A804-35F671842CAF"
+      },
+      {
+        "folder" : "3B729601-1EE3-4771-B8AC-623006E0B6CF",
+        "fragments" : [
+          {
+            "content" : "gcloud projects list --impersonate-service-account=<your-service-account-email-address>",
+            "note" : "https:\/\/stackoverflow.com\/questions\/70095836\/is-there-a-way-to-find-out-to-which-projects-a-gcp-service-account-has-access-to",
+            "title" : "Fragment",
+            "dateCreated" : "2022-11-29T22:32:52Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "5070D7BB-7710-44B0-8987-B0D33010E019",
+            "dateModified" : "2022-11-29T22:33:20Z"
+          }
+        ],
+        "title" : "Find which projects a GCP service account has access to?",
+        "dateCreated" : "2022-11-29T22:32:52Z",
+        "uuid" : "19254186-0A2A-469F-B393-8E787AB959B5",
+        "tags" : [
+          "C065306C-966E-43F9-AC67-3E0DF5526751"
+        ],
+        "dateModified" : "2022-11-29T22:33:25Z"
+      },
+      {
+        "dateCreated" : "2022-12-21T18:07:44Z",
+        "title" : "Identify Missing Values in Columns",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=IF(ISNA(MATCH(A4,$B$4:$B,0)),\"Missing\",\"Found\")\n",
+            "note" : "=IF(ISNA(MATCH(A4,$B$4:$B,0)),\"Missing\",\"Found\")\n",
+            "title" : "Fragment",
+            "dateCreated" : "2022-12-21T18:07:44Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "7784300C-1EEA-4402-976B-C096518D8A3A",
+            "dateModified" : "2022-12-21T18:08:09Z"
+          }
+        ],
+        "dateModified" : "2022-12-21T18:07:53Z",
+        "uuid" : "19BB2463-C4DB-4530-BD05-0DF232B7B422"
+      },
+      {
+        "dateCreated" : "2023-02-03T17:47:36Z",
+        "title" : "Add All Rows in Single Column",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=IF(C2=\"\",\"\",ArrayFormula(SUBSTITUTE(TEXTJOIN(CHAR(10),TRUE,$H2:2),CHAR(10),\",\"&CHAR(10))&\",\"))",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-03T17:47:36Z",
+            "language" : "IniLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "16124EB4-43B3-475D-854F-48869E6646B2",
+            "dateModified" : "2023-02-03T17:47:48Z"
+          }
+        ],
+        "dateModified" : "2023-02-03T17:47:47Z",
+        "uuid" : "E7C8451D-79F7-4E7F-B163-4FB386F2B301"
+      },
+      {
+        "dateCreated" : "2022-08-10T13:35:06Z",
+        "title" : "untitled snippet",
+        "folder" : "DCADEC6A-6FC7-4DB2-8AD0-7EA9026A690C",
+        "fragments" : [
+          {
+            "content" : "  gcloud asset search-all-iam-policies \\\n  --scope=organizations\/123456 \\\n  --page-size=50 \\\n  --flatten='policy.bindings[].members[]' \\\n  --format='table(resource, policy.bindings.role, policy.bindings.members)'",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2022-08-10T13:35:06Z",
+            "language" : "BashLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "0B045A0E-6015-4034-AB70-B60506C5A2B1",
+            "dateModified" : "2022-08-10T13:36:12Z"
+          }
+        ],
+        "dateModified" : "2022-08-10T13:35:06Z",
+        "uuid" : "6BE89DA3-69E6-46C9-95AA-6D6C52E7D3F9"
+      },
+      {
+        "dateCreated" : "2023-02-17T16:20:18Z",
+        "title" : "untitled snippet",
+        "fragments" : [
+          {
+            "content" : "",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-17T16:20:18Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "BA659608-FA72-4DFD-B53B-8DFB76F1D61C",
+            "dateModified" : "2023-02-17T16:20:18Z"
+          }
+        ],
+        "dateModified" : "2023-02-17T16:20:18Z",
+        "uuid" : "BF3795FD-809F-4D60-A0DA-9FEAC63D2B62"
+      },
+      {
+        "dateCreated" : "2023-02-17T16:21:34Z",
+        "title" : "untitled snippet",
+        "fragments" : [
+          {
+            "content" : "",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-17T16:21:34Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "F847F463-9391-4490-AFBF-BA9623A0170C",
+            "dateModified" : "2023-02-17T16:21:34Z"
+          }
+        ],
+        "dateModified" : "2023-02-17T16:21:34Z",
+        "uuid" : "147757DE-CA4C-4618-BC31-D96E24766A41"
+      },
+      {
+        "dateCreated" : "2023-02-17T16:27:06Z",
+        "title" : "Transpose & Split Named Range List of Lists",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=IFERROR(TRANSPOSE(SPLIT(CLEAN($E$1),\",\")),\"Select User in C7\")\n",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-17T16:27:06Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "CEBB7771-4715-438F-BF67-A8EC32F5FF4A",
+            "dateModified" : "2023-02-17T16:27:21Z"
+          }
+        ],
+        "dateModified" : "2023-02-17T16:27:20Z",
+        "uuid" : "26B5384F-CF8F-48E2-812C-B5D589D4AA25"
+      },
+      {
+        "dateCreated" : "2023-02-17T16:27:52Z",
+        "title" : "All Columns Into One",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=IF($A2=\"\",\"\",ArrayFormula(SUBSTITUTE(TEXTJOIN(CHAR(10),TRUE,$E2:2),CHAR(10),\",\"&CHAR(10))&\"\"))",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-17T16:27:52Z",
+            "language" : "SLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "033C711F-2AF1-493A-9F53-FB26246BC9E0",
+            "dateModified" : "2023-02-17T16:28:05Z"
+          }
+        ],
+        "dateModified" : "2023-02-17T16:28:04Z",
+        "uuid" : "E47D51D0-FC9E-4937-8BE8-01D97CDDA51A"
+      },
+      {
+        "dateCreated" : "2023-02-17T16:28:46Z",
+        "title" : "ArrayFormula VLOOKUP Named Ranges",
+        "folder" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880",
+        "fragments" : [
+          {
+            "content" : "=ARRAYFORMULA(VLOOKUP($A$2:A,google_workspace_users,2))",
+            "note" : "",
+            "title" : "Fragment",
+            "dateCreated" : "2023-02-17T16:28:46Z",
+            "language" : "TextLexer",
+            "attachments" : [
+
+            ],
+            "uuid" : "4B060BC0-9AB2-4633-873E-DC9E2845A8B4",
+            "dateModified" : "2023-02-17T16:29:03Z"
+          }
+        ],
+        "dateModified" : "2023-02-17T16:29:02Z",
+        "uuid" : "A856A1DB-566F-43FA-A7E7-8478C72DC525"
+      }
+    ],
+    "smartGroups" : [
+
+    ],
+    "tags" : [
+      {
+        "title" : "g sheets",
+        "uuid" : "FA2D1564-1723-430D-83C8-0CDEF17665F1"
+      },
+      {
+        "title" : "columns to rows",
+        "uuid" : "0AC052C6-67C0-4DA4-8574-B12E63E41A37"
+      },
+      {
+        "title" : "formula",
+        "uuid" : "698ED861-FC67-45E8-AE79-CD9954FFAC01"
+      },
+      {
+        "title" : "gcloud",
+        "uuid" : "C065306C-966E-43F9-AC67-3E0DF5526751"
+      },
+      {
+        "title" : "regexreplace",
+        "uuid" : "719F5579-DD31-4C3B-B464-92B5D06AF2EF"
+      },
+      {
+        "title" : "double-qoutes",
+        "uuid" : "E81E5387-B3B7-4096-906B-2473674B842B"
+      }
+    ],
+    "attachments" : [
+
+    ],
+    "shortcuts" : [
+
+    ],
+    "folders" : [
+      {
+        "title" : "Apps Scripts",
+        "uuid" : "13543EA6-AFA9-4528-A16F-109242DB7EA1"
+      },
+      {
+        "title" : "bash",
+        "uuid" : "EC37B3F1-35A2-43F0-BA94-A868C054C3AA"
+      },
+      {
+        "title" : "G Sheets",
+        "uuid" : "7F61970C-251A-4FA3-8758-4DFA0C6BB880"
+      },
+      {
+        "title" : "gcloud",
+        "children" : [
+          {
+            "title" : "iam",
+            "uuid" : "DCADEC6A-6FC7-4DB2-8AD0-7EA9026A690C"
+          }
+        ],
+        "uuid" : "3B729601-1EE3-4771-B8AC-623006E0B6CF"
+      },
+      {
+        "title" : "grep",
+        "uuid" : "A2EF7ADC-9FB7-439F-9E4A-D6668DDF1B1A"
+      },
+      {
+        "title" : "Jupyter",
+        "uuid" : "C08D11AF-C915-4752-BB0B-870726FF5E10"
+      },
+      {
+        "title" : "Pandas",
+        "uuid" : "66A7F534-3521-4FFB-B891-1E02C358304C"
+      },
+      {
+        "title" : "Python",
+        "children" : [
+          {
+            "title" : "gspread",
+            "uuid" : "28A7AE2C-AE14-4AB9-8D85-FF9F6D697304"
+          }
+        ],
+        "uuid" : "74AF2829-D6B6-4AC1-B0FA-248B8A5079E1"
+      },
+      {
+        "title" : "vim",
+        "uuid" : "BFDF416E-8E10-4676-BE50-FC6176E1DE4C"
+      }
+    ]
+  },
+  "modified" : "2023-02-17T16:29:02Z",
+  "name" : "main.snippetslablibrary"
+}

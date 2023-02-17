@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>app</key>
+	<string>2.2.2</string>
+	<key>contents</key>
+	<dict>
+		<key>attachments</key>
+		<array/>
+		<key>folders</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Apps Scripts</string>
+				<key>uuid</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>bash</string>
+				<key>uuid</key>
+				<string>EC37B3F1-35A2-43F0-BA94-A868C054C3AA</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>G Sheets</string>
+				<key>uuid</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+			</dict>
+			<dict>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>title</key>
+						<string>iam</string>
+						<key>uuid</key>
+						<string>DCADEC6A-6FC7-4DB2-8AD0-7EA9026A690C</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>gcloud</string>
+				<key>uuid</key>
+				<string>3B729601-1EE3-4771-B8AC-623006E0B6CF</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>grep</string>
+				<key>uuid</key>
+				<string>A2EF7ADC-9FB7-439F-9E4A-D6668DDF1B1A</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Jupyter</string>
+				<key>uuid</key>
+				<string>C08D11AF-C915-4752-BB0B-870726FF5E10</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Pandas</string>
+				<key>uuid</key>
+				<string>66A7F534-3521-4FFB-B891-1E02C358304C</string>
+			</dict>
+			<dict>
+				<key>children</key>
+				<array>
+					<dict>
+						<key>title</key>
+						<string>gspread</string>
+						<key>uuid</key>
+						<string>28A7AE2C-AE14-4AB9-8D85-FF9F6D697304</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Python</string>
+				<key>uuid</key>
+				<string>74AF2829-D6B6-4AC1-B0FA-248B8A5079E1</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>vim</string>
+				<key>uuid</key>
+				<string>BFDF416E-8E10-4676-BE50-FC6176E1DE4C</string>
+			</dict>
+		</array>
+		<key>shortcuts</key>
+		<array/>
+		<key>smartGroups</key>
+		<array/>
+		<key>snippets</key>
+		<array>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-01-25T23:58:39Z</date>
+				<key>dateModified</key>
+				<date>2023-01-25T23:59:14Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=TRANSPOSE(SPLIT(TRIM(CLEAN(REGEXREPLACE(J14,"""",""))),","))</string>
+						<key>dateCreated</key>
+						<date>2023-01-25T23:58:39Z</date>
+						<key>dateModified</key>
+						<date>2023-01-25T23:58:53Z</date>
+						<key>language</key>
+						<string>BatchLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>32DBE7A3-6AB4-4941-AE09-FEE340618A62</string>
+					</dict>
+				</array>
+				<key>tags</key>
+				<array>
+					<string>719F5579-DD31-4C3B-B464-92B5D06AF2EF</string>
+					<string>E81E5387-B3B7-4096-906B-2473674B842B</string>
+				</array>
+				<key>title</key>
+				<string>Regex Replace Double Qoutes in Cell</string>
+				<key>uuid</key>
+				<string>D877498F-E457-49B5-874C-47CA29B6469F</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-03T22:00:20Z</date>
+				<key>dateModified</key>
+				<date>2022-08-03T22:00:31Z</date>
+				<key>folder</key>
+				<string>A2EF7ADC-9FB7-439F-9E4A-D6668DDF1B1A</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string></string>
+						<key>dateCreated</key>
+						<date>2022-08-03T22:00:20Z</date>
+						<key>dateModified</key>
+						<date>2022-08-03T22:00:20Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>513A8C48-8630-437C-B30F-3A133BAAD5BA</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>ONLY Email Addresses</string>
+				<key>uuid</key>
+				<string>8E24A2B6-51EF-4F14-BF69-76ADA6807616</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-09-14T16:16:53Z</date>
+				<key>dateModified</key>
+				<date>2022-09-14T16:17:06Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=QUERY(IMPORTRANGE(A1,"all_apps"), "Select * where Col1 is not null AND Col3 contains 'true'",1)</string>
+						<key>dateCreated</key>
+						<date>2022-09-14T16:16:53Z</date>
+						<key>dateModified</key>
+						<date>2022-09-14T16:17:01Z</date>
+						<key>language</key>
+						<string>BatchLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>0A8C684D-4F5D-4DC0-AFD0-FDA0750062DF</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Query</string>
+				<key>uuid</key>
+				<string>9E88F7F4-B0FD-4A44-8E00-76887B57C35A</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-10T15:46:58Z</date>
+				<key>dateModified</key>
+				<date>2022-08-10T15:46:58Z</date>
+				<key>folder</key>
+				<string>3B729601-1EE3-4771-B8AC-623006E0B6CF</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>#!/usr/bin/env bash
+
+
+PROJECT_IDS=$(bq ls -p | sed 's/[[:blank:]]\{1,\}/,/g' | awk -F, '{ print $2 }' | tail +3)
+
+echo $PROJECT_IDS
+
+
+# sed 's/[[:blank:]]\{1,\}/,/g' $PROJECT_IDS &gt;&gt; output
+
+# sed 's/^.\{,1\}//' output
+
+
+
+</string>
+						<key>dateCreated</key>
+						<date>2022-08-10T15:46:58Z</date>
+						<key>dateModified</key>
+						<date>2022-08-10T15:47:00Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>E756E810-AF7C-4243-A252-286C740D046E</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>untitled snippet</string>
+				<key>uuid</key>
+				<string>BE5A9D48-9643-46CE-9B82-7BA6D77B78FD</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-11-29T22:31:03Z</date>
+				<key>dateModified</key>
+				<date>2022-11-29T22:31:14Z</date>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>gcloud projects list | \
+  awk '{print $1}' | \
+  xargs -I % sh -c "echo ""; echo project:% &amp;&amp; \
+  gcloud projects get-iam-policy % \
+  --flatten='bindings[].members' \
+  --format='table(bindings.role)' \
+  --filter='bindings.members:YOU-SERVICE-ACCOUNT@blah.com' \
+  ;" </string>
+						<key>dateCreated</key>
+						<date>2022-11-29T22:31:03Z</date>
+						<key>dateModified</key>
+						<date>2022-11-29T22:31:36Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string>https://stackoverflow.com/questions/47006062/how-do-i-list-the-roles-associated-with-a-gcp-service-account</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>24967D08-32F2-4E05-8CCB-08E3702BFBCE</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>List the roles associated with a gcp service account?</string>
+				<key>uuid</key>
+				<string>ACBDE883-A759-4D93-874A-A147C3150FC6</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-10-29T01:01:41Z</date>
+				<key>dateModified</key>
+				<date>2022-10-29T01:01:45Z</date>
+				<key>folder</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>//**GLOBALS**
+// Sheet the data is on.
+var SHEET = "Main";
+var SHEET_TO_EDIT = "Main";
+// The value that will cause the row to hide.
+var VALUE = true;
+// The column we will be using
+var COLUMN_NUMBER = 1
+ 
+function onEdit(e) {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var activeSheet = ss.getActiveSheet();
+  var editingSheet = ss.getSheetByName(SHEET_TO_EDIT)
+  
+  //Ensure on correct cheet.
+  if(SHEET == activeSheet.getName()){
+    var cell = ss.getActiveCell()
+    var cellNotation = cell.getA1Notation();
+    var cellValue = cell.getValue();
+    
+    //Ensure we are looking at the correct column.
+    if(cell.getColumn() == COLUMN_NUMBER){
+      //If the cell matched the value we require,hide the row.
+      if(cellValue == VALUE){
+        var range = editingSheet.getRange(cellNotation);
+        editingSheet.hideRow(range);
+      };
+    };
+  };
+}
+
+//@OnlyCurrentDoc
+
+function onOpen() {
+  SpreadsheetApp.getUi().createMenu("Custom Filter")
+    .addItem("Filter rows", "filterRows")
+    .addItem("Show all rows", "showAllRows")
+    .addToUi();
+}
+
+function filterRows() {
+  var sheet = SpreadsheetApp.getActive().getSheetByName("Main");
+  var data = sheet.getDataRange().getValues();
+  for(var i = 1; i &lt; data.length; i++) {
+    //If column C (3rd column) is "Y" then hide the row.
+    if(data[i][1] === true) {
+      sheet.hideRows(i + 1);
+    }
+  }
+}
+
+function showAllRows() {
+  var sheet = SpreadsheetApp.getActive().getSheetByName("Data");
+  sheet.showRows(1, sheet.getMaxRows());
+}</string>
+						<key>dateCreated</key>
+						<date>2022-10-29T01:01:41Z</date>
+						<key>dateModified</key>
+						<date>2022-10-29T01:01:47Z</date>
+						<key>language</key>
+						<string>JavascriptLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>E6D4119C-C04F-484E-98A7-083A0B3D0FCA</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>hideRows</string>
+				<key>uuid</key>
+				<string>899E0152-33F7-4120-BD17-70B228F473FB</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-15T22:18:34Z</date>
+				<key>dateModified</key>
+				<date>2022-08-15T22:18:38Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=split(A2,char(10)&amp;",")</string>
+						<key>dateCreated</key>
+						<date>2022-08-15T22:18:34Z</date>
+						<key>dateModified</key>
+						<date>2022-08-15T22:18:48Z</date>
+						<key>language</key>
+						<string>BatchLexer</string>
+						<key>note</key>
+						<string>https://www.extendoffice.com/documents/excel/4741-google-sheets-split-by-new-line.html</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>B27D0819-9122-4657-933C-8FD10FEB7FF2</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Split cell contents into columns based on carriage return</string>
+				<key>uuid</key>
+				<string>A8E6DB01-145F-448B-BDF0-82A22C36578A</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-03T21:59:39Z</date>
+				<key>dateModified</key>
+				<date>2022-08-03T22:00:40Z</date>
+				<key>folder</key>
+				<string>A2EF7ADC-9FB7-439F-9E4A-D6668DDF1B1A</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>grep -e "[a-zA-Z0-9._]\+@[a-zA-Z]\+.[a-zA-Z]\+" policy.yaml</string>
+						<key>dateCreated</key>
+						<date>2022-08-03T21:59:39Z</date>
+						<key>dateModified</key>
+						<date>2022-08-03T21:59:58Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string>https://www.linuxshelltips.com/extract-email-addresses-from-text-file/</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>0A130FFA-4252-4413-96D2-492C64F29E18</string>
+					</dict>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>grep -oe "[a-zA-Z0-9._]\+@[a-zA-Z]\+.[a-zA-Z]\+" test2.txt</string>
+						<key>dateCreated</key>
+						<date>2022-08-03T22:00:40Z</date>
+						<key>dateModified</key>
+						<date>2022-08-03T22:00:55Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>ONLY Email Addresses</string>
+						<key>uuid</key>
+						<string>C0FEC142-3FF1-49F0-BC02-B2F8E9A36F86</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Extract Email Addresses</string>
+				<key>uuid</key>
+				<string>4FD8842D-8237-413E-B9E8-F2492A095CA3</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-12-06T23:56:46Z</date>
+				<key>dateModified</key>
+				<date>2022-12-06T23:57:02Z</date>
+				<key>folder</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>/*
+Function to make a copy of a Google Sheet. Checks to see if linked Form on Sheet once copied.
+If so then un-links and deletes the Form.
+*/
+
+
+function makeCopy() {
+  
+  // get the old file and its name
+  var destinationFolder = DriveApp.getFolderById("??????????????");
+  var templateFile = DriveApp.getFileById("???????????????????");
+  var oldFileName = templateFile.getName();
+  
+  // get spreadsheet
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  
+  // get the date
+  var d = new Date();
+  var timeZone = ss.getSpreadsheetTimeZone();
+  var niceDate = Utilities.formatDate(d, timeZone, "yyyy-MM-dd");
+  Logger.log(niceDate);
+  
+  // create name for new file
+  var newFileName = oldFileName + " " + niceDate;
+  
+  // make the copy and get its Id
+  var newFileId = templateFile.makeCopy(newFileName, destinationFolder).getId();
+  
+  // check new file for linked Form
+  var formUrl = SpreadsheetApp.openById(newFileId).getFormUrl();
+  
+  // check if there is a linked Form as this will need deleting
+  if (formUrl) {
+    
+    // open linked Form and get its Id
+    var form = FormApp.openByUrl(formUrl);
+    var formId = form.getId();
+    Logger.log('Form Id is: ' + formId);
+    
+    // Un-link Form from response Sheet
+    form.removeDestination();
+    
+    // delete Form
+    DriveApp.getFileById(formId).setTrashed(true);
+    
+  }
+  else {
+    // do nothing as no attached Form found
+  }
+}</string>
+						<key>dateCreated</key>
+						<date>2022-12-06T23:56:46Z</date>
+						<key>dateModified</key>
+						<date>2022-12-06T23:57:04Z</date>
+						<key>language</key>
+						<string>JavaLexer</string>
+						<key>note</key>
+						<string>https://www.pbainbridge.co.uk/2020/06/remove-google-form-created-during-copy.html</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>E01E78FE-417B-4415-ACFC-4A0D07137C92</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Remove Google Form created during copy</string>
+				<key>uuid</key>
+				<string>3FB9ECB2-1E95-4892-B1F2-EB585314370B</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-27T02:04:11Z</date>
+				<key>dateModified</key>
+				<date>2022-08-27T02:04:11Z</date>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string></string>
+						<key>dateCreated</key>
+						<date>2022-08-27T02:04:11Z</date>
+						<key>dateModified</key>
+						<date>2022-08-27T02:04:11Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>8DD8A8D8-2EC8-44D4-9168-5253E6DF5439</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>untitled snippet</string>
+				<key>uuid</key>
+				<string>6A467E32-27B5-4885-B140-FA13256BACA4</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-08T01:00:33Z</date>
+				<key>dateModified</key>
+				<date>2023-02-08T01:00:39Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>https://webaim.org/resources/contrastchecker/</string>
+						<key>dateCreated</key>
+						<date>2023-02-08T01:00:33Z</date>
+						<key>dateModified</key>
+						<date>2023-02-08T01:00:43Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>AC60E8E6-B851-4F4E-85FB-7664156AFF6B</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Color Contraster</string>
+				<key>uuid</key>
+				<string>F23E1672-E79C-4655-8E59-B77FF9F0B95A</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-30T15:01:32Z</date>
+				<key>dateModified</key>
+				<date>2022-08-30T15:01:51Z</date>
+				<key>folder</key>
+				<string>28A7AE2C-AE14-4AB9-8D85-FF9F6D697304</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>client = gspread.authorize(credentials)
+spreadsheetId = '###'  # Please set spreadsheet ID.
+sheetName = 'Sheet2'  # Please set sheet name you want to put the CSV data.
+csvFile = 'sample.csv'  # Please set the filename and path of csv file.
+
+sh = client.open_by_key(spreadsheetId)
+sh.values_update(
+    sheetName,
+    params={'valueInputOption': 'USER_ENTERED'},
+    body={'values': list(csv.reader(open(csvFile)))}
+)
+</string>
+						<key>dateCreated</key>
+						<date>2022-08-30T15:01:32Z</date>
+						<key>dateModified</key>
+						<date>2022-08-30T15:01:59Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string>https://stackoverflow.com/questions/57264871/python-gspread-import-csv-to-specific-work-sheet</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>C5D22AEA-B3FA-4CE6-888D-61F1ECA88B5E</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>python gspread import csv to specific work sheet</string>
+				<key>uuid</key>
+				<string>8FF6AA2B-9E41-4200-8FBD-65D51F0C50B9</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-11-05T03:36:00Z</date>
+				<key>dateModified</key>
+				<date>2022-11-05T03:36:05Z</date>
+				<key>folder</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>///*-----------------------------------------------------------------------
+//
+// From Sennsei 11/30/2017
+// This function will return the spreadsheet key for your current file. 
+// Use =URL("key") to get the SS key, use =URL() to get the full URL.
+//
+//-----------------------------------------------------------------------*/
+
+function URL(text) {
+   var str = SpreadsheetApp.getActiveSpreadsheet().getUrl();
+   var regex = new RegExp("\/d\/(.+)\/edit");
+   var res = regex.exec(str);
+      
+   if (typeof text == 'string') {
+        return res[1];
+   } else {
+        return str;
+   }
+}</string>
+						<key>dateCreated</key>
+						<date>2022-11-05T03:36:00Z</date>
+						<key>dateModified</key>
+						<date>2022-11-05T03:36:06Z</date>
+						<key>language</key>
+						<string>JavascriptLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>626FEC54-5FF6-4730-BB45-B28ACF6F718C</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>getSpreadSheetID</string>
+				<key>uuid</key>
+				<string>93C87605-B26B-458B-9559-D617181FDF17</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-18T15:49:16Z</date>
+				<key>dateModified</key>
+				<date>2022-08-18T15:49:45Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=SUMPRODUCT(--(LEN(F2:F)&gt;0))</string>
+						<key>dateCreated</key>
+						<date>2022-08-18T15:49:16Z</date>
+						<key>dateModified</key>
+						<date>2022-08-18T15:50:05Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string>https://www.lido.app/tutorials/count-non-empty-cells-in-google-sheets#:~:text=within%20a%20range%3A-,To%20count%20the%20number%20of%20cells%20that%20are%20not%20blank,cells%20that%20are%20not%20blank.</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>8393CC03-5BC9-43A0-8055-C38C7401F868</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Count Only Non-Empty Cells + Blank Sppace Cells</string>
+				<key>uuid</key>
+				<string>D742E169-CEA9-424A-89E3-1440D1B67B72</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-02T21:25:20Z</date>
+				<key>dateModified</key>
+				<date>2022-08-02T21:25:35Z</date>
+				<key>folder</key>
+				<string>EC37B3F1-35A2-43F0-BA94-A868C054C3AA</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>find . -type f ! -iname "*.sh" -delete
+</string>
+						<key>dateCreated</key>
+						<date>2022-08-02T21:25:20Z</date>
+						<key>dateModified</key>
+						<date>2022-08-03T01:56:12Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string>https://unix.stackexchange.com/questions/11801/replace-all-white-spaces-with-commas-in-a-text-file</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>5B8421B1-7D70-41C4-85E0-56BF6EA7ABFE</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Delete All Files In Directory Except...</string>
+				<key>uuid</key>
+				<string>F706EFDC-C5AD-406C-AB45-351500CFFC10</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-04T00:46:40Z</date>
+				<key>dateModified</key>
+				<date>2022-08-04T00:46:45Z</date>
+				<key>folder</key>
+				<string>BFDF416E-8E10-4676-BE50-FC6176E1DE4C</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>15,25s/^/#</string>
+						<key>dateCreated</key>
+						<date>2022-08-04T00:46:40Z</date>
+						<key>dateModified</key>
+						<date>2022-08-04T00:46:58Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string>https://www.maketecheasier.com/comment-multiple-lines-vim/</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>29CBE7B1-F14A-4BD8-9834-DFB7F9623385</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>comment multiple rows</string>
+				<key>uuid</key>
+				<string>31E2F7F3-D342-475F-B639-D6BC82E9B745</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-15T21:02:35Z</date>
+				<key>dateModified</key>
+				<date>2022-08-15T21:03:09Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=INDIRECT(ADDRESS((ROW($A1)-1)*3+COLUMN(A1),1))
+</string>
+						<key>dateCreated</key>
+						<date>2022-08-15T21:02:35Z</date>
+						<key>dateModified</key>
+						<date>2023-01-24T18:01:52Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>474175AF-92F1-4D59-A76A-9513701ACA41</string>
+					</dict>
+				</array>
+				<key>tags</key>
+				<array>
+					<string>FA2D1564-1723-430D-83C8-0CDEF17665F1</string>
+					<string>0AC052C6-67C0-4DA4-8574-B12E63E41A37</string>
+					<string>698ED861-FC67-45E8-AE79-CD9954FFAC01</string>
+				</array>
+				<key>title</key>
+				<string>Columns to N* of Rows</string>
+				<key>uuid</key>
+				<string>09A3BBAF-3DB3-4F2F-B983-57A8FD3506C2</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-09-12T22:02:38Z</date>
+				<key>dateModified</key>
+				<date>2022-09-12T22:02:53Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=IFERROR(RIGHT(D2,LEN(D2)-SEARCH("#",SUBSTITUTE(D2,"/","#",LEN(D2)-LEN(SUBSTITUTE(D2,"/",""))))),"")</string>
+						<key>dateCreated</key>
+						<date>2022-09-12T22:02:38Z</date>
+						<key>dateModified</key>
+						<date>2022-09-12T22:02:55Z</date>
+						<key>language</key>
+						<string>NasmLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>0E86245B-8299-4B27-BD56-38D38F7DE1ED</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Extract All Text After Last URL /</string>
+				<key>uuid</key>
+				<string>68BBC36E-D8FB-496C-834F-270169275066</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-12-06T23:28:38Z</date>
+				<key>dateModified</key>
+				<date>2022-12-06T23:28:56Z</date>
+				<key>folder</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>// replace your-folder below with the folder for which you want a listing
+function listFolderContents() {
+  var foldername = 'your-folder';
+  var folderlisting = 'listing of folder ' + foldername;
+  
+  var folders = DriveApp.getFoldersByName(foldername)
+  var folder = folders.next();
+  var contents = folder.getFiles();
+  
+  var ss = SpreadsheetApp.create(folderlisting);
+  var sheet = ss.getActiveSheet();
+  sheet.appendRow( ['name', 'link'] );
+  
+  var file;
+  var name;
+  var link;
+  var row;
+  while(contents.hasNext()) {
+    file = contents.next();
+    name = file.getName();
+    link = file.getUrl();
+    sheet.appendRow( [name, link] );     
+  }  
+};</string>
+						<key>dateCreated</key>
+						<date>2022-12-06T23:28:38Z</date>
+						<key>dateModified</key>
+						<date>2022-12-06T23:28:58Z</date>
+						<key>language</key>
+						<string>JavascriptLexer</string>
+						<key>note</key>
+						<string>https://www.acrosswalls.org/ortext-datalinks/list-google-drive-folder-file-names-urls/</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>33B99E2D-86E9-4F39-8429-A33F5ACBEF41</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>List Google Drive Folder File Names and URLs to a Google Sheet</string>
+				<key>uuid</key>
+				<string>137E4B91-D7BB-4DFA-965E-CB97C6A8A2FB</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-09-01T19:01:37Z</date>
+				<key>dateModified</key>
+				<date>2022-09-01T19:01:51Z</date>
+				<key>folder</key>
+				<string>3B729601-1EE3-4771-B8AC-623006E0B6CF</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>gcloud projects get-iam-policy ${PROJECT} \
+--flatten="bindings[].members[]" \
+--filter="bindings.members~\"serviceAccount:\"" \
+--format="value(bindings.members.split(sep=\":\").slice(1))"</string>
+						<key>dateCreated</key>
+						<date>2022-09-01T19:01:37Z</date>
+						<key>dateModified</key>
+						<date>2022-09-01T19:01:47Z</date>
+						<key>language</key>
+						<string>MarkdownLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>7C0B535A-EEA3-4DFB-A700-4BC1FBAB67EA</string>
+					</dict>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>FILTER='
+  .bindings[].members[]
+  |select(. | startswith("serviceAccount:"))
+  |.[15:]
+'
+
+gcloud projects get-iam-policy ${PROJECT} \
+--format="json" \
+| jq -r "${FILTER}"
+</string>
+						<key>dateCreated</key>
+						<date>2022-09-01T19:01:51Z</date>
+						<key>dateModified</key>
+						<date>2022-09-01T19:02:01Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string>https://stackoverflow.com/questions/71153917/how-can-i-list-all-service-accounts-also-those-created-by-gcp-with-the-gcloud</string>
+						<key>title</key>
+						<string>Fragment 2</string>
+						<key>uuid</key>
+						<string>1E7D6D6E-11F9-4BF7-B8BB-FE1703EAA300</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>List All Service Accounts</string>
+				<key>uuid</key>
+				<string>AD957D38-2802-40DE-B826-BB46447C14E4</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-27T02:04:29Z</date>
+				<key>dateModified</key>
+				<date>2022-08-27T02:04:33Z</date>
+				<key>folder</key>
+				<string>EC37B3F1-35A2-43F0-BA94-A868C054C3AA</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>#!/bin/bash
+
+# add your okta apikey
+OKTA_API_KEY=~/.config 
+OKTA_DOMAIN=color.okta.com
+OUTPUT_FILE=okta-users.csv
+
+# write CSV headers
+echo '"userType","department","firstName","lastName","nickName","displayName","email","title","division","postalAddress","streetAddress","city","state","zipCode","primaryPhone","secondEmail","mobilePhone"' \
+&gt; $OUTPUT_FILE
+
+# GET all active Okta users, convert from json to csv, sort
+curl -s -S -X GET -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: SSWS ${OKTA_API_KEY}" \
+  --data-urlencode "filter=status eq \"ACTIVE\"" \
+  "https://${OKTA_DOMAIN}/api/v1/users" \
+| jq -r '.[].profile|[.userType, .department, .firstName, .lastName, .nickName, .displayName, .email, .title, .division, .postalAddress, .streetAddress, .city, .state, .zipCode, .primaryPhone, .secondEmail, .mobilePhone]|@csv' \
+| sort \
+&gt;&gt; $OUTPUT_FILE</string>
+						<key>dateCreated</key>
+						<date>2022-08-27T02:04:29Z</date>
+						<key>dateModified</key>
+						<date>2022-08-27T02:20:00Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>6F0C9231-0702-4DB2-BDAF-91A7F7778EBD</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Export active Okta users to CSV file</string>
+				<key>uuid</key>
+				<string>9C168A74-8D70-4B22-9859-89BA81DC558A</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-11-23T20:38:56Z</date>
+				<key>dateModified</key>
+				<date>2022-12-02T02:05:56Z</date>
+				<key>folder</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>/**
+ * Auto-populate Question options in Google Forms
+ * from values in Google Spreadsheet
+ *
+ * Written by Amit Agarwal (MIT License)
+ *
+ **/
+
+const populateGoogleForms = () =&gt; {
+  const GOOGLE_SHEET_NAME = 'TAB_NAME';
+  const GOOGLE_FORM_ID = 'FORM_ID';
+
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+
+  const [header, ...data] = ss.getSheetByName(GOOGLE_SHEET_NAME).getDataRange().getDisplayValues();
+
+  const choices = {};
+  header.forEach((title, i) =&gt; {
+    choices[title] = data.map((d) =&gt; d[i]).filter((e) =&gt; e);
+  });
+
+  FormApp.openById(GOOGLE_FORM_ID)
+    .getItems()
+    .map((item) =&gt; ({
+      item,
+      values: choices[item.getTitle()],
+    }))
+    .filter(({ values }) =&gt; values)
+    .forEach(({ item, values }) =&gt; {
+      switch (item.getType()) {
+        case FormApp.ItemType.CHECKBOX:
+          item.asCheckboxItem().setChoiceValues(values);
+          break;
+        case FormApp.ItemType.LIST:
+          item.asListItem().setChoiceValues(values);
+          break;
+        case FormApp.ItemType.MULTIPLE_CHOICE:
+          item.asMultipleChoiceItem().setChoiceValues(values);
+          break;
+        default:
+        // ignore item
+      }
+    });
+  ss.toast('Google Form Updated !!');
+};
+</string>
+						<key>dateCreated</key>
+						<date>2022-11-23T20:38:56Z</date>
+						<key>dateModified</key>
+						<date>2022-11-23T20:39:33Z</date>
+						<key>language</key>
+						<string>JavascriptLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>C21EC5AD-A9B5-4FC4-81D9-C8455E85921C</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>G Sheets to Forms v1</string>
+				<key>uuid</key>
+				<string>B43E9457-37E9-4CB9-B768-E1DB197D6C62</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-12-02T02:05:08Z</date>
+				<key>dateModified</key>
+				<date>2022-12-02T02:05:34Z</date>
+				<key>folder</key>
+				<string>13543EA6-AFA9-4528-A16F-109242DB7EA1</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>function onOpen() {
+  var spreadsheet = SpreadsheetApp.getActive();
+  var menuItems = [
+    {name: 'Build Access Review Form', functionName: 'createQuestions'}
+  ];
+  spreadsheet.addMenu('Create Form', menuItems);
+}
+
+function createQuestions() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var data = sheet.getDataRange().getValues();
+
+  var form_name = data[0][1];
+  var form_desc = data[1][1];
+  var form = FormApp.create(form_name).setDescription(form_desc).setIsQuiz(false);
+
+// // create questions as item to form
+// var  item = form.addTextItem();
+// item.setTitle('Student ID Number').setRequired(true);
+
+//   item = form.addTextItem();
+//   item.setTitle('Name').setRequired(true);
+
+  var choices = [];
+
+  for (var i = 5; i &lt; data.length; i++) {
+    if (data[i][0] != "") {
+      if (data[i][0] == "-") {
+        form.addPageBreakItem();
+        continue;
+      }
+
+      noChoice = true;
+      for (var j = 1; j &lt;= 5; j++) {
+        if (data[i][j] != '') {
+          noChoice = false;
+        }
+      }
+
+      if (noChoice == false) {
+        item = form.addCheckboxItem();
+        item.setTitle(data[i][0]).setRequired(true);
+
+        isCorrectA = false;
+        isCorrectB = false;
+        isCorrectC = false;
+        isCorrectD = false;
+        isCorrectE = false;
+
+        switch(data[i][6]) {
+          case 'A': isCorrectA = true; break;
+          case 'B': isCorrectB = true; break;
+          case 'C': isCorrectC = true; break;
+          case 'D': isCorrectD = true; break;
+          case 'E': isCorrectE = true; break;
+        }
+
+        choices = []
+        if (data[i][1] != "") {
+          choices.push(item.createChoice(data[i][1], isCorrectA));
+        }
+        if (data[i][2] != "") {
+          choices.push(item.createChoice(data[i][2], isCorrectB));
+        }
+        if (data[i][3] != "") {
+          choices.push(item.createChoice(data[i][3], isCorrectC));
+        }
+        if (data[i][4] != "") {
+          choices.push(item.createChoice(data[i][4], isCorrectD));
+        }
+        if (data[i][5] != "") {
+          choices.push(item.createChoice(data[i][5], isCorrectE));
+        }
+
+        item.setChoices(choices);
+      }
+      else {
+        item = form.addParagraphTextItem();
+        item.setTitle(data[i][0]).setRequired(true);
+      }
+
+      var point = parseInt(data[i][7]);
+      if (point &gt; 0) {
+        item.setPoints(point);
+      }
+    }
+  }
+
+  SpreadsheetApp.getUi().alert("Google Form untuk kuis dengan nama \"" + form_name + "\" done.\Please check your Google Drive.");
+}
+</string>
+						<key>dateCreated</key>
+						<date>2022-12-02T02:05:08Z</date>
+						<key>dateModified</key>
+						<date>2022-12-02T02:05:36Z</date>
+						<key>language</key>
+						<string>JavascriptLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>542CB63E-39B7-4EDC-A953-1698EC0FB02A</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>G Sheets to Forms Automation Script</string>
+				<key>uuid</key>
+				<string>842EABA5-2A91-4F5F-AFCF-B07A460F5F92</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-03T21:34:00Z</date>
+				<key>dateModified</key>
+				<date>2022-08-03T21:35:35Z</date>
+				<key>folder</key>
+				<string>3B729601-1EE3-4771-B8AC-623006E0B6CF</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>gcloud projects get-iam-policy $project_id  \
+--flatten="bindings[].members" \
+--format="table(bindings.role)" \
+--filter="bindings.members:&lt;THE USER OR SERVICE ACCOUNT&gt;"</string>
+						<key>dateCreated</key>
+						<date>2022-08-03T21:34:00Z</date>
+						<key>dateModified</key>
+						<date>2022-08-05T18:58:53Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string>https://stackoverflow.com/questions/59360326/gcp-command-to-read-all-users-permissions</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>F22739C3-A1EA-406A-B7B2-CE368E9340DF</string>
+					</dict>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>gcloud beta asset search-all-iam-policies --scope=organizations/123 --query="policy:foo@bar.com" | egrep "resource:|role:|user:foo"</string>
+						<key>dateCreated</key>
+						<date>2022-08-03T21:35:35Z</date>
+						<key>dateModified</key>
+						<date>2022-08-03T21:36:33Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string>https://cloud.google.com/asset-inventory/docs/searching-iam-policies</string>
+						<key>title</key>
+						<string>Fragment 2</string>
+						<key>uuid</key>
+						<string>7BC4BED6-5ACE-4A6D-964C-688148579CBE</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>can list the roles associated to a user or service account by</string>
+				<key>uuid</key>
+				<string>9840D5CB-1738-4220-A804-35F671842CAF</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-11-29T22:32:52Z</date>
+				<key>dateModified</key>
+				<date>2022-11-29T22:33:25Z</date>
+				<key>folder</key>
+				<string>3B729601-1EE3-4771-B8AC-623006E0B6CF</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>gcloud projects list --impersonate-service-account=&lt;your-service-account-email-address&gt;</string>
+						<key>dateCreated</key>
+						<date>2022-11-29T22:32:52Z</date>
+						<key>dateModified</key>
+						<date>2022-11-29T22:33:20Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string>https://stackoverflow.com/questions/70095836/is-there-a-way-to-find-out-to-which-projects-a-gcp-service-account-has-access-to</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>5070D7BB-7710-44B0-8987-B0D33010E019</string>
+					</dict>
+				</array>
+				<key>tags</key>
+				<array>
+					<string>C065306C-966E-43F9-AC67-3E0DF5526751</string>
+				</array>
+				<key>title</key>
+				<string>Find which projects a GCP service account has access to?</string>
+				<key>uuid</key>
+				<string>19254186-0A2A-469F-B393-8E787AB959B5</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-12-21T18:07:44Z</date>
+				<key>dateModified</key>
+				<date>2022-12-21T18:07:53Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=IF(ISNA(MATCH(A4,$B$4:$B,0)),"Missing","Found")
+</string>
+						<key>dateCreated</key>
+						<date>2022-12-21T18:07:44Z</date>
+						<key>dateModified</key>
+						<date>2022-12-21T18:08:09Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string>=IF(ISNA(MATCH(A4,$B$4:$B,0)),"Missing","Found")
+</string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>7784300C-1EEA-4402-976B-C096518D8A3A</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Identify Missing Values in Columns</string>
+				<key>uuid</key>
+				<string>19BB2463-C4DB-4530-BD05-0DF232B7B422</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-03T17:47:36Z</date>
+				<key>dateModified</key>
+				<date>2023-02-03T17:47:47Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=IF(C2="","",ArrayFormula(SUBSTITUTE(TEXTJOIN(CHAR(10),TRUE,$H2:2),CHAR(10),","&amp;CHAR(10))&amp;","))</string>
+						<key>dateCreated</key>
+						<date>2023-02-03T17:47:36Z</date>
+						<key>dateModified</key>
+						<date>2023-02-03T17:47:48Z</date>
+						<key>language</key>
+						<string>IniLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>16124EB4-43B3-475D-854F-48869E6646B2</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Add All Rows in Single Column</string>
+				<key>uuid</key>
+				<string>E7C8451D-79F7-4E7F-B163-4FB386F2B301</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2022-08-10T13:35:06Z</date>
+				<key>dateModified</key>
+				<date>2022-08-10T13:35:06Z</date>
+				<key>folder</key>
+				<string>DCADEC6A-6FC7-4DB2-8AD0-7EA9026A690C</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>  gcloud asset search-all-iam-policies \
+  --scope=organizations/123456 \
+  --page-size=50 \
+  --flatten='policy.bindings[].members[]' \
+  --format='table(resource, policy.bindings.role, policy.bindings.members)'</string>
+						<key>dateCreated</key>
+						<date>2022-08-10T13:35:06Z</date>
+						<key>dateModified</key>
+						<date>2022-08-10T13:36:12Z</date>
+						<key>language</key>
+						<string>BashLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>0B045A0E-6015-4034-AB70-B60506C5A2B1</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>untitled snippet</string>
+				<key>uuid</key>
+				<string>6BE89DA3-69E6-46C9-95AA-6D6C52E7D3F9</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-17T16:20:18Z</date>
+				<key>dateModified</key>
+				<date>2023-02-17T16:20:18Z</date>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string></string>
+						<key>dateCreated</key>
+						<date>2023-02-17T16:20:18Z</date>
+						<key>dateModified</key>
+						<date>2023-02-17T16:20:18Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>BA659608-FA72-4DFD-B53B-8DFB76F1D61C</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>untitled snippet</string>
+				<key>uuid</key>
+				<string>BF3795FD-809F-4D60-A0DA-9FEAC63D2B62</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-17T16:21:34Z</date>
+				<key>dateModified</key>
+				<date>2023-02-17T16:21:34Z</date>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string></string>
+						<key>dateCreated</key>
+						<date>2023-02-17T16:21:34Z</date>
+						<key>dateModified</key>
+						<date>2023-02-17T16:21:34Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>F847F463-9391-4490-AFBF-BA9623A0170C</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>untitled snippet</string>
+				<key>uuid</key>
+				<string>147757DE-CA4C-4618-BC31-D96E24766A41</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-17T16:27:06Z</date>
+				<key>dateModified</key>
+				<date>2023-02-17T16:27:20Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=IFERROR(TRANSPOSE(SPLIT(CLEAN($E$1),",")),"Select User in C7")
+</string>
+						<key>dateCreated</key>
+						<date>2023-02-17T16:27:06Z</date>
+						<key>dateModified</key>
+						<date>2023-02-17T16:27:21Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>CEBB7771-4715-438F-BF67-A8EC32F5FF4A</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>Transpose &amp; Split Named Range List of Lists</string>
+				<key>uuid</key>
+				<string>26B5384F-CF8F-48E2-812C-B5D589D4AA25</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-17T16:27:52Z</date>
+				<key>dateModified</key>
+				<date>2023-02-17T16:28:04Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=IF($A2="","",ArrayFormula(SUBSTITUTE(TEXTJOIN(CHAR(10),TRUE,$E2:2),CHAR(10),","&amp;CHAR(10))&amp;""))</string>
+						<key>dateCreated</key>
+						<date>2023-02-17T16:27:52Z</date>
+						<key>dateModified</key>
+						<date>2023-02-17T16:28:05Z</date>
+						<key>language</key>
+						<string>SLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>033C711F-2AF1-493A-9F53-FB26246BC9E0</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>All Columns Into One</string>
+				<key>uuid</key>
+				<string>E47D51D0-FC9E-4937-8BE8-01D97CDDA51A</string>
+			</dict>
+			<dict>
+				<key>dateCreated</key>
+				<date>2023-02-17T16:28:46Z</date>
+				<key>dateModified</key>
+				<date>2023-02-17T16:29:02Z</date>
+				<key>folder</key>
+				<string>7F61970C-251A-4FA3-8758-4DFA0C6BB880</string>
+				<key>fragments</key>
+				<array>
+					<dict>
+						<key>attachments</key>
+						<array/>
+						<key>content</key>
+						<string>=ARRAYFORMULA(VLOOKUP($A$2:A,google_workspace_users,2))</string>
+						<key>dateCreated</key>
+						<date>2023-02-17T16:28:46Z</date>
+						<key>dateModified</key>
+						<date>2023-02-17T16:29:03Z</date>
+						<key>language</key>
+						<string>TextLexer</string>
+						<key>note</key>
+						<string></string>
+						<key>title</key>
+						<string>Fragment</string>
+						<key>uuid</key>
+						<string>4B060BC0-9AB2-4633-873E-DC9E2845A8B4</string>
+					</dict>
+				</array>
+				<key>title</key>
+				<string>ArrayFormula VLOOKUP Named Ranges</string>
+				<key>uuid</key>
+				<string>A856A1DB-566F-43FA-A7E7-8478C72DC525</string>
+			</dict>
+		</array>
+		<key>tags</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>g sheets</string>
+				<key>uuid</key>
+				<string>FA2D1564-1723-430D-83C8-0CDEF17665F1</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>columns to rows</string>
+				<key>uuid</key>
+				<string>0AC052C6-67C0-4DA4-8574-B12E63E41A37</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>formula</string>
+				<key>uuid</key>
+				<string>698ED861-FC67-45E8-AE79-CD9954FFAC01</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>gcloud</string>
+				<key>uuid</key>
+				<string>C065306C-966E-43F9-AC67-3E0DF5526751</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>regexreplace</string>
+				<key>uuid</key>
+				<string>719F5579-DD31-4C3B-B464-92B5D06AF2EF</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>double-qoutes</string>
+				<key>uuid</key>
+				<string>E81E5387-B3B7-4096-906B-2473674B842B</string>
+			</dict>
+		</array>
+	</dict>
+	<key>date</key>
+	<date>2023-02-17T16:33:53Z</date>
+	<key>modified</key>
+	<date>2023-02-17T16:29:02Z</date>
+	<key>name</key>
+	<string>main.snippetslablibrary</string>
+	<key>schema</key>
+	<string>2.2</string>
+	<key>snippets</key>
+	<integer>33</integer>
+</dict>
+</plist>
